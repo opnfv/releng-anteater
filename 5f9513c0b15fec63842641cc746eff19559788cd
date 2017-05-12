@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_91ac0e37",
+        "filename": "INFO",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-05-12T16:03:37Z",
+      "side": 1,
+      "message": "I had not thought about this... since its a releng sub project Perhaps we should make a terse info file (for subprojects) irc channel, jira, mailing list, and who to contact.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "5f9513c0b15fec63842641cc746eff19559788cd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_71b15a8e",
+        "filename": "INFO",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-05-12T16:03:37Z",
+      "side": 1,
+      "message": "For committers you can just say inherited from releng.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 11
+      },
+      "revId": "5f9513c0b15fec63842641cc746eff19559788cd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
