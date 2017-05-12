@@ -1,0 +1,25 @@
+Project: CI Gate Security (releng-anteater)
+Project Creation Date: April 27, 2017
+Project Category: Integration & Testing
+Lifecycle State: Incubation
+Primary Contact: Luke Hinds (lhinds@redhat.com)
+Project Lead: Luke Hinds (lhinds@redhat.com)
+Jira Project Name: Release Engineering
+Jira Project Prefix: RELENG
+Mailing list tag: [releng]
+IRC: Server:freenode.net Channel:#opnfv-sec
+Repository: releng-anteater
+
+Committers:
+Fatih Degirmenci (Ericsson, fatih.degirmenci@ericsson.com)
+Aric Gardner (Linux Foundation, agardner@linuxfoundation.org)
+Tim Rozet (Red Hat, trozet@redhat.com)
+Morgan Richomme (Orange, morgan.richomme@orange.com)
+Matthew Lijun (Huawei, matthew.lijun@huawei.com)
+Jose Lausuch (Ericsson, jose.lausuch@ericsson.com)
+Ryota Mibu (NEC, r-mibu@cq.jp.nec.com)
+Mei Mei (Huawei, meimei@huawei.com)
+Trevor Bramwell (Linux Foundation, tbramwell@linuxfoundation.org)
+Serena Feng (ZTE, feng.xiaowei@zte.com.cn)
+Yolanda Robla Mota (Red Hat, yroblamo@redhat.com)
+Markos Chandras (SUSE, mchandras@suse.de)
