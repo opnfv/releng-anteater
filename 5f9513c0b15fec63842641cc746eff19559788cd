@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9ab8dda7_6cde616f",
+        "filename": "INFO",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 254
+      },
+      "writtenOn": "2017-05-12T22:28:23Z",
+      "side": 1,
+      "message": "I don\u0027t think we even have something called \"subproject\". \n\nThe only thing we have is a trial activity to create additional repos for existing projects and this is part of that effort.\n\nI suggest you to not include INFO file at all or it will make things a lot confusing.",
+      "parentUuid": "9ab8dda7_91ac0e37",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "5f9513c0b15fec63842641cc746eff19559788cd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ab8dda7_71b15a8e",
         "filename": "INFO",
         "patchSetId": 1
