@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ab8dda7_cb908a45",
+        "filename": "anteater/src/get_lists.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-05-20T05:50:46Z",
+      "side": 1,
+      "message": "what about put these 2 lines in __init__",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 26
+      },
+      "revId": "a565504fb3dbd50600199e5acab3278166075716",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_eb930e4d",
+        "filename": "anteater/src/get_lists.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-05-20T05:50:46Z",
+      "side": 1,
+      "message": "what about move these 2 before if project_list, for it is the same as else\n\nand is there any issue when default_list is undefined?",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 55
+      },
+      "revId": "a565504fb3dbd50600199e5acab3278166075716",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_3a7c0db5",
+        "filename": "anteater/src/patch_scan.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-05-20T05:50:46Z",
+      "side": 1,
+      "message": "shall we use multi-line regex or search?",
+      "range": {
+        "startLine": 108,
+        "startChar": 8,
+        "endLine": 108,
+        "endChar": 26
+      },
+      "revId": "a565504fb3dbd50600199e5acab3278166075716",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_da4cd1a0",
+        "filename": "anteater/src/patch_scan.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-05-20T05:50:46Z",
+      "side": 1,
+      "message": "it\u0027s better to open and write to the file out fo the for loop",
+      "range": {
+        "startLine": 119,
+        "startChar": 16,
+        "endLine": 119,
+        "endChar": 71
+      },
+      "revId": "a565504fb3dbd50600199e5acab3278166075716",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_fa519536",
+        "filename": "anteater/src/patch_scan.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-05-20T05:50:46Z",
+      "side": 1,
+      "message": "is this just for test?",
+      "range": {
+        "startLine": 146,
+        "startChar": 23,
+        "endLine": 146,
+        "endChar": 29
+      },
+      "revId": "a565504fb3dbd50600199e5acab3278166075716",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_9a42d966",
+        "filename": "gatechecks.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-05-20T05:50:46Z",
+      "side": 1,
+      "message": "shall we add some directories to ignore?",
+      "range": {
+        "startLine": 8,
+        "startChar": 81,
+        "endLine": 8,
+        "endChar": 91
+      },
+      "revId": "a565504fb3dbd50600199e5acab3278166075716",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab8dda7_ba479d76",
+        "filename": "gatechecks.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-05-20T05:50:46Z",
+      "side": 1,
+      "message": "shall we include txt files",
+      "range": {
+        "startLine": 35,
+        "startChar": 16,
+        "endLine": 35,
+        "endChar": 22
+      },
+      "revId": "a565504fb3dbd50600199e5acab3278166075716",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
