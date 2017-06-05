@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_086851b9",
+        "filename": "anteater.conf",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1451
+      },
+      "writtenOn": "2017-06-05T17:33:16Z",
+      "side": 1,
+      "message": "Is there a implied requirement here to create an OPNFV user? Could this be set to the current user, or perhaps a local path?",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 50
+      },
+      "revId": "0142c227fca974fb65561d0aeb9b38c8683e22e6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_28650de1",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1451
+      },
+      "writtenOn": "2017-06-05T17:33:16Z",
+      "side": 1,
+      "message": "Is there a USER set from the \u0027centos\u0027 image? If not one should be specified otherwise this container will run as root.",
+      "revId": "0142c227fca974fb65561d0aeb9b38c8683e22e6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aaae553_486e49cb",
+        "filename": "tasks.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1451
+      },
+      "writtenOn": "2017-06-05T17:33:16Z",
+      "side": 1,
+      "message": "It\u0027s preferable to use twine[0] here, as its more secure and also allows you to easily add detached GPG signatures.\n\n[0] https://pypi.python.org/pypi/twine",
+      "revId": "0142c227fca974fb65561d0aeb9b38c8683e22e6",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
