@@ -13,6 +13,9 @@ FROM centos:latest
 MAINTAINER Luke Hinds <lhinds@redhat.com>
 LABEL version="0.1" description="Anteater - OPNFV Gerrit Security Gate Checks"
 
+# environment variables
+ARG BRANCH=master
+
 ENV HOME /home/opnfv
 ENV ANT_HOME ${HOME}/anteater
 RUN mkdir -p ${ANT_HOME}
