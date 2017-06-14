@@ -99,7 +99,7 @@ def scan_file(project_dir, project, binary_list, binary_project_list,
                                      format(line.rstrip()))
                         logger.error('Matched String: {0}'.
                                      format(match.group()))
-                        with open(reports_dir + "contents_" + project + ".log",
+                        with open(reports_dir + "contents-" + project + ".log",
                                   "a") \
                                 as gate_report:
                                     gate_report. \

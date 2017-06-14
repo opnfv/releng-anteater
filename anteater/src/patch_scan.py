@@ -160,5 +160,5 @@ def process_failure():
     """ If any scan operations register a failure, sys.exit(1) is called
         to allow jjb to register a failure"""
     if failure:
-        logger.error('Failures registered')
+        logger.error('Please visit: https://wiki.opnfv.org/x/5oey')
         sys.exit(1)
