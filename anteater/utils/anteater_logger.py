@@ -11,6 +11,7 @@
 
 import ConfigParser
 import logging
+import os
 
 config = ConfigParser.RawConfigParser()
 config.read('anteater.conf')
@@ -29,6 +30,14 @@ class Logger:
         ch.setFormatter(formatter)
         ch.setLevel(logging.DEBUG)
         self.logger.addHandler(ch)
+
+        # create the directory if not existed
+        path = os.path.dirname(anteater_log)
+        if ( False == os.path.exists(path)):
+            try:
+                os.makedirs(path)
+            except OSError as e:
+                raise e
 
         handler = logging.FileHandler(anteater_log)
         handler.setFormatter(formatter)
