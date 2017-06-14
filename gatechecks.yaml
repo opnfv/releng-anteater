@@ -5,8 +5,23 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [\.pdf,\.png,\.jpeg,\.jpg,\.gif,\.idx,\.pack,\.woff,\.ttf,\.eot,\.DS_Store,\.git/objects,\.git/index,
-                  \.otf,\.ico]
+  binary_ignore:
+    - \.DS_Store
+    - \.eot
+    - \.gif
+    - \.git/index
+    - \.git/objects
+    - \.ico
+    - \.idx
+    - \.jpeg
+    - \.jpg
+    - \.otf
+    - \.pack
+    - \.pdf
+    - \.png
+    - \.ttf
+    - \.woff
+
   releng:
     binary_ignore: [nullvalue]
   sandbox:
@@ -15,25 +30,93 @@ binaries:
     binary_ignore: [nullvalue]
 
 file_audits:
-  file_names: [\.gpg$,\.key$,\.asc$,\.sig$,\.md5,aws_access_key_id,aws_secret_access_key,id_rsa]
-  file_contents: [-----BEGIN\sRSA\sPRIVATE\sKEY----,secret,ssh_key,private_key,md5,wget,"curl(.*?)bash",eval,
-                 "sh(.*?)curl","git(.*?)clone",gost,md2,md4,md5,rc4,sha0,streebog,dual_ec_drbg,
-                 snefru,panama,ripemd,sslv1,sslv2,tlsv1]
+  file_names:
+    - \.asc$
+    - \.gpg$
+    - \.key$
+    - \.md5
+    - \.sig$
+    - aws_access_key_id
+    - aws_secret_access_key
+    - id_rsa
+  file_contents:
+    - -----BEGIN\sRSA\sPRIVATE\sKEY----
+    - "curl(.*?)bash"
+    - "git(.*?)clone"
+    - "sh(.*?)curl"
+    - dual_ec_drbg
+    - eval
+    - gost
+    - md2
+    - md4
+    - md5
+    - md5
+    - panama
+    - private_key
+    - rc4
+    - ripemd
+    - secret
+    - sha0
+    - snefru
+    - ssh_key
+    - sslv1
+    - sslv2
+    - streebog
+    - tlsv1
+    - wget
   releng:
     file_names: [nullvalue]
-    file_contents: [slave_secret,self\.local_ssh_key,self\.proxy_ssh_key,jh_ssh_key='/root/\.ssh/id_rsa',fa-user-secret,
-                     -s  set secret key,paramiko\.RSAKey\.from_private_key_file\(pkey_file\),git clone the Openstack-Ansible,
-                     secret not defined,user_secrets\.yml,wget -O /tmp/get-pip\.py,"PKG_MAP\\[wget\\]",^wget \\,
-                     "git clone(.*)gerrit\\.opnfv\\.org","git clone(.*)\\.openstack\\.org",wget(.*)build.opnfv.org,
-                     wget --version,"\\[wget\\]=wget",git repositories of XCI,"packages = \\['parted', 'puppet', 'wget'",
-                     bifrost_ssh_private_key,github\.com/maestrodev/puppet-wget,"wget http://repo1\\.maven\\.org",
-                     elif type wget >/dev/null,wget \$get_pip_url,"wget(.*)puppetlabs\\.com",git_clone(.*)MOD(.*)MODULE_PATH(.*)MODULE_NAME,
-                     git clone \$MOD \$DEST,function git_clone,"name: SSH_KEY","name: GIT_CLONE_BASE",
-                     wget -q -O \$ODL_ZIP \$NETVIRT_ARTIFACT_URL,git clone(.*)\$GIT_BASE(.*)\$WORKSPACE,
-                     git clone --quiet --branch \$BRANCH \$LAB_CONFIG_URL lab-config,git clone(.*)\$OPENSTACK_OSA_GIT_URL,
-                     wget --directory-prefix=(.*)SNAP_CACHE(.*)snap_url(.*),sudo yum -y install wget,cacheValues,isInfiniteValue,
-                     wget(.*)WORKSPACE/opnfv\.properties(.*)GS_URL(.*)properties,wget > /dev/null,fileValidationError,eval_collection,
-                     eval_db,if \(name === 'evals'\),evaluate,value,ast\.literal_eva,_eval_pods_db,new = eval\(obj\)]
+    file_contents:
+      - -s  set secret key
+      - "PKG_MAP\\[wget\\]"
+      - "\\[wget\\]=wget"
+      - "git clone(.*)\\.openstack\\.org"
+      - "git clone(.*)gerrit\\.opnfv\\.org"
+      - "name: GIT_CLONE_BASE"
+      - "name: SSH_KEY"
+      - "packages = \\['parted', 'puppet', 'wget'"
+      - "wget http://repo1\\.maven\\.org"
+      - "wget(.*)puppetlabs\\.com"
+      - ^wget \\
+      - _eval_pods_db
+      - ast\.literal_eva
+      - bifrost_ssh_private_key
+      - cacheValues
+      - elif type wget >/dev/null
+      - eval_collection
+      - eval_db
+      - evaluate
+      - fa-user-secret
+      - fileValidationError
+      - function git_clone
+      - git clone --quiet --branch \$BRANCH \$LAB_CONFIG_URL lab-config
+      - git clone \$MOD \$DEST
+      - git clone the Openstack-Ansible
+      - git clone(.*)\$GIT_BASE(.*)\$WORKSPACE
+      - git clone(.*)\$OPENSTACK_OSA_GIT_URL
+      - git repositories of XCI
+      - git_clone(.*)MOD(.*)MODULE_PATH(.*)MODULE_NAME
+      - github\.com/maestrodev/puppet-wget
+      - if \(name === 'evals'\)
+      - isInfiniteValue
+      - jh_ssh_key='/root/\.ssh/id_rsa'
+      - new = eval\(obj\)
+      - paramiko\.RSAKey\.from_private_key_file\(pkey_file\)
+      - secret not defined
+      - self\.local_ssh_key
+      - self\.proxy_ssh_key
+      - slave_secret
+      - sudo yum -y install wget
+      - user_secrets\.yml
+      - value
+      - wget --directory-prefix=(.*)SNAP_CACHE(.*)snap_url(.*)
+      - wget --version
+      - wget -O /tmp/get-pip\.py
+      - wget -q -O \$ODL_ZIP \$NETVIRT_ARTIFACT_URL
+      - wget > /dev/null
+      - wget \$get_pip_url
+      - wget(.*)WORKSPACE/opnfv\.properties(.*)GS_URL(.*)properties
+      - wget(.*)build.opnfv.org
   sandbox:
     file_names: [nullvalue]
     file_contents: [nullvalue]
@@ -42,6 +125,13 @@ file_audits:
     file_contents: [nullvalue]
 
 licence:
-  licence_ext: ['.rst','.md','.py','.sh','.java','.rb']
-  licence_ignore: ['__init__.py']
+  licence_ext:
+    - '.java'
+    - '.md'
+    - '.py'
+    - '.rb'
+    - '.rst'
+    - '.sh'
+  licence_ignore:
+    - '__init__.py'
 
