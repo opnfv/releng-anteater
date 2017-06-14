@@ -11,6 +11,8 @@ binaries:
     binary_ignore: [nullvalue]
   sandbox:
     binary_ignore: [nullvalue]
+  testproj:
+    binary_ignore: [nullvalue]
 
 file_audits:
   file_names: [\.gpg$,\.key$,\.asc$,\.sig$,\.md5,aws_access_key_id,aws_secret_access_key,id_rsa]
@@ -33,6 +35,9 @@ file_audits:
                      wget(.*)WORKSPACE/opnfv\.properties(.*)GS_URL(.*)properties,wget > /dev/null,fileValidationError,eval_collection,
                      eval_db,if \(name === 'evals'\),evaluate,value,ast\.literal_eva,_eval_pods_db,new = eval\(obj\)]
   sandbox:
+    file_names: [nullvalue]
+    file_contents: [nullvalue]
+  testproj:
     file_names: [nullvalue]
     file_contents: [nullvalue]
 
