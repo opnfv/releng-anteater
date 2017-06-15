@@ -16,6 +16,8 @@
 
 import anteater.utils.anteater_logger as antlog
 import ConfigParser
+import copy
+import os
 import yaml
 import re
 
@@ -27,14 +29,45 @@ gate_checks = config.get('config', 'gate_checks')
 with open(gate_checks, 'r') as f:
     yl = yaml.safe_load(f)
 
+def _remove_nullvalue(contents):
+    if contents and len(contents) > 2 and 'nullvalue' in contents:
+        contents.remove('nullvalue')
+
+def _merge(org, ded):
+    ret = copy.deepcopy(org)
+    for key in list(set([k for k in org] + [k for k in ded])):
+        if key in org and key in ded:
+            ret[key] = list(set(ret[key] + ded[key]))
+            _remove_nullvalue(ret[key])
+        elif key in ded:
+            ret[key] = ded[key]
+    return ret
 
 class GetLists(object):
     def __init__(self, *args):
         # Placeholder for future args if more filters are needed
         self.args = args
+        self.loaded = False
+
+    def load_project_exception_file(self, project_config, project):
+        if self.loaded:
+            return
+        exception_file = None
+        for item in project_config:
+            if project in item:
+                exception_file = item.get(project)
+        if exception_file is not None:
+            with open(exception_file, 'r') as f:
+                ex = yaml.safe_load(f)
+            for key in ex:
+                if key in yl:
+                    yl[key][project] = _merge(yl[key][project], ex.get(key, None)) \
+                            if project in yl[key] else ex.get(key, None)
+            self.loaded = True
 
     def binary_list(self, project):
         project_list = False
+        self.load_project_exception_file(yl.get('project_config'), project)
         try:
             default_list = (yl['binaries']['binary_ignore'])
         except KeyError:
@@ -58,6 +91,7 @@ class GetLists(object):
 
     def file_audit_list(self, project):
         project_list = False
+        self.load_project_exception_file(yl.get('project_config'), project)
         try:
             default_list = set((yl['file_audits']['file_names']))
         except KeyError:
@@ -83,6 +117,7 @@ class GetLists(object):
 
     def file_content_list(self,  project):
         project_list = False
+        self.load_project_exception_file(yl.get('project_config'), project)
         try:
             default_list = set((yl['file_audits']['file_contents']))
         except KeyError:

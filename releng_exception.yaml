@@ -1,0 +1,61 @@
+# When adding projects all `arrays: []` sections must have
+# a value, Use 'nullvalue' if no waivers are available.
+#
+# This file uses standard regular expression syntax,  however be mindful
+# of escaping YAML delimiters too (such as `:`) using double quotes "".
+
+binaries:
+  binary_ignore: [nullvalue]
+file_audits:
+  file_names: [nullvalue]
+  file_contents:
+    - -s  set secret key
+    - "PKG_MAP\\[wget\\]"
+    - "\\[wget\\]=wget"
+    - "git clone(.*)\\.openstack\\.org"
+    - "git clone(.*)gerrit\\.opnfv\\.org"
+    - "name: GIT_CLONE_BASE"
+    - "name: SSH_KEY"
+    - "packages = \\['parted', 'puppet', 'wget'"
+    - "wget http://repo1\\.maven\\.org"
+    - "wget(.*)puppetlabs\\.com"
+    - ^wget \\
+    - _eval_pods_db
+    - ast\.literal_eva
+    - bifrost_ssh_private_key
+    - cacheValues
+    - elif type wget >/dev/null
+    - eval_collection
+    - eval_db
+    - evaluate
+    - fa-user-secret
+    - fileValidationError
+    - function git_clone
+    - git clone --quiet --branch \$BRANCH \$LAB_CONFIG_URL lab-config
+    - git clone \$MOD \$DEST
+    - git clone the Openstack-Ansible
+    - git clone(.*)\$GIT_BASE(.*)\$WORKSPACE
+    - git clone(.*)\$OPENSTACK_OSA_GIT_URL
+    - git repositories of XCI
+    - git_clone(.*)MOD(.*)MODULE_PATH(.*)MODULE_NAME
+    - github\.com/maestrodev/puppet-wget
+    - if \(name === 'evals'\)
+    - isInfiniteValue
+    - jh_ssh_key='/root/\.ssh/id_rsa'
+    - new = eval\(obj\)
+    - paramiko\.RSAKey\.from_private_key_file\(pkey_file\)
+    - secret not defined
+    - self\.local_ssh_key
+    - self\.proxy_ssh_key
+    - slave_secret
+    - sudo yum -y install wget
+    - user_secrets\.yml
+    - value
+    - wget --directory-prefix=(.*)SNAP_CACHE(.*)snap_url(.*)
+    - wget --version
+    - wget -O /tmp/get-pip\.py
+    - wget -q -O \$ODL_ZIP \$NETVIRT_ARTIFACT_URL
+    - wget > /dev/null
+    - wget \$get_pip_url
+    - wget(.*)WORKSPACE/opnfv\.properties(.*)GS_URL(.*)properties
+    - wget(.*)build.opnfv.org
