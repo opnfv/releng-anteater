@@ -16,6 +16,7 @@
 
 import anteater.utils.anteater_logger as antlog
 import ConfigParser
+import os
 import yaml
 import re
 
@@ -28,13 +29,31 @@ with open(gate_checks, 'r') as f:
     yl = yaml.safe_load(f)
 
 
+def remove_nullvalue(contents):
+    if contents and len(contents) > 2 and 'nullvalue' in contents:
+        contents.remove('nullvalue')
+
 class GetLists(object):
     def __init__(self, *args):
         # Placeholder for future args if more filters are needed
         self.args = args
 
+    # TODO: avoid to load the safe file multiple times
+    def load_project_exception_file(self, project_config):
+        if project_config.has_key('exception_filename'):
+            exception_file = project_config.get('exception_filename')
+            with open(exception_file, 'r') as f:
+                ex = yaml.safe_load(f)
+            if ex is not None and ex.has_key('file_contents'):
+                project_config['file_contents'] = list(set(
+                    (project_config.get('file_contents')
+                        if project_config.get('file_contents') else [])
+                    + ex.get('file_contents')))
+                remove_nullvalue(project_config['file_contents'])
+
     def binary_list(self, project):
         project_list = False
+        self.load_project_exception_file(yl.get('file_audits').get(project))
         try:
             default_list = (yl['binaries']['binary_ignore'])
         except KeyError:
@@ -58,6 +77,7 @@ class GetLists(object):
 
     def file_audit_list(self, project):
         project_list = False
+        self.load_project_exception_file(yl.get('file_audits').get(project))
         try:
             default_list = set((yl['file_audits']['file_names']))
         except KeyError:
@@ -83,6 +103,7 @@ class GetLists(object):
 
     def file_content_list(self,  project):
         project_list = False
+        self.load_project_exception_file(yl.get('file_audits').get(project))
         try:
             default_list = set((yl['file_audits']['file_contents']))
         except KeyError:
