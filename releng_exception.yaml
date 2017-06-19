@@ -9,6 +9,7 @@ binaries:
 file_audits:
   file_names: [nullvalue]
   file_contents:
+    - ^#
     - -s  set secret key
     - "PKG_MAP\\[wget\\]"
     - "\\[wget\\]=wget"
