@@ -57,6 +57,7 @@ def prepare_project(project, project_dir):
 
     # Perform licence header checks
     licence_check(licence_ext, licence_ignore, project, project_dir)
+    licence_root_check(project_dir, project)
 
 
 def scan_file(project_dir, project, binary_list, binary_project_list,
@@ -122,6 +123,20 @@ def scan_file(project_dir, project, binary_list, binary_project_list,
                             as gate_report:
                         gate_report.write('Non Whitelisted Binary: {0}\n'.
                                           format(full_path))
+
+
+def licence_root_check(project_dir, project):
+    if os.path.isfile(project_dir + '/LICENSE'):
+        logger.info('LICENSE file present in: {0}'.
+                    format(project_dir))
+    else:
+        logger.error('LICENSE file missing in: {0}'.
+                     format(project_dir))
+        with open(reports_dir + "licence-" + project + ".log",
+                  "a") \
+                as gate_report:
+            gate_report.write('LICENSE file missing in: {0}\n'.
+                              format(project_dir))
 
 
 def licence_check(licence_ext, licence_ignore, project, project_dir):
