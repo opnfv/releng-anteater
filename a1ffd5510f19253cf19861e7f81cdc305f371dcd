@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_1d6967f9",
+        "filename": "anteater/src/project_scan.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 483
+      },
+      "writtenOn": "2017-06-19T16:14:11Z",
+      "side": 1,
+      "message": "is the LICENSE file necessary?\n\nin some project they may include the license information in every file.",
+      "range": {
+        "startLine": 129,
+        "startChar": 22,
+        "endLine": 129,
+        "endChar": 46
+      },
+      "revId": "a1ffd5510f19253cf19861e7f81cdc305f371dcd",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
