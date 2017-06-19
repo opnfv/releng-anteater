@@ -69,6 +69,6 @@ licence:
     - '__init__.py'
 
 project_config:
-  - releng: releng_exception.yaml
-  - sandbox: sandbox_exception.yaml
-  - testproj: sandbox_exception.yaml
+  - releng: exceptions/releng_exception.yaml
+  - sandbox: exceptions/sandbox_exception.yaml
+  - testproj: exceptions/sandbox_exception.yaml
