@@ -13,15 +13,17 @@
     Gathers various values from the gate check yaml file and return them to the
     calling instance
 """
+from __future__ import absolute_import
 
 import anteater.utils.anteater_logger as antlog
-import ConfigParser
+import six.moves.configparser
 import copy
 import os
 import yaml
 import re
 
-config = ConfigParser.RawConfigParser()
+
+config = six.moves.configparser.RawConfigParser()
 config.read('anteater.conf')
 logger = antlog.Logger(__name__).getLogger()
 master_list = config.get('config', 'master_list')

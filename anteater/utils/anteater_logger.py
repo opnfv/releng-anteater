@@ -9,11 +9,14 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-import ConfigParser
-import logging
-import os
+from __future__ import absolute_import
 
-config = ConfigParser.RawConfigParser()
+import logging
+
+import os
+import six.moves.configparser
+
+config = six.moves.configparser.RawConfigParser()
 config.read('anteater.conf')
 anteater_log = config.get('config', 'anteater_log')
 
