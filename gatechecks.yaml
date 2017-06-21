@@ -5,18 +5,68 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [\.pdf,\.png,\.jpeg,\.jpg,\.gif,\.idx,\.pack,\.woff,\.ttf,\.eot,\.DS_Store,\.git/objects,\.git/index,
-                  \.otf,\.ico]
+  binary_ignore:
+    - \.DS_Store
+    - \.eot
+    - \.gif
+    - \.git/index
+    - \.git/objects
+    - \.ico
+    - \.idx
+    - \.jpeg
+    - \.jpg
+    - \.otf
+    - \.pack
+    - \.pdf
+    - \.png
+    - \.ttf
+    - \.woff
 
 file_audits:
-  file_names: [\.gpg$,\.key$,\.asc$,\.sig$,\.md5,aws_access_key_id,aws_secret_access_key,id_rsa]
-  file_contents: [-----BEGIN\sRSA\sPRIVATE\sKEY----,secret,ssh_key,private_key,md5,wget,"curl(.*?)bash",eval,
-                 "sh(.*?)curl","git(.*?)clone",gost,md2,md4,md5,rc4,sha0,streebog,dual_ec_drbg,
-                 snefru,panama,ripemd,sslv1,sslv2,tlsv1]
+  file_names:
+    - \.asc$
+    - \.gpg$
+    - \.key$
+    - \.md5
+    - \.sig$
+    - aws_access_key_id
+    - aws_secret_access_key
+    - id_rsa
+  file_contents:
+    - -----BEGIN\sRSA\sPRIVATE\sKEY----
+    - "curl(.*?)bash"
+    - "git(.*?)clone"
+    - "sh(.*?)curl"
+    - dual_ec_drbg
+    - eval
+    - gost
+    - md2
+    - md4
+    - md5
+    - panama
+    - private_key
+    - rc4
+    - ripemd
+    - secret
+    - sha0
+    - snefru
+    - ssh_key
+    - sslv1
+    - sslv2
+    - streebog
+    - tlsv1
+    - wget
 
 licence:
-  licence_ext: ['.rst','.md','.py','.sh','.java','.rb']
-  licence_ignore: ['__init__.py']
+  licence_ext:
+    - '.java'
+    - '.md'
+    - '.py'
+    - '.rb'
+    - '.rst'
+    - '.sh'
+  licence_ignore:
+    - '__init__.py'
 
 project_config:
   - releng: releng_exception.yaml
