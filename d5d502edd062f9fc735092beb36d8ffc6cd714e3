@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_d54de373",
+        "filename": "master_list.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 254
+      },
+      "writtenOn": "2017-06-21T23:01:34Z",
+      "side": 1,
+      "message": "can we have the project exception list filenames aligned and use only the project names as filename since the parent folder already says these are exception files?",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 38
+      },
+      "revId": "d5d502edd062f9fc735092beb36d8ffc6cd714e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
