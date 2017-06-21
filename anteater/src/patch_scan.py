@@ -19,14 +19,14 @@
 from __future__ import division, print_function, absolute_import
 from binaryornot.check import is_binary
 import anteater.utils.anteater_logger as antlog
-import anteater.src.get_lists as get_lists
-import ConfigParser
+import six.moves.configparser
 import sys
 import re
 
+from . import get_lists
 
 logger = antlog.Logger(__name__).getLogger()
-config = ConfigParser.RawConfigParser()
+config = six.moves.configparser.RawConfigParser()
 config.read('anteater.conf')
 reports_dir = config.get('config', 'reports_dir')
 failure = False
