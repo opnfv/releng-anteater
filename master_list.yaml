@@ -64,6 +64,8 @@ licence:
     - '__init__.py'
 
 project_exceptions:
-  - releng: exceptions/releng_exception.yaml
-  - sandbox: exceptions/sandbox_exception.yaml
-  - testproj: exceptions/sandbox_exception.yaml
+  - releng:   exceptions/releng.yaml
+  - sandbox:  exceptions/sandbox.yaml
+  - pharos:   exceptions/pharos.yaml
+  - octopus:  exceptions/octopus.yaml
+  - functest: exceptions/functest.yaml
