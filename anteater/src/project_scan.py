@@ -27,7 +27,7 @@ logger = antlog.Logger(__name__).getLogger()
 config = ConfigParser.RawConfigParser()
 config.read('anteater.conf')
 reports_dir = config.get('config', 'reports_dir')
-gate_checks = config.get('config', 'gate_checks')
+master_list = config.get('config', 'master_list')
 ignore_dirs = ['.git']
 
 

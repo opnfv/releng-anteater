@@ -63,7 +63,7 @@ licence:
   licence_ignore:
     - '__init__.py'
 
-project_config:
+project_exceptions:
   - releng: exceptions/releng_exception.yaml
   - sandbox: exceptions/sandbox_exception.yaml
   - testproj: exceptions/sandbox_exception.yaml
