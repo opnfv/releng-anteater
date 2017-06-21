@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aaae553_de9e6556",
+        "filename": "gatechecks.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-06-21T02:32:26Z",
+      "side": 1,
+      "message": "is this section only used for exceptions? if so how about naming in \u0027project_exceptions\u0027 directly?",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 14
+      },
+      "revId": "9067077eb11c606b8ebe98338457fad894dc38d1",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
