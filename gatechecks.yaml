@@ -9,12 +9,10 @@ binaries:
     - \.DS_Store
     - \.eot
     - \.gif
-    - \.git/index
-    - \.git/objects
+    - \.git/(index|objects)
     - \.ico
     - \.idx
-    - \.jpeg
-    - \.jpg
+    - \.jp(e?)g
     - \.otf
     - \.pack
     - \.pdf
@@ -40,9 +38,7 @@ file_audits:
     - dual_ec_drbg
     - eval
     - gost
-    - md2
-    - md4
-    - md5
+    - md[245]
     - panama
     - private_key
     - rc4
@@ -51,8 +47,7 @@ file_audits:
     - sha0
     - snefru
     - ssh_key
-    - sslv1
-    - sslv2
+    - sslv[12]
     - streebog
     - tlsv1
     - wget
