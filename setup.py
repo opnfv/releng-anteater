@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 import re
 import sys
 from setuptools.command.test import test as TestCommand
@@ -37,7 +38,7 @@ def find_version(fname):
         raise RuntimeError('Cannot find version information')
     return version
 
-__version__ = find_version("anteater/anteater.py")
+__version__ = find_version("anteater/main.py")
 
 
 def read(fname):
@@ -64,6 +65,8 @@ setup(
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.7',
+        "Programming Language :: Python :: 3",
+        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
@@ -71,7 +74,7 @@ setup(
     py_modules=["anteater"],
     entry_points={
         'console_scripts': [
-            "anteater = anteater.anteater:main"
+            "anteater = anteater.main:main"
         ]
     },
     tests_require=['pytest'],

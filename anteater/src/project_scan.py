@@ -16,16 +16,17 @@
 """
 
 from __future__ import division, print_function, absolute_import
-import ConfigParser
 import hashlib
+import six.moves.configparser
 import os
 import re
 import anteater.utils.anteater_logger as antlog
-import anteater.src.get_lists as get_lists
 from binaryornot.check import is_binary
 
+from . import get_lists
+
 logger = antlog.Logger(__name__).getLogger()
-config = ConfigParser.RawConfigParser()
+config = six.moves.configparser.RawConfigParser()
 config.read('anteater.conf')
 reports_dir = config.get('config', 'reports_dir')
 master_list = config.get('config', 'master_list')

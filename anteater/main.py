@@ -23,16 +23,17 @@ Options:
   -h --help     Show this screen.
   --version     Show version.
 """
+from __future__ import absolute_import
 
-import ConfigParser
+import six.moves.configparser
 from docopt import docopt
 import os
-from src.patch_scan import prepare_patchset
-from src.project_scan import prepare_project
-import utils.anteater_logger as antlog
+from anteater.src.patch_scan import prepare_patchset
+from anteater.src.project_scan import prepare_project
+from anteater.utils import anteater_logger as antlog
 
 
-config = ConfigParser.RawConfigParser()
+config = six.moves.configparser.RawConfigParser()
 config.read('anteater.conf')
 reports_dir = config.get('config', 'reports_dir')
 logger = antlog.Logger(__name__).getLogger()
