@@ -66,4 +66,6 @@ licence:
 project_exceptions:
   - releng: exceptions/releng_exception.yaml
   - sandbox: exceptions/sandbox_exception.yaml
-  - testproj: exceptions/sandbox_exception.yaml
+  - pharos: exceptions/pharos_exception.yaml
+  - octopus: exceptions/octopus.yaml
+  - functest: exceptions/functest.yaml
