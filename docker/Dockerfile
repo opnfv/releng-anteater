@@ -15,10 +15,13 @@ LABEL version="0.1" description="Anteater - OPNFV Gerrit Security Gate Checks"
 
 # environment variables
 ARG BRANCH=master
+ARG ANTEATER_USER=opnfv
 
-ENV HOME /home/opnfv
-ENV ANT_HOME ${HOME}/anteater
-RUN mkdir -p ${ANT_HOME}
+# Anteater is run as user 'opnfv'
+RUN useradd -U -m -s /bin/bash ${ANTEATER_USER}
+
+ENV HOME /home/${ANTEATER_USER}
+ENV ANTEATER_HOME ${HOME}/anteater
 
 # Packaged dependencies
 RUN yum -y install epel-release
@@ -26,8 +29,12 @@ RUN yum -y update
 RUN yum -y install git python-devel python-pip
 RUN yum clean all
 
+# Run all following commands and container as non-root user
+USER ${ANTEATER_USER}
+
 # Commands to clone and install
-RUN git clone https://gerrit.opnfv.org/gerrit/releng-anteater ${ANT_HOME}
-WORKDIR ${ANT_HOME}
-RUN /usr/bin/pip install -r ${ANT_HOME}/requirements.txt
-RUN python ${ANT_HOME}/setup.py install
+RUN mkdir -p ${ANTEATER_HOME}
+RUN git clone https://gerrit.opnfv.org/gerrit/releng-anteater ${ANTEATER_HOME}
+WORKDIR ${ANTEATER_HOME}
+RUN /usr/bin/pip install -r ${ANTEATER_HOME}/requirements.txt
+RUN python ${ANTEATER_HOME}/setup.py install
