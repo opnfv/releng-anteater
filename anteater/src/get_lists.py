@@ -78,8 +78,7 @@ class GetLists(object):
         try:
             project_list = (yl['binaries'][project]['binary_ignore'])
         except KeyError:
-            logger.info('No binary waivers found for {0}'.
-                        format(project))
+            logger.info('No binary waivers found for %s', project)
 
         binary_re = re.compile("|".join(default_list),
                 flags=re.IGNORECASE)
@@ -101,11 +100,9 @@ class GetLists(object):
             logger.error('Key Error processing file_names list values')
         try:
             project_list = set((yl['file_audits'][project]['file_names']))
-            logger.info('file_names waivers found for {0}'.
-                        format(project))
+            logger.info('file_names waivers found for %s', project)
         except KeyError:
-            logger.info('No file_names waivers found for {0}'.
-                        format(project))
+            logger.info('No file_names waivers found for %s', project)
 
         file_names_re = re.compile("|".join(default_list),
                                    flags=re.IGNORECASE)
@@ -128,8 +125,7 @@ class GetLists(object):
         try:
             project_list = set((yl['file_audits'][project]['file_contents']))
         except KeyError:
-            logger.info('No file_contents waivers found  for {0}'.
-                        format(project))
+            logger.info('No file_contents waivers found  for %s', project)
 
         file_contents_re = re.compile("|".join(default_list),
                                       flags=re.IGNORECASE)
