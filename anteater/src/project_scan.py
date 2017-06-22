@@ -75,10 +75,8 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
             if file_audit_list.search(full_path) and not \
                     file_audit_project_list.search(full_path):
                 match = file_audit_list.search(full_path)
-                logger.error('Blacklisted filename: {0}'.
-                             format(full_path))
-                logger.error('Matched String: {0}'.
-                             format(match.group()))
+                logger.error('Blacklisted filename: %s', full_path)
+                logger.error('Matched String: %s', match.group())
                 with open(reports_dir + "file-names_" + project + ".log",
                           "a") as gate_report:
                             gate_report. \
@@ -96,12 +94,9 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                     if file_content_list.search(line) and not \
                             project_content_list.search(line):
                         match = file_content_list.search(line)
-                        logger.error('File contains violation: {0}'.
-                                     format(full_path))
-                        logger.error('Flagged Content: {0}'.
-                                     format(line.rstrip()))
-                        logger.error('Matched String: {0}'.
-                                     format(match.group()))
+                        logger.error('File contains violation: %s', full_path)
+                        logger.error('Flagged Content: %s', line.rstrip())
+                        logger.error('Matched String: %s', match.group())
                         with open(reports_dir + "contents-" + project + ".log",
                                   "a") \
                                 as gate_report:
@@ -123,13 +118,13 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                         buf = afile.read()
                         hasher.update(buf)
                     if hasher.hexdigest() in binary_hash:
-                        logger.info('Found matching file hash for file: {0}'.
-                                    format(full_path))
+                        logger.info('Found matching file hash for file: %s',
+                                    full_path)
                     else:
-                        logger.error('Non Whitelisted Binary file: {0}'.
-                                     format(full_path))
-                        logger.error('Please submit patch with this hash: {0}'.
-                                     format(hasher.hexdigest()))
+                        logger.error('Non Whitelisted Binary file: %s',
+                                     full_path)
+                        logger.error('Please submit patch with this hash: %s',
+                                     hasher.hexdigest())
                         with open(reports_dir + "binaries-" + project + ".log",
                                   "a") \
                                 as gate_report:
@@ -139,11 +134,9 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
 
 def licence_root_check(project_dir, project):
     if os.path.isfile(project_dir + '/LICENSE'):
-        logger.info('LICENSE file present in: {0}'.
-                    format(project_dir))
+        logger.info('LICENSE file present in: %s', project_dir)
     else:
-        logger.error('LICENSE file missing in: {0}'.
-                     format(project_dir))
+        logger.error('LICENSE file missing in: %s', project_dir)
         with open(reports_dir + "licence-" + project + ".log",
                   "a") \
                 as gate_report:
@@ -166,14 +159,11 @@ def licence_check(licence_ext, licence_ignore, project, project_dir):
                     # of a decision made at 2017 plugfest to limit searches to
                     # just these two strings.
                     if re.search("copyright", content, re.IGNORECASE):
-                        logger.info('Licence string present: {0}'.
-                                    format(full_path))
+                        logger.info('Licence string present: %s', full_path)
                     elif re.search("spdx", content, re.IGNORECASE):
-                        logger.info('Licence string present: {0}'.
-                                    format(full_path))
+                        logger.info('Licence string present: %s', full_path)
                     else:
-                        logger.error('Licence header missing: {0}'.
-                                     format(full_path))
+                        logger.error('Licence header missing: %s', full_path)
                         with open(reports_dir + "licence-" + project + ".log",
                                   "a") \
                                 as gate_report:
