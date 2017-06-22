@@ -87,8 +87,7 @@ class GetLists(object):
             binary_hash = (yl['binaries'][project][file_name])
             return binary_hash
         except KeyError:
-            logger.info('No checksum entries found for {0}'.
-                        format(file_name))
+            logger.info('No checksum entries found for %s', file_name)
             binary_hash = 'null'
             return binary_hash
 
@@ -102,11 +101,9 @@ class GetLists(object):
             logger.error('Key Error processing file_names list values')
         try:
             project_list = set((yl['file_audits'][project]['file_names']))
-            logger.info('file_names waivers found for {0}'.
-                        format(project))
+            logger.info('file_names waivers found for %s', project)
         except KeyError:
-            logger.info('No file_names waivers found for {0}'.
-                        format(project))
+            logger.info('No file_names waivers found for %s', project)
 
         file_names_re = re.compile("|".join(default_list),
                                    flags=re.IGNORECASE)
@@ -129,8 +126,7 @@ class GetLists(object):
         try:
             project_list = set((yl['file_audits'][project]['file_contents']))
         except KeyError:
-            logger.info('No file_contents waivers found  for {0}'.
-                        format(project))
+            logger.info('No file_contents waivers found  for %s', project)
 
         file_contents_re = re.compile("|".join(default_list),
                                       flags=re.IGNORECASE)
