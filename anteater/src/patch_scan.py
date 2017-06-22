@@ -84,13 +84,13 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
                 buf = afile.read()
                 hasher.update(buf)
             if hasher.hexdigest() in binary_hash:
-                logger.info('Found matching file hash for file: {0}'.
-                            format(patch_file))
+                logger.info('Found matching file hash for file: %s',
+                            patch_file)
             else:
-                logger.error('Non Whitelisted Binary file: {0}'.
-                             format(patch_file))
-                logger.error('Submit patch with the following hash: {0}'.
-                             format(hasher.hexdigest()))
+                logger.error('Non Whitelisted Binary file: %s',
+                             patch_file)
+                logger.error('Submit patch with the following hash: %s',
+                             hasher.hexdigest())
             failure = True
             with open(reports_dir + "binaries-" + project + ".log", "a") \
                     as gate_report:
@@ -101,10 +101,8 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
         if file_audit_list.search(patch_file) and not \
                     file_audit_project_list.search(patch_file):
             match = file_audit_list.search(patch_file)
-            logger.error('Blacklisted file: {0}'.
-                         format(patch_file))
-            logger.error('Matched String: {0}'.
-                         format(match.group()))
+            logger.error('Blacklisted file: %s', patch_file)
+            logger.error('Matched String: %s', match.group())
             failure = True
             with open(reports_dir + "file-names_" + project + ".log", "a") \
                     as gate_report:
@@ -121,12 +119,9 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
             if file_content_list.search(line) and not \
                     file_content_project_list.search(line):
                 match = file_content_list.search(line)
-                logger.error('File contains violation: {0}'.
-                             format(patch_file))
-                logger.error('Flagged Content: {0}'.
-                             format(line.rstrip()))
-                logger.error('Matched String: {0}'.
-                             format(match.group()))
+                logger.error('File contains violation: %s', patch_file)
+                logger.error('Flagged Content: %s', line.rstrip())
+                logger.error('Matched String: %s', match.group())
                 failure = True
                 with open(reports_dir + "contents_" + project + ".log",
                           "a") as gate_report:
@@ -153,14 +148,11 @@ def licence_check(project, licence_ext,
         # of a decision made at 2017 plugfest to limit searches to
         # just these two strings.
         if re.search("copyright", content, re.IGNORECASE):
-            logger.info('Contains needed Licence string: {0}'.
-                        format(patch_file))
+            logger.info('Contains needed Licence string: %s', patch_file)
         elif re.search("spdx", content, re.IGNORECASE):
-            logger.info('Contains needed Licence string: {0}'.
-                        format(patch_file))
+            logger.info('Contains needed Licence string: %s', patch_file)
         else:
-            logger.error('Licence header missing in file: {0}'.
-                         format(patch_file))
+            logger.error('Licence header missing in file: %s', patch_file)
             failure = True
             with open(reports_dir + "licence-" + project + ".log", "a") \
                     as gate_report:

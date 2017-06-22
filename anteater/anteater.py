@@ -43,7 +43,7 @@ def check_dir():
     """ Creates a directory for scan reports """
     try:
         os.makedirs(reports_dir)
-        logger.info('Creating reports directory: {0}'.format(reports_dir))
+        logger.info('Creating reports directory: %s', reports_dir)
     except OSError as e:
         if not os.path.isdir(reports_dir):
             logger.error(e)
