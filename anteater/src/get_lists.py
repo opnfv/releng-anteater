@@ -15,8 +15,8 @@
 """
 from __future__ import absolute_import
 
-import anteater.utils.anteater_logger as antlog
 import six.moves.configparser
+import logging
 import copy
 import os
 import yaml
@@ -25,7 +25,7 @@ import re
 
 config = six.moves.configparser.RawConfigParser()
 config.read('anteater.conf')
-logger = antlog.Logger(__name__).getLogger()
+logger = logging.getLogger(__name__)
 master_list = config.get('config', 'master_list')
 
 with open(master_list, 'r') as f:
