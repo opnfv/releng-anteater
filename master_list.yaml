@@ -1,3 +1,4 @@
+---
 # When adding projects all `arrays: []` sections must have
 # a value, Use 'nullvalue' if no waivers are available.
 #
@@ -64,8 +65,8 @@ licence:
     - '__init__.py'
 
 project_exceptions:
-  - releng:   exceptions/releng.yaml
-  - sandbox:  exceptions/sandbox.yaml
-  - pharos:   exceptions/pharos.yaml
-  - octopus:  exceptions/octopus.yaml
+  - releng: exceptions/releng.yaml
+  - sandbox: exceptions/sandbox.yaml
+  - pharos: exceptions/pharos.yaml
+  - octopus: exceptions/octopus.yaml
   - functest: exceptions/functest.yaml
