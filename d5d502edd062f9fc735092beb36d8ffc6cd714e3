@@ -22,6 +22,30 @@
       "revId": "d5d502edd062f9fc735092beb36d8ffc6cd714e3",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_43d3a638",
+        "filename": "master_list.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-06-23T03:42:13Z",
+      "side": 1,
+      "message": "Agree, and the same rule for other items, for example, licence and licence_ext/licence_ignore, all have duplicated naming \u0027licence\u0027",
+      "parentUuid": "5aaae553_d54de373",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 38
+      },
+      "revId": "d5d502edd062f9fc735092beb36d8ffc6cd714e3",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
