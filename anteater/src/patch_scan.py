@@ -21,6 +21,7 @@ from binaryornot.check import is_binary
 import anteater.utils.anteater_logger as antlog
 import anteater.src.get_lists as get_lists
 import ConfigParser
+import hashlib
 import sys
 import re
 
@@ -30,6 +31,7 @@ config = ConfigParser.RawConfigParser()
 config.read('anteater.conf')
 reports_dir = config.get('config', 'reports_dir')
 failure = False
+hasher = hashlib.sha256()
 
 
 def prepare_patchset(project, patchset):
@@ -39,7 +41,7 @@ def prepare_patchset(project, patchset):
     # Get Various Lists / Project Waivers
     lists = get_lists.GetLists()
     # Get binary white list
-    binary_list, binary_project_list = lists.binary_list(project)
+    binary_list = lists.binary_list(project)
 
     # Get file name black list and project waivers
     file_audit_list, file_audit_project_list = lists.file_audit_list(project)
@@ -59,7 +61,7 @@ def prepare_patchset(project, patchset):
     for line in lines:
         patch_file = line.strip('\n')
         # Perform binary and file / content checks
-        scan_patch(project, patch_file, binary_list, binary_project_list,
+        scan_patch(project, patch_file, binary_list,
                    file_audit_list, file_audit_project_list,
                    file_content_list, file_content_project_list, licence_ext,
                    licence_ignore)
@@ -69,16 +71,26 @@ def prepare_patchset(project, patchset):
     process_failure()
 
 
-def scan_patch(project, patch_file, binary_list, binary_project_list,
-               file_audit_list, file_audit_project_list, file_content_list,
+def scan_patch(project, patch_file, binary_list, file_audit_list,
+               file_audit_project_list, file_content_list,
                file_content_project_list, licence_ext, licence_ignore):
     """ Scan actions for each commited file in patch set """
     global failure
     if is_binary(patch_file):
-        if not binary_list.search(patch_file) and not binary_project_list\
-                .search(patch_file):
-            logger.error('Non Whitelisted Binary file: {0}'.
-                         format(patch_file))
+        hashlist = get_lists.GetLists()
+        binary_hash = hashlist.binary_hash(project, patch_file)
+        if not binary_list.search(patch_file):
+            with open(patch_file, 'rb') as afile:
+                buf = afile.read()
+                hasher.update(buf)
+            if hasher.hexdigest() in binary_hash:
+                logger.info('Found matching file hash for file: {0}'.
+                            format(patch_file))
+            else:
+                logger.error('Non Whitelisted Binary file: {0}'.
+                             format(patch_file))
+                logger.error('Please submit patch with this hash:: {0}'.
+                             format(hasher.hexdigest()))
             failure = True
             with open(reports_dir + "binaries-" + project + ".log", "a") \
                     as gate_report:

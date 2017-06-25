@@ -6,19 +6,7 @@
 
 binaries:
   binary_ignore:
-    - \.DS_Store
-    - \.eot
-    - \.gif
     - \.git/(index|objects)
-    - \.ico
-    - \.idx
-    - \.jp(e?)g
-    - \.otf
-    - \.pack
-    - \.pdf
-    - \.png
-    - \.ttf
-    - \.woff
 
 file_audits:
   file_names:

@@ -69,28 +69,23 @@ class GetLists(object):
             self.loaded = True
 
     def binary_list(self, project):
-        project_list = False
-        self.load_project_exception_file(yl.get('project_exceptions'), project)
         try:
             default_list = (yl['binaries']['binary_ignore'])
         except KeyError:
             logger.error('Key Error processing binary list values')
-        try:
-            project_list = (yl['binaries'][project]['binary_ignore'])
-        except KeyError:
-            logger.info('No binary waivers found for {0}'.
-                        format(project))
 
         binary_re = re.compile("|".join(default_list),
-                flags=re.IGNORECASE)
+                               flags=re.IGNORECASE)
+        return binary_re
 
-        if project_list:
-            binary_project_re = re.compile("|".join(project_list),
-                                           flags=re.IGNORECASE)
-            return binary_re, binary_project_re
-        else:
-            binary_project_re = re.compile("")
-            return binary_re, binary_project_re
+    def binary_hash(self, project, patch_file):
+        self.load_project_exception_file(yl.get('project_exceptions'), project)
+        file_name = os.path.basename(patch_file)
+        try:
+            binary_hash = (yl['binaries'][project][file_name])
+        except KeyError:
+            logger.error('Key Error processing binary hash values')
+        return binary_hash
 
     def file_audit_list(self, project):
         project_list = False
