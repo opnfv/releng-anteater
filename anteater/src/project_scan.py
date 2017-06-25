@@ -17,6 +17,7 @@
 
 from __future__ import division, print_function, absolute_import
 import ConfigParser
+import hashlib
 import os
 import re
 import anteater.utils.anteater_logger as antlog
@@ -29,6 +30,7 @@ config.read('anteater.conf')
 reports_dir = config.get('config', 'reports_dir')
 master_list = config.get('config', 'master_list')
 ignore_dirs = ['.git']
+hasher = hashlib.sha256()
 
 
 def prepare_project(project, project_dir):
@@ -38,7 +40,7 @@ def prepare_project(project, project_dir):
     lists = get_lists.GetLists()
 
     # Get binary white list
-    binary_list, binary_project_list = lists.binary_list(project)
+    binary_list = lists.binary_list(project)
 
     # Get file name black list and project waivers
     file_audit_list, file_audit_project_list = lists.file_audit_list(project)
@@ -51,8 +53,8 @@ def prepare_project(project, project_dir):
     licence_ignore = lists.licence_ignore()
 
     # Perform rudimentary scans
-    scan_file(project_dir, project, binary_list, binary_project_list,
-              file_audit_list, file_audit_project_list, file_content_list,
+    scan_file(project_dir, project, binary_list,file_audit_list,
+              file_audit_project_list, file_content_list,
               project_content_list)
 
     # Perform licence header checks
@@ -60,8 +62,8 @@ def prepare_project(project, project_dir):
     licence_root_check(project_dir, project)
 
 
-def scan_file(project_dir, project, binary_list, binary_project_list,
-              file_audit_list, file_audit_project_list, file_content_list,
+def scan_file(project_dir, project, binary_list, file_audit_list,
+              file_audit_project_list, file_content_list,
               project_content_list):
     """Searches for banned strings and files that are listed """
     for root, dirs, files in os.walk(project_dir):
@@ -114,15 +116,25 @@ def scan_file(project_dir, project, binary_list, binary_project_list,
                                               format(match.group()))
             else:
                 # Check if Binary is whitelisted
-                if not binary_list.search(full_path) \
-                        and not binary_project_list.search(full_path):
-                    logger.error('Non Whitelisted Binary: {0}'.
-                                 format(full_path))
-                    with open(reports_dir + "binaries-" + project + ".log",
-                              "a") \
-                            as gate_report:
-                        gate_report.write('Non Whitelisted Binary: {0}\n'.
-                                          format(full_path))
+                hashlist = get_lists.GetLists()
+                binary_hash = hashlist.binary_hash(project, full_path)
+                if not binary_list.search(full_path):
+                    with open(full_path, 'rb') as afile:
+                        buf = afile.read()
+                        hasher.update(buf)
+                    if hasher.hexdigest() in binary_hash:
+                        logger.info('Found matching file hash for file: {0}'.
+                                    format(full_path))
+                    else:
+                        logger.error('Non Whitelisted Binary file: {0}'.
+                                     format(full_path))
+                        logger.error('Please submit patch with this hash: {0}'.
+                                     format(hasher.hexdigest()))
+                        with open(reports_dir + "binaries-" + project + ".log",
+                                  "a") \
+                                as gate_report:
+                            gate_report.write('Non Whitelisted Binary: {0}\n'.
+                                              format(full_path))
 
 
 def licence_root_check(project_dir, project):
