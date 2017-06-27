@@ -1,5 +1,6 @@
 ##############################################################################
-# Anteater Dockerfile
+
+             # Anteater Dockerfile
 ##############################################################################
 # Copyright (c) 2017 Luke Hinds <lhinds@redhat.com>, Red Hat
 #
@@ -26,7 +27,7 @@ ENV ANTEATER_HOME ${HOME}/anteater
 # Packaged dependencies
 RUN yum -y install epel-release
 RUN yum -y update
-RUN yum -y install git python-devel python-pip
+RUN yum -y install git python-devel python-pip python-virtualenv
 RUN yum clean all
 
 # Run all following commands and container as non-root user
@@ -36,5 +37,7 @@ USER ${ANTEATER_USER}
 RUN mkdir -p ${ANTEATER_HOME}
 RUN git clone https://gerrit.opnfv.org/gerrit/releng-anteater ${ANTEATER_HOME}
 WORKDIR ${ANTEATER_HOME}
-RUN /usr/bin/pip install -r ${ANTEATER_HOME}/requirements.txt
-RUN python ${ANTEATER_HOME}/setup.py install
+RUN virtualenv ~/venv
+RUN . ~/venv/bin/activate
+RUN ~/venv/bin/pip install -r ${ANTEATER_HOME}/requirements.txt
+RUN ~/venv/bin/python ${ANTEATER_HOME}/setup.py install
