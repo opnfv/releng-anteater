@@ -83,9 +83,13 @@ class GetLists(object):
         file_name = os.path.basename(patch_file)
         try:
             binary_hash = (yl['binaries'][project][file_name])
+            return binary_hash
         except KeyError:
-            logger.error('Key Error processing binary hash values')
-        return binary_hash
+            logger.info('No checksum entries found for {0}'.
+                        format(file_name))
+            binary_hash = 'null'
+            return binary_hash
+
 
     def file_audit_list(self, project):
         project_list = False

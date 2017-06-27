@@ -89,7 +89,7 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
             else:
                 logger.error('Non Whitelisted Binary file: {0}'.
                              format(patch_file))
-                logger.error('Please submit patch with this hash:: {0}'.
+                logger.error('Submit patch with the following hash: {0}'.
                              format(hasher.hexdigest()))
             failure = True
             with open(reports_dir + "binaries-" + project + ".log", "a") \
