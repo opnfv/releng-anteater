@@ -34,6 +34,24 @@
       "revId": "7514fba169d8b68140a216c7a833d86b47cb1e6c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_8f9a1813",
+        "filename": "exceptions/functest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 610
+      },
+      "writtenOn": "2017-06-28T16:18:40Z",
+      "side": 1,
+      "message": "sounds good to me, thx.",
+      "parentUuid": "1aa4ed85_2fd1a4cd",
+      "revId": "7514fba169d8b68140a216c7a833d86b47cb1e6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
