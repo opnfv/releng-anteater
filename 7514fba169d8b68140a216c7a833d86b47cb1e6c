@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_2fd1a4cd",
+        "filename": "exceptions/functest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3405
+      },
+      "writtenOn": "2017-06-28T15:58:26Z",
+      "side": 1,
+      "message": "This one should be removed.\nIt\u0027s better to get files from OpenStack repos instead of github. I will propose a patch in Functest",
+      "revId": "7514fba169d8b68140a216c7a833d86b47cb1e6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
