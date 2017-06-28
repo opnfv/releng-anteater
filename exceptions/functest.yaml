@@ -15,5 +15,5 @@ file_audits:
     - git clone(.*)gerrit\.opnfv\.org
     - wget(.*)build\\.opnfv\.org
     - wget(.*)artifacts\\.opnfv\.org
-    - wget(.*)https:\/\/raw.githubusercontent\.com\/openstack\/(.*)
+    - wget(.*)git\\.openstack\.org
     - git clone(.*)https:\/\/git.opendaylight\.org\/gerrit\/(.*)
