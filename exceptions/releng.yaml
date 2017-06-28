@@ -60,4 +60,5 @@ file_audits:
     - wget > /dev/null
     - wget \$get_pip_url
     - wget(.*)WORKSPACE/opnfv\.properties(.*)GS_URL(.*)properties
-    - wget(.*)build.opnfv.org
+    - wget(.*)build\.opnfv\.org
+    - wget(.*)artifacts\.opnfv\.org
