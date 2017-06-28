@@ -16,6 +16,24 @@
       "revId": "7514fba169d8b68140a216c7a833d86b47cb1e6c",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_ef014c3a",
+        "filename": "exceptions/functest.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 459
+      },
+      "writtenOn": "2017-06-28T16:07:28Z",
+      "side": 1,
+      "message": "right, good catch. We will use https://github.com/openstack/rally/blob/master/install_rally.sh",
+      "parentUuid": "1aa4ed85_2fd1a4cd",
+      "revId": "7514fba169d8b68140a216c7a833d86b47cb1e6c",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
