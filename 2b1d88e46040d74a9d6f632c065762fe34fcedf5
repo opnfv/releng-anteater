@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_a51cd56b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 610
+      },
+      "writtenOn": "2017-06-29T09:12:34Z",
+      "side": 1,
+      "message": "minor nit, but you might need to change the commit msg to 72 chars.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 2
+      },
+      "revId": "2b1d88e46040d74a9d6f632c065762fe34fcedf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_e512cd57",
+        "filename": "anteater/src/project_scan.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 610
+      },
+      "writtenOn": "2017-06-29T09:12:34Z",
+      "side": 1,
+      "message": "The new string handling `%s` me a \u0027TypeError: function takes exactly 1 argument (2 given)\u0027 on this section of gate.report.write.\n\nIf I revert just this section to using format(full_path)) it runs ok. \n\nNot sure why this is, but it seems like this is the only gate.report instance changed (for example see lines 144 \u0026 171 which use format and work ok).\n\nYou could maybe just revert this section to the former one, and leave the logger formatting to the new %s style.",
+      "range": {
+        "startLine": 131,
+        "startChar": 28,
+        "endLine": 132,
+        "endChar": 56
+      },
+      "revId": "2b1d88e46040d74a9d6f632c065762fe34fcedf5",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
