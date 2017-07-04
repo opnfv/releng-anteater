@@ -11,21 +11,59 @@ binaries:
 
 file_audits:
   file_names:
-    - \.asc$
-    - \.gpg$
-    - \.key$
-    - \.md5
-    - \.sig$
+    - \.asc
+    - \.gpg
+    - \.key
+    - \.md(2|3|4|5)
+    - \.sha1
+    - \.sig
+    - \.pcap
+    - \.kdb
+    - \.pypirc
+    - \.pem
+    - \.cer
+    - \.der
+    - \.crt
+    - \.crl
+    - \.p7b
+    - \.p7r
+    - \.spc
+    - \.sst
+    - \.stl
+    - \.pfx
+    - \.p12
+    - _rsa
+    - _dsa
+    - (irb|plsq|mysql|bash|zsh)_history
+    - (zsh|bash)rc-secrets
+    - \.vimrc
+    - \.gem\/credentials
+    - configuration\.user\.xpl
+    - \.dockercfg
+    - \.npmrc
+    - key(store|ring)
+    - ovpn
+    - secret_token\.rb
+    - omniauth\.rb
+    - carrierwave\.rb
+    - schema\.rb
+    - database\.yml
+    - settings\.py
+    - keychain
+    - backup
+    - credentials\.xml
+    - htpasswd
+    - kwallet
     - aws_access_key_id
     - aws_secret_access_key
-    - id_rsa
+
   file_contents:
     - -----BEGIN\sRSA\sPRIVATE\sKEY----
-    - "curl(.*?)bash"
-    - "git(.*?)clone"
-    - "sh(.*?)curl"
+    - (password|passwd|pass)(.*:|.*=.*)
+    - curl
+    - git.*clone
     - dual_ec_drbg
-    - eval(.*)base64_decode
+    - base64_decode
     - gost
     - md[245]
     - panama
@@ -40,6 +78,18 @@ file_audits:
     - streebog
     - tlsv1
     - wget
+    - run_as_root.*=.*True
+    - exec\s*(\"|\().+(\"|\))
+    - \beval\b
+    - app\.run\s*\(.*debug.*=.*True.*\)
+    - autoescape.*=.*False
+    - safestring\.mark_safe.*\(.*\)
+    - shell.*=.*True
+    - \/tmp\/
+    - \yaml\.load
+    - telnet
+    - ftp
+    - finger
 
 licence:
   licence_ext:
