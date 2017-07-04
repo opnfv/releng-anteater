@@ -25,7 +25,6 @@ file_audits:
     - "git(.*?)clone"
     - "sh(.*?)curl"
     - dual_ec_drbg
-    - eval
     - gost
     - md[245]
     - panama
