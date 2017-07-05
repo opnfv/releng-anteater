@@ -14,9 +14,9 @@ file_audits:
     - deploy_settings.py
   file_contents:
     - ^#
-    - git clone(.*)\.openstack\.org
-    - git clone(.*)gerrit\.opnfv\.org
-    - wget(.*)build\\.opnfv\.org
-    - wget(.*)artifacts\\.opnfv\.org
-    - wget(.*)git\\.openstack\.org
-    - git clone(.*)https:\/\/git.opendaylight\.org\/gerrit\/(.*)
+    - git clone.+\.openstack\.org
+    - git clone.+gerrit\.opnfv\.org
+    - wget.+build\.opnfv\.org
+    - wget.+artifacts\.opnfv\.org
+    - wget.+git\.openstack.org
+    - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
