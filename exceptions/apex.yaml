@@ -9,7 +9,9 @@ binaries:
   binary_ignore: [nullvalue]
 
 file_audits:
-  file_names: [nullvalue]
+  file_names:
+    - network_settings.py
+    - deploy_settings.py
   file_contents:
     - ^#
     - git clone(.*)\.openstack\.org
