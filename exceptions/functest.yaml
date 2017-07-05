@@ -17,3 +17,4 @@ file_audits:
     - wget.+artifacts\.opnfv\.org
     - wget.+git\.openstack.org
     - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
+    - openssl-dev.libjpeg-turbo-dev.git.wget.&
