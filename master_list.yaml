@@ -59,7 +59,7 @@ file_audits:
 
   file_contents:
     - -----BEGIN\sRSA\sPRIVATE\sKEY----
-    - (password|passwd|pass)(.*:|.*=.*)
+    - (password|passwd)(.*:|.*=.*)
     - curl
     - git.*clone
     - dual_ec_drbg
