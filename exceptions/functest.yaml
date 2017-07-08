@@ -19,3 +19,4 @@ file_audits:
     - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
     - openssl-dev.libjpeg-turbo-dev.git.wget.&
     - RUN.+curl.*https\:\/\/get\.rvm\.io.*bash.*stable
+    - grep.sed.wget.ca-certificates.git.\&&
