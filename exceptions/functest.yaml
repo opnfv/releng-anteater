@@ -18,3 +18,4 @@ file_audits:
     - wget.+git\.openstack.org
     - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
     - openssl-dev.libjpeg-turbo-dev.git.wget.&
+    - RUN.+curl.*https\:\/\/get\.rvm\.io.*bash.*stable
