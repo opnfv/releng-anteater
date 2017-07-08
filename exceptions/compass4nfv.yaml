@@ -19,3 +19,9 @@ file_audits:
     - wget.+git\.openstack.org
     - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
     - publicURL
+    - server_password
+    - username\,.password
+    - \'password\'\:.password
+    - \'password\'\:.\{
+    - metadata_secret
+    - compass_user_password
