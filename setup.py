@@ -7,6 +7,9 @@ from setuptools import setup, find_packages
 
 REQUIRES = [
     'docopt',
+    'six',
+    'binaryornot',
+    'PyYAML',
 ]
 
 
@@ -71,7 +74,6 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
     packages=find_packages(),
-    py_modules=["anteater"],
     entry_points={
         'console_scripts': [
             "anteater = anteater.main:main"
