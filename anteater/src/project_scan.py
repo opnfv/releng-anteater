@@ -159,9 +159,9 @@ def licence_check(licence_ext, licence_ignore, project, project_dir):
                     # Note: Hardcoded use of 'copyright' & 'spdx' is the result
                     # of a decision made at 2017 plugfest to limit searches to
                     # just these two strings.
-                    if re.search("copyright", content, re.IGNORECASE):
-                        logger.info('Licence string present: %s', full_path)
-                    elif re.search("spdx", content, re.IGNORECASE):
+                    patterns = ['copyright', 'spdx',
+                                'http://creativecommons.org/licenses/by/4.0']
+                    if any(i in content.lower() for i in patterns):
                         logger.info('Licence string present: %s', full_path)
                     else:
                         logger.error('Licence header missing: %s', full_path)
