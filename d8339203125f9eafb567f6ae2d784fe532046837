@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1aa4ed85_1ba16ff8",
+        "filename": "requirements.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4469
+      },
+      "writtenOn": "2017-07-12T01:09:00Z",
+      "side": 1,
+      "message": "I have some doubts in including packaging tools in `requirements.txt`. \n\nWe usually include only the packages required for **running** in this file.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 5
+      },
+      "revId": "d8339203125f9eafb567f6ae2d784fe532046837",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
