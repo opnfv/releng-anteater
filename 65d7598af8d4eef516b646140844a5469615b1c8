@@ -22,6 +22,30 @@
       "revId": "65d7598af8d4eef516b646140844a5469615b1c8",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa4ed85_017a62f1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1451
+      },
+      "writtenOn": "2017-07-12T18:34:50Z",
+      "side": 1,
+      "message": "This this is fixed by include line MANIFEST.in. I\u0027ll update the commit message to clarify.",
+      "parentUuid": "1aa4ed85_5b5fe70e",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 59
+      },
+      "revId": "65d7598af8d4eef516b646140844a5469615b1c8",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
