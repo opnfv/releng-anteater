@@ -4,6 +4,7 @@
 /docs_output/
 /releng/
 .idea
+.vscode
 *.py[cod]
 
 .Python

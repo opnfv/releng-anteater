@@ -22,3 +22,4 @@ file_audits:
     - grep.sed.wget.ca-certificates.git.\&&
     - publicurl
     - installer_password
+    - os_password
