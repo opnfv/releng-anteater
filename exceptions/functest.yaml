@@ -20,3 +20,5 @@ file_audits:
     - openssl-dev.libjpeg-turbo-dev.git.wget.&
     - RUN.+curl.*https\:\/\/get\.rvm\.io.*bash.*stable
     - grep.sed.wget.ca-certificates.git.\&&
+    - publicurl
+    - installer_password
