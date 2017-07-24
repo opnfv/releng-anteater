@@ -7,7 +7,7 @@
 
 binaries:
   dynamic-flow.png:
-    - d0d7dfc73e0fac09d920ebbdf8cd4e0ef623f15d6246ff20d7a6d12c9a48bf41
+    - dca00ca0c823938e3fca1889ae366e86e6ce2279e4fc689b437d43978cfbe1c9
 file_audits:
   file_names: [nullvalue]
   file_contents:
