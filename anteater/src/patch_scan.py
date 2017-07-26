@@ -55,8 +55,12 @@ def prepare_patchset(project, patchset):
     licence_ignore = lists.licence_ignore()
 
     # Open patch set to get file list
-    fo = open(patchset, 'r')
-    lines = fo.readlines()
+    try:
+        fo = open(patchset, 'r')
+        lines = fo.readlines()
+    except IOError:
+        logger.error('%s does not exist', patchset)
+        exit(0)
 
     for line in lines:
         patch_file = line.strip('\n')
