@@ -1,0 +1,8 @@
+Code-Review+1: Yujun Zhang <zhang.yujunz@zte.com.cn>
+Code-Review+2: Serena Feng <feng.xiaowei@zte.com.cn>
+Verified+1: Luke Hinds <lhinds@redhat.com>
+Submitted-by: Luke Hinds <lhinds@redhat.com>
+Submitted-at: Thu, 27 Jul 2017 09:18:53 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/38151
+Project: releng-anteater
+Branch: refs/heads/master
