@@ -6,7 +6,54 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  cisco-favicon.ico:
+    - b6cb17eb0eedf9329fa6541ef56c646495b35b2d04dad198d653d375b1de8a4d
+  cisco-logo-load.png:
+    - 2b60b92c25297ad04a0ee1fac33743b702a6746ae5b1f6d3a379d4e96c2629ba
+  dna-718905_600.png:
+    - 74f0315a4ce27fa7e4ce394ba0c55a34fb361c946b88fef43f87a05bd2bac04d
+  dashboard-notifications.png:
+    - e4071614e1cbb6c4b34ae792d39d093c9fc36d8ba6dba92c8ad3f5811af886a3
+  env-dashboard.png:
+    - a677f8928770e345bbd655736bd5070cb883ceba08f0442a083d98c11a8a049f
+  env-delete-action.png:
+    - 66353111c9bdcd7816a8f57c4dc9a3a6979953b3950781e80220d3d4c4367094
+  env-diting-os-db-credentails.png:
+    - ef203db8e9da00583103d299bdb7ade2b529d1d30636702874f1b4909eec9f07
+  env-edit-action.png:
+    - e189dc8f58cb46238e3adf5138fe425dc4e57905b13c3d5e6441d7919230dc24
+  env-editing-amqp-credentials.png:
+    - 60478ae7a0ac372bd2ad9d3efd8ff6269f27a8232077d0c7b11f24c80871bdb2
+  env-editing-master-host-credentials.png:
+    - 9e9fbee71857e57bf1b575d000b2d6d7fbdb125795964fbd320555c90c6fa905
+  env-editing-monitoring.png:
+    - ea69af7e9296f4101dcdf0f2103f16fe030923457888af8dbae373104dd2481c
+  env-editing-os-end-point.png:
+    - a706dbc979251eb9b7944b7faebdaec91028a96da91618b4954d9da3a9cbad54
+  env-editing-provision.png:
+    - db96603c51eed8c7dc33eda03f2b782de3bed65a2cad8e62a8cb5543102b78bd
+  env-editing.png:
+    - 7cb27fb053015f868513c2ada702800007f9bd49a540ee3f8a03e579775ec8ee
+  environments-pick.png:
+    - e17017b58b20efa315e929c80c9cb21dfced0b0dd21e783331979703170d6e26
+  main-screen-explained.png:
+    - 9841bbaa618efb80764a06ff5e75429e6c758ee3916fb05b43c6b3b1ddb839d9
+  navbar-explained.png:
+    - 494ac1aecf2b0d7158a401425f37dbd978e857e8143e9ccf6ab83bc935003fd9
+  new-environment-action.png:
+    - f0971dbc9f1811ed14a41bfde132ed3343d554cf553882e95fd0b635d50a7d38
+  scan-action.png:
+    - 435ac7e6f803027e75a8a03e6c7b076325a36aa8821b38658d7688dea7dfc5f5
+  scan-request-screen.png:
+    - 946cd2fe7870e19aa998f6fd81781c1c108dbfed1f414c8262f1a967c2b1f8a1
+  selecting-dashboard.png:
+    - eb0c742d990aeba453f456ae161597c7b14ef31326a6367782aa9d2397a1dd38
+  selecting-env.png:
+    - 624ac7fe87ce08229e99496c49d7ebe3a45123802128b625731b8c5683d351b0
+  setting-action.png:
+    - 23270c354e375c7e355dbc3affc0281caf1dba60579fc1d85b97e515fde5a67c
+  setting-scans-action.png:
+    - e27ce7090ba96495c91aa972d6dae33c663d8286f2b8d842a28bb6f54c6e9a34
 
 file_audits:
   file_names: [nullvalue]
@@ -18,3 +65,6 @@ file_audits:
     - wget.+artifacts\.opnfv\.org
     - wget.+git\.openstack.org
     - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
+    - \.login-button#login-buttons-(.*)
+    - <input class="mdl-textfield__input" type="password" id="apiPassword">
+    - "password: { type: String }"
