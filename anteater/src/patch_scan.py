@@ -47,8 +47,7 @@ def prepare_patchset(project, patchset):
     file_audit_list, file_audit_project_list = lists.file_audit_list(project)
 
     # Get file content black list and project waivers
-    file_content_list, \
-        file_content_project_list = lists.file_content_list(project)
+    master_list, project_list_re = lists.file_content_list(project)
 
     # Get Licence Lists
     licence_ext = lists.licence_extensions()
@@ -67,7 +66,7 @@ def prepare_patchset(project, patchset):
         # Perform binary and file / content checks
         scan_patch(project, patch_file, binary_list,
                    file_audit_list, file_audit_project_list,
-                   file_content_list, file_content_project_list, licence_ext,
+                   master_list, project_list_re, licence_ext,
                    licence_ignore)
 
     # Process each file in patch set using waivers generated above
@@ -76,8 +75,8 @@ def prepare_patchset(project, patchset):
 
 
 def scan_patch(project, patch_file, binary_list, file_audit_list,
-               file_audit_project_list, file_content_list,
-               file_content_project_list, licence_ext, licence_ignore):
+               file_audit_project_list, master_list,
+               project_list_re, licence_ext, licence_ignore):
     """ Scan actions for each commited file in patch set """
     global failure
     if is_binary(patch_file):
@@ -116,16 +115,22 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
                                   format(match.group()))
 
         # Open file to check for blacklisted content
-        fo = open(patch_file, 'r')
-        lines = fo.readlines()
+        try:
+            fo = open(patch_file, 'r')
+            lines = fo.readlines()
+        except IOError:
+            logger.error('%s does not exist', patch_file)
+            sys.exit(1)
 
         for line in lines:
-            if file_content_list.search(line) and not \
-                    file_content_project_list.search(line):
-                match = file_content_list.search(line)
-                logger.error('File contains violation: %s', patch_file)
-                logger.error('Flagged Content: %s', line.rstrip())
-                logger.error('Matched String: %s', match.group())
+            for key, value in master_list.iteritems():
+                regex = value['regex']
+                desc = value['desc']
+                if re.search(regex, line) and not re.search(project_list_re, line):
+                    logger.error('File contains violation: %s', patch_file)
+                    logger.error('Flagged Content: %s', line.rstrip())
+                    logger.error('Matched Regular Exp: %s', regex)
+                    logger.error('Rationale: %s', desc.rstrip())
                 failure = True
                 with open(reports_dir + "contents_" + project + ".log",
                           "a") as gate_report:
@@ -133,9 +138,10 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
                                       format(patch_file))
                     gate_report.write('Flagged Content: {0}'.
                                       format(line))
-                    gate_report.write('Matched String: {0}\n'.
-                                      format(match.group()))
-
+                    gate_report.write('Matched Regular Exp: {0}'.
+                                      format(regex))
+                    gate_report.write('Rationale: {0}'.
+                                      format(desc))
         # Run license check
         licence_check(project, licence_ext, licence_ignore, patch_file)
 
