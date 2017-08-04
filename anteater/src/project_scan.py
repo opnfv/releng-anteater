@@ -47,7 +47,7 @@ def prepare_project(project, project_dir):
     file_audit_list, file_audit_project_list = lists.file_audit_list(project)
 
     # Get file content black list and project waivers
-    file_content_list, project_content_list = lists.file_content_list(project)
+    master_list, project_list = lists.file_content_list(project)
 
     # Get Licence Lists
     licence_ext = lists.licence_extensions()
@@ -55,8 +55,8 @@ def prepare_project(project, project_dir):
 
     # Perform rudimentary scans
     scan_file(project_dir, project, binary_list,file_audit_list,
-              file_audit_project_list, file_content_list,
-              project_content_list)
+              file_audit_project_list, master_list,
+              project_list)
 
     # Perform licence header checks
     licence_check(licence_ext, licence_ignore, project, project_dir)
@@ -64,8 +64,8 @@ def prepare_project(project, project_dir):
 
 
 def scan_file(project_dir, project, binary_list, file_audit_list,
-              file_audit_project_list, file_content_list,
-              project_content_list):
+              file_audit_project_list, master_list,
+              project_list):
     """Searches for banned strings and files that are listed """
     for root, dirs, files in os.walk(project_dir):
         # Filter out ignored directories from list.
@@ -88,16 +88,22 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                                       format(match.group()))
 
             if not is_binary(full_path):
-                fo = open(full_path, 'r')
-                lines = fo.readlines()
+                try:
+                    fo = open(full_path, 'r')
+                    lines = fo.readlines()
+                except IOError:
+                    logger.error('%s does not exist', full_path)
+
                 for line in lines:
                     # Check for sensitive content in project files
-                    if file_content_list.search(line) and not \
-                            project_content_list.search(line):
-                        match = file_content_list.search(line)
-                        logger.error('File contains violation: %s', full_path)
-                        logger.error('Flagged Content: %s', line.rstrip())
-                        logger.error('Matched String: %s', match.group())
+                    for key, value in master_list.iteritems():
+                        regex = value['regex']
+                        desc = value['desc']
+                        if re.search(regex, line) and not re.search(project_list, line):
+                            logger.error('File contains violation: %s', full_path)
+                            logger.error('Flagged Content: %s', line.rstrip())
+                            logger.error('Matched Regular Exp: %s', regex)
+                            logger.error('Rationale: %s', desc)
                         with open(reports_dir + "contents-" + project + ".log",
                                   "a") \
                                 as gate_report:
@@ -108,8 +114,11 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                                         write('Flagged Content: {0}'.
                                               format(line))
                                     gate_report. \
-                                        write('Matched String: {0}\n'.
-                                              format(match.group()))
+                                        write('Matched Regular Exp: {0}'.
+                                              format(regex))
+                                    gate_report. \
+                                        write('Rationale: {0}\n'.
+                                              format(desc))
             else:
                 # Check if Binary is whitelisted
                 hashlist = get_lists.GetLists()

@@ -116,28 +116,30 @@ class GetLists(object):
             file_names_proj_re = re.compile("")
             return file_names_re, file_names_proj_re
 
+    # TODO Currently we have the following providing the correct strings for the
+    # needed checks
+
     def file_content_list(self,  project):
         project_list = False
         self.load_project_exception_file(yl.get('project_exceptions'), project)
         try:
-            default_list = set((yl['file_audits']['file_contents']))
+            master_list = (yl['file_audits']['file_contents'])
+
         except KeyError:
             logger.error('Key Error processing file_contents list values')
+
         try:
             project_list = set((yl['file_audits'][project]['file_contents']))
+            project_list_re = re.compile("|".join(project_list),
+                                               flags=re.IGNORECASE)
         except KeyError:
             logger.info('No file_contents waivers found  for %s', project)
 
-        file_contents_re = re.compile("|".join(default_list),
-                                      flags=re.IGNORECASE)
+        # might need to return this uncompiled?
+        #file_contents_re = re.compile("|".join(content_list),
+        #                              flags=re.IGNORECASE)
 
-        if project_list:
-            file_contents_proj_re = re.compile("|".join(project_list),
-                                               flags=re.IGNORECASE)
-            return file_contents_re, file_contents_proj_re
-        else:
-            file_contents_proj_re = re.compile("")
-            return file_contents_re, file_contents_proj_re
+        return master_list, project_list_re
 
     def licence_extensions(self):
         try:
