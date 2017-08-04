@@ -1,7 +1,4 @@
 ---
-# When adding projects all `arrays: []` sections must have
-# a value, Use 'nullvalue' if no waivers are available.
-#
 # This file uses standard regular expression syntax,  however be mindful
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
@@ -58,38 +55,147 @@ file_audits:
     - aws_secret_access_key
 
   file_contents:
-    - -----BEGIN\sRSA\sPRIVATE\sKEY----
-    - (password|passwd)(.*:|.*=.*)
-    - curl
-    - git.*clone
-    - dual_ec_drbg
-    - base64_decode
-    - gost
-    - md[245]
-    - panama
-    - private_key
-    - rc4
-    - ripemd
-    - secret
-    - sha0
-    - snefru
-    - ssh_key
-    - sslv[12]
-    - streebog
-    - tlsv1
-    - wget
-    - run_as_root.*=.*True
-    - exec\s*(\"|\().+(\"|\))
-    - \beval\b
-    - app\.run\s*\(.*debug.*=.*True.*\)
-    - autoescape.*=.*False
-    - safestring\.mark_safe.*\(.*\)
-    - shell.*=.*True
-    - \/tmp\/
-    - \yaml\.load
-    - telnet
-    - ftp
-    - finger
+    private_key:
+      regex: -----BEGIN\sRSA\sPRIVATE\sKEY----
+      desc: "This looks like it could be a private key"
+
+    password:
+      regex: (password|passwd)(.*:|.*=.*)
+      desc: "Possible hardcoded password"
+
+    curl:
+      regex: \bcurl\b
+      desc: "Curl can be used for retrieving objects from untrusted sources"
+
+    clone:
+      regex: git.*clone
+      desc: "clone blocked as using an non approved external source"
+
+    dual_ec_drbg:
+      regex: dual_ec_drbg
+      desc: "Insecure cryptographic algorithm"
+
+    base64_decode:
+      regex: base64_decode
+      desc: "Insecure cryptographic algorithm"
+
+    gost:
+      regex: gost
+      desc: "Insecure cryptographic algorithm"
+
+    md245:
+      regex: md[245]
+      desc: "Insecure hashing algorithm"
+
+    panama:
+      regex: panama
+      desc: "Insecure cryptographic algorithm"
+
+    private_key2:
+      regex: private_key
+      desc: "This looks like it could be a private key"
+
+    rc4:
+      regex: rc4
+      desc: "Rivest Cipher 4 is an insecure stream cipher"
+
+    ripemd:
+      regex: ripemd
+      desc: |
+        "RACE Integrity Primitives Evaluation Message Digest 
+        is an insecure hashing algorithm"
+
+    secret:
+      regex: secret
+      desc: "Possible leak of sensitive information"
+
+    sha:
+      regex: sha[01]
+      desc: "Insecure hashing algorithm"
+
+    snefru:
+      regex: snefru
+      desc: "Insecure hashing algorithm"
+
+    ssh_key:
+      regex: ssh_key
+      desc: "Possible leak of private SSH key"
+
+    sslv:
+      regex: sslv[12]
+      desc: "Insecure SSL Version"
+
+    streebog:
+      regex: sslv[12]
+      desc: "Insecure cryptographic hashing algorithm"
+
+    tlsv1:
+      regex: tlsv1
+      desc: "Insecure TLS Version"
+
+    wget:
+      regex: wget
+      desc: "WGET is blocked to unknown / untrusted destinations"
+
+    run_as_root:
+      regex: run_as_root.*=.*True
+      desc: "Its better to use sudo or a rootwrapper"
+
+    exec:
+      regex: \sexec\s*(\"|\().+(\"|\))
+      desc: "Exec can be dangerous when used with arbitrary, untrusted code."
+
+    eval:
+      regex: \beval\b
+      desc: "Eval can be dangerous when used with arbitrary, untrusted code."
+
+    apprun:
+      regex: app\.run\s*\(.*debug.*=.*True.*\)
+      desc: |
+        "Running flask in debug mode can give away sensitive data on a 
+        systems configuration"
+
+    autoescape:
+      regex: autoescape.*=.*False
+      desc: |
+        "Without escaping HTML input an application becomes 
+        vulnerable to Cross Site Scripting (XSS) attacks."
+
+    autoescape:
+      regex: safestring\.mark_safe.*\(.*\)
+      desc: |
+        "Without escaping HTML input an application becomes 
+        vulnerable to Cross Site Scripting (XSS) attacks."
+
+    shelltrue:
+      regex: shell.*=.*True
+      desc: |
+        "Shell=True can lead to dangerous shell escapes,
+        expecially when the input can be crafted by untrusted external input"
+
+    tmp:
+      regex: \/tmp\/
+      desc: |
+        "Use of tmp directories can be dangerous. Its world writable and 
+        accessable, and can be easily guessed by attackers"
+
+    yamlload:
+      regex: \yaml\.load
+      desc: |
+        "Avoid dangerous file parsing and object serialization libraries,
+        use instead `yaml.safe_load`"
+
+    telnet:
+      regex: telnet
+      desc: "Avoid coms applications that transmit credentials in clear text"
+
+    ftp:
+      regex: \bftp\b
+      desc: "Avoid coms applications that transmit credentials in clear text"
+
+    finger:
+      regex: \bfinger\b
+      desc: "Avoid coms applications that transmit credentials in clear text"
 
 licence:
   licence_ext:
@@ -126,3 +232,4 @@ project_exceptions:
   - releng: exceptions/releng.yaml
   - sandbox: exceptions/sandbox.yaml
   - yardstick: exceptions/yardstick.yaml
+
