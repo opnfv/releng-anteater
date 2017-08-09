@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_b5142af6",
+        "filename": "anteater/src/get_lists.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 2651
+      },
+      "writtenOn": "2017-08-09T04:13:22Z",
+      "side": 1,
+      "message": "how about split the method into two methods, one for get_master_list(), the other for get_project_list()?",
+      "revId": "d1db65c86809a0ea9adae1423237cdc60eb026fb",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
