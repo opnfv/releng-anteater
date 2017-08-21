@@ -104,21 +104,21 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                             logger.error('Flagged Content: %s', line.rstrip())
                             logger.error('Matched Regular Exp: %s', regex)
                             logger.error('Rationale: %s', desc.rstrip())
-                        with open(reports_dir + "contents-" + project + ".log",
-                                  "a") \
-                                as gate_report:
-                                    gate_report. \
-                                        write('File contains violation: {0}\n'.
-                                              format(full_path))
-                                    gate_report. \
-                                        write('Flagged Content: {0}'.
-                                              format(line))
-                                    gate_report. \
-                                        write('Matched Regular Exp: {0}'.
-                                              format(regex))
-                                    gate_report. \
-                                        write('Rationale: {0}\n'.
-                                              format(desc.rstrip()))
+                            with open(reports_dir + "contents-" + project + ".log",
+                                      "a") \
+                                    as gate_report:
+                                        gate_report. \
+                                            write('File contains violation: {0}\n'.
+                                                  format(full_path))
+                                        gate_report. \
+                                            write('Flagged Content: {0}'.
+                                                  format(line))
+                                        gate_report. \
+                                            write('Matched Regular Exp: {0}'.
+                                                  format(regex))
+                                        gate_report. \
+                                            write('Rationale: {0}\n'.
+                                                  format(desc.rstrip()))
             else:
                 # Check if Binary is whitelisted
                 hashlist = get_lists.GetLists()
