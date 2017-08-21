@@ -131,7 +131,7 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
                     logger.error('Flagged Content: %s', line.rstrip())
                     logger.error('Matched Regular Exp: %s', regex)
                     logger.error('Rationale: %s', desc.rstrip())
-                failure = True
+                    failure = True
                 with open(reports_dir + "contents_" + project + ".log",
                           "a") as gate_report:
                     gate_report.write('File contains violation: {0}\n'.
