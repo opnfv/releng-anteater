@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_250604cf",
+        "filename": "exceptions/calipso.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 610
+      },
+      "writtenOn": "2017-08-22T09:45:09Z",
+      "side": 1,
+      "message": "I would be better to add more of the blocked line(s) here, rather than allow every instance of shell\u003dTrue\n\nYou also have a duplicate at line 154",
+      "range": {
+        "startLine": 148,
+        "startChar": 4,
+        "endLine": 148,
+        "endChar": 16
+      },
+      "revId": "1cba9786e21b43bc09134c2cc7e62108d8cc2827",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
