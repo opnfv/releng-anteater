@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "da33351e_65100c02",
+        "filename": "exceptions/calipso.yaml",
+        "patchSetId": 16
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 610
+      },
+      "writtenOn": "2017-08-22T09:47:44Z",
+      "side": 1,
+      "message": "These two lines are causing the YAML lint failure. Its reading the `:` as a YAML field. If you double quote the whole line it should be fine then.",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 19
+      },
+      "revId": "1cba9786e21b43bc09134c2cc7e62108d8cc2827",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da33351e_250604cf",
         "filename": "exceptions/calipso.yaml",
         "patchSetId": 16
