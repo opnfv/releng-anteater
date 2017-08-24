@@ -101,9 +101,7 @@ file_audits:
 
     ripemd:
       regex: ripemd
-      desc: |
-        "RACE Integrity Primitives Evaluation Message Digest
-        is an insecure hashing algorithm"
+      desc: "RACE Message Digest is an insecure hashing algorithm"
 
     secret:
       regex: secret
@@ -152,38 +150,29 @@ file_audits:
     apprun:
       regex: app\.run\s*\(.*debug.*=.*True.*\)
       desc: |
-        "Running flask in debug mode can give away sensitive data on a
-        systems configuration"
+        "Running flask in debug mode can give away sensitive data"
 
     autoescape:
       regex: autoescape.*=.*False
-      desc: |
-        "Without escaping HTML input an application becomes
-        vulnerable to Cross Site Scripting (XSS) attacks."
+      desc: "Not escaping HTML input is vulnerable to XSS attacks."
 
     safestring:
       regex: safestring\.mark_safe.*\(.*\)
-      desc: |
-        "Without escaping HTML input an application becomes
-        vulnerable to Cross Site Scripting (XSS) attacks."
+      desc: "Not escaping HTML input is vulnerable to XSS attacks."
 
     shelltrue:
       regex: shell.*=.*True
-      desc: |
-        "Shell=True can lead to dangerous shell escapes,
-        expecially when the input can be crafted by untrusted external input"
+      desc: "Shell=True can lead to dangerous shell escapes"
 
     tmp:
       regex: \/tmp\/
       desc: |
-        "Use of tmp directories can be dangerous. Its world writable and
-        accessable, and can be easily guessed by attackers"
+        "tmp directories are risky. They are world writable and easily guessed"
 
     yamlload:
       regex: \yaml\.load
       desc: |
-        "Avoid dangerous file parsing and object serialization libraries,
-        use instead `yaml.safe_load`"
+        "Avoid dangerous file parsing & serialization libs, use yaml.safe_load"
 
     telnet:
       regex: telnet
