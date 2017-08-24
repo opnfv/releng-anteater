@@ -1,0 +1,7 @@
+Code-Review+2: Aric Gardner <agardner@linuxfoundation.org>
+Verified+1: Aric Gardner <agardner@linuxfoundation.org>
+Submitted-by: Luke Hinds <lhinds@redhat.com>
+Submitted-at: Thu, 24 Aug 2017 15:28:07 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/40105
+Project: releng-anteater
+Branch: refs/heads/master
