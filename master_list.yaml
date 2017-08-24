@@ -101,9 +101,7 @@ file_audits:
 
     ripemd:
       regex: ripemd
-      desc: |
-        "RACE Integrity Primitives Evaluation Message Digest
-        is an insecure hashing algorithm"
+      desc: "RACE Integrity Primitives Evaluation Message Digest is an insecure hashing algorithm"
 
     secret:
       regex: secret
@@ -151,39 +149,27 @@ file_audits:
 
     apprun:
       regex: app\.run\s*\(.*debug.*=.*True.*\)
-      desc: |
-        "Running flask in debug mode can give away sensitive data on a
-        systems configuration"
+      desc: "Running flask in debug mode can give away sensitive data on a systems configuration"
 
     autoescape:
       regex: autoescape.*=.*False
-      desc: |
-        "Without escaping HTML input an application becomes
-        vulnerable to Cross Site Scripting (XSS) attacks."
+      desc: "Without escaping HTML input an application becomes vulnerable to Cross Site Scripting (XSS) attacks."
 
     safestring:
       regex: safestring\.mark_safe.*\(.*\)
-      desc: |
-        "Without escaping HTML input an application becomes
-        vulnerable to Cross Site Scripting (XSS) attacks."
+      desc: "Without escaping HTML input an application becomes vulnerable to Cross Site Scripting (XSS) attacks."
 
     shelltrue:
       regex: shell.*=.*True
-      desc: |
-        "Shell=True can lead to dangerous shell escapes,
-        expecially when the input can be crafted by untrusted external input"
+      desc: "Shell=True can lead to dangerous shell escapes, expecially when the input can be crafted by untrusted external input"
 
     tmp:
       regex: \/tmp\/
-      desc: |
-        "Use of tmp directories can be dangerous. Its world writable and
-        accessable, and can be easily guessed by attackers"
+      desc: "Use of tmp directories can be dangerous. Its world writable and accessable, and can be easily guessed by attackers"
 
     yamlload:
       regex: \yaml\.load
-      desc: |
-        "Avoid dangerous file parsing and object serialization libraries,
-        use instead `yaml.safe_load`"
+      desc: "Avoid dangerous file parsing and object serialization libraries, use instead `yaml.safe_load`"
 
     telnet:
       regex: telnet
