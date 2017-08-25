@@ -6,7 +6,30 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  binary_ignore:
+    FDS-L3-DVR-example.png:
+      - e300e5b342feedb617f39df198b2593f510084ceb99a768fd9d19a0191a5f219
+      - 864b3e22f87a6f6c2c47d0ab0ef381b691b5875e8c477495c99ed24a07f255e2
+    FDS-L3-noha-sample-setup.png:
+      - 19ff72df6d638082e61ecca03a7d12d06407d5ba9b5258a0f190e0af4d56ac00
+      - 467012e9d99b2cf0622e500bc7893cf9cbb8f36f84ac5b5df6705a40846e22de
+      - f5a6445e0c9a56b63bafb89ecd84c7e12722916895060ad53824cc85fdef1a23
+      - 9e53381d7d9a9bfca787250db6718d7b5b352c7f3b0d01b9604def0e3647fbfc
+    FDS-basic-components.jpg:
+      - 92d3b1598b898fcc7a7ec4c82cbe1a9fcc29b624f85791367d050a5fac67f917
+      - 0de43003ba2a34baf97d9a43af14bf65d166726ecb327fb35254d0f5595f744e
+      - f19c200845d27dea097633494cf804a974a70374a83d752b7a5309bcd63a8220
+      - 5e1184e6e7287e23b53ef2f953800c4572d21962fd4b953f2eae716ab3c1a4bd
+    FDS-odl_l3-noha-overview.png:
+      - 250ac432d6e8c7b694a4d1bfc57f3364e0996ccd259b98f4b4ac41323ae98ad2
+      - d534f09b7da0f300ea3b334f5001d0a0023dee8ef8ea91a9c6ce2c5e705d1794
+      - 5d71abf82c63c9005ba322bc0ffb24d935b272ea7540a695e3777e6a6843b923
+      - 05d5d9d20db079a0d3a95531f96fef9959bad88a1e79fb75f37b5fd4464f57f6
+    FDS-simple-callflow.png:
+      - 1323b03a6ba5bba6d1b1f8ff47127cf7f29a4bfa7aaad02102aab3438465d29a
+      - 93b4df13daa656de20d49f6ac494fd4d85f3030e0e42947e0983ee93e3690cc1
+      - 6cf39a9a3e94346d6a96f384bce242ec4bdf252426977b789528c1e30a786bc9
+      - 1eb2f046865ccd702688b826375336b85f42ef1e00cc84561842dad5e0529490
 
 file_audits:
   file_names: [nullvalue]
