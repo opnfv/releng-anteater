@@ -1,0 +1,7 @@
+Code-Review+2: Fatih Degirmenci <fatih.degirmenci@ericsson.com>
+Verified+1: Luke Hinds <lhinds@redhat.com>
+Submitted-by: Luke Hinds <lhinds@redhat.com>
+Submitted-at: Fri, 25 Aug 2017 10:14:33 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/40233
+Project: releng-anteater
+Branch: refs/heads/master
