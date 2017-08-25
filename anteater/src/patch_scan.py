@@ -118,32 +118,33 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
         try:
             fo = open(patch_file, 'r')
             lines = fo.readlines()
+            file_exists = True
         except IOError:
-            logger.error('%s does not exist', patch_file)
-            sys.exit(1)
+            file_exists = False
 
-        for line in lines:
-            for key, value in master_list.iteritems():
-                regex = value['regex']
-                desc = value['desc']
-                if re.search(regex, line) and not re.search(project_list_re, line):
-                    logger.error('File contains violation: %s', patch_file)
-                    logger.error('Flagged Content: %s', line.rstrip())
-                    logger.error('Matched Regular Exp: %s', regex)
-                    logger.error('Rationale: %s', desc.rstrip())
-                    failure = True
-                    with open(reports_dir + "contents_" + project + ".log",
-                              "a") as gate_report:
-                        gate_report.write('File contains violation: {0}\n'.
-                                          format(patch_file))
-                        gate_report.write('Flagged Content: {0}'.
-                                          format(line))
-                        gate_report.write('Matched Regular Exp: {0}'.
-                                          format(regex))
-                        gate_report.write('Rationale: {0}'.
-                                          format(desc.rstrip()))
-        # Run license check
-        licence_check(project, licence_ext, licence_ignore, patch_file)
+        if file_exists:
+            for line in lines:
+                for key, value in master_list.iteritems():
+                    regex = value['regex']
+                    desc = value['desc']
+                    if re.search(regex, line) and not re.search(project_list_re, line):
+                        logger.error('File contains violation: %s', patch_file)
+                        logger.error('Flagged Content: %s', line.rstrip())
+                        logger.error('Matched Regular Exp: %s', regex)
+                        logger.error('Rationale: %s', desc.rstrip())
+                        failure = True
+                        with open(reports_dir + "contents_" + project + ".log",
+                                  "a") as gate_report:
+                            gate_report.write('File contains violation: {0}\n'.
+                                              format(patch_file))
+                            gate_report.write('Flagged Content: {0}'.
+                                              format(line))
+                            gate_report.write('Matched Regular Exp: {0}'.
+                                              format(regex))
+                            gate_report.write('Rationale: {0}'.
+                                              format(desc.rstrip()))
+            # Run license check
+            licence_check(project, licence_ext, licence_ignore, patch_file)
 
 
 def licence_check(project, licence_ext,
