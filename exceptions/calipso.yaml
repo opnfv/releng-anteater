@@ -134,7 +134,7 @@ file_audits:
     - "password: { type: String }"
     - password=_?pwd
     - password=self[.]pwd
-    - "ssh_password": self.require
+    - "ssh_password\": self.require"
     - "\"passwordCredentials\":"
     - "\"password\" *:"
     - dbpassword
@@ -145,7 +145,6 @@ file_audits:
     - ip netns exec
     - "\"private_key_file\" :"
     - "history. : .eval: value\\.last"
-    - subprocess\.(popen\|check_output\)(.*, shell=True)
     - get_ssh
     - for_sftp
     - write to remote host prepare dir - use sftp
