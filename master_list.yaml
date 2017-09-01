@@ -185,6 +185,9 @@ file_audits:
     finger:
       regex: \bfinger\b
       desc: "Avoid coms applications that transmit credentials in clear text"
+    allint:
+      regex: 0\.0\.0\.0
+      desc: "Interface listening on all addresses - may break security zones"
 
 licence:
   licence_ext:
