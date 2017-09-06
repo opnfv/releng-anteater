@@ -139,9 +139,9 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
                                               format(patch_file))
                             gate_report.write('Flagged Content: {0}'.
                                               format(line))
-                            gate_report.write('Matched Regular Exp: {0}'.
+                            gate_report.write('Matched Regular Exp: {0}\n'.
                                               format(regex))
-                            gate_report.write('Rationale: {0}'.
+                            gate_report.write('Rationale: {0}\n'.
                                               format(desc.rstrip()))
             # Run license check
             licence_check(project, licence_ext, licence_ignore, patch_file)
