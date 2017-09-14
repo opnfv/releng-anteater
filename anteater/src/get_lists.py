@@ -87,7 +87,6 @@ class GetLists(object):
             binary_hash = (yl['binaries'][project][file_name])
             return binary_hash
         except KeyError:
-            logger.info('No checksum entries found for %s', file_name)
             binary_hash = 'null'
             return binary_hash
 
@@ -133,6 +132,13 @@ class GetLists(object):
             logger.info('No file_contents waivers found  for %s', project)
 
         return master_list, project_list_re
+
+    def file_ignore(self):
+        try:
+            file_ignore = (yl['file_ignore'])
+        except KeyError:
+            logger.error('Key Error processing file_ignore list values')
+        return file_ignore
 
     def licence_extensions(self):
         try:
