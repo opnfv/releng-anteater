@@ -189,6 +189,10 @@ file_audits:
       regex: 0\.0\.0\.0
       desc: "Interface listening on all addresses - may break security zones"
 
+file_ignore:
+  - '.rst'
+  - '.md'
+
 licence:
   licence_ext:
     - '.java'

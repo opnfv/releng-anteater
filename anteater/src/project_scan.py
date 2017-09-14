@@ -49,13 +49,16 @@ def prepare_project(project, project_dir):
     # Get file content black list and project waivers
     master_list, project_list = lists.file_content_list(project)
 
+    # Get File Ignore Lists
+    file_ignore = lists.file_ignore()
+
     # Get Licence Lists
     licence_ext = lists.licence_extensions()
     licence_ignore = lists.licence_ignore()
 
     # Perform rudimentary scans
     scan_file(project_dir, project, binary_list,file_audit_list,
-              file_audit_project_list, master_list,
+              file_audit_project_list, master_list, file_ignore,
               project_list)
 
     # Perform licence header checks
@@ -64,7 +67,7 @@ def prepare_project(project, project_dir):
 
 
 def scan_file(project_dir, project, binary_list, file_audit_list,
-              file_audit_project_list, master_list,
+              file_audit_project_list, master_list, file_ignore,
               project_list):
     """Searches for banned strings and files that are listed """
     for root, dirs, files in os.walk(project_dir):
@@ -87,59 +90,63 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                                 write('Matched String: {0}'.
                                       format(match.group()))
 
-            if not is_binary(full_path):
-                try:
-                    fo = open(full_path, 'r')
-                    lines = fo.readlines()
-                except IOError:
-                    logger.error('%s does not exist', full_path)
-
-                for line in lines:
-                    # Check for sensitive content in project files
-                    for key, value in master_list.iteritems():
-                        regex = value['regex']
-                        desc = value['desc']
-                        if re.search(regex, line) and not re.search(project_list, line):
-                            logger.error('File contains violation: %s', full_path)
-                            logger.error('Flagged Content: %s', line.rstrip())
-                            logger.error('Matched Regular Exp: %s', regex)
-                            logger.error('Rationale: %s', desc.rstrip())
-                            with open(reports_dir + "contents-" + project + ".log",
-                                      "a") \
-                                    as gate_report:
-                                        gate_report. \
-                                            write('File contains violation: {0}\n'.
-                                                  format(full_path))
-                                        gate_report. \
-                                            write('Flagged Content: {0}'.
-                                                  format(line))
-                                        gate_report. \
-                                            write('Matched Regular Exp: {0}'.
-                                                  format(regex))
-                                        gate_report. \
-                                            write('Rationale: {0}\n'.
-                                                  format(desc.rstrip()))
-            else:
-                # Check if Binary is whitelisted
-                hashlist = get_lists.GetLists()
-                binary_hash = hashlist.binary_hash(project, full_path)
-                if not binary_list.search(full_path):
-                    with open(full_path, 'rb') as afile:
-                        buf = afile.read()
-                        hasher.update(buf)
-                    if hasher.hexdigest() in binary_hash:
-                        logger.info('Found matching file hash for file: %s',
+                            # Check if Binary is whitelisted
+            hashlist = get_lists.GetLists()
+            binary_hash = hashlist.binary_hash(project, full_path)
+            if is_binary(full_path) and not binary_list.search(full_path):
+                with open(full_path, 'rb') as afile:
+                    buf = afile.read()
+                    hasher.update(buf)
+                if hasher.hexdigest() in binary_hash:
+                    logger.info('Found matching file hash for file: %s',
                                     full_path)
-                    else:
-                        logger.error('Non Whitelisted Binary file: %s',
-                                     full_path)
-                        logger.error('Please submit patch with this hash: %s',
-                                     hasher.hexdigest())
-                        with open(reports_dir + "binaries-" + project + ".log",
-                                  "a") \
-                                as gate_report:
+                else:
+                    logger.error('Non Whitelisted Binary file: %s',
+                                 full_path)
+                    logger.error('Please submit patch with this hash: %s',
+                                 hasher.hexdigest())
+                    with open(reports_dir + "binaries-" + project + ".log",
+                              "a") as gate_report:
                             gate_report.write('Non Whitelisted Binary: {0}\n'.
                                               format(full_path))
+
+            else:
+                if not items.endswith(tuple(file_ignore)):
+                    try:
+                        fo = open(full_path, 'r')
+                        lines = fo.readlines()
+                    except IOError:
+                        logger.error('%s does not exist', full_path)
+
+                    for line in lines:
+                        # Check for sensitive content in project files
+                        for key, value in master_list.iteritems():
+                            regex = value['regex']
+                            desc = value['desc']
+                            if re.search(regex, line) and not re.search(
+                                    project_list, line):
+                                logger.error('File contains violation: %s',
+                                             full_path)
+                                logger.error('Flagged Content: %s',
+                                             line.rstrip())
+                                logger.error('Matched Regular Exp: %s', regex)
+                                logger.error('Rationale: %s', desc.rstrip())
+                                with open(reports_dir + "contents-" + project
+                                                  + ".log", "a") \
+                                        as gate_report:
+                                    gate_report. \
+                                        write('File contains violation: {0}\n'.
+                                              format(full_path))
+                                    gate_report. \
+                                        write('Flagged Content: {0}'.
+                                              format(line))
+                                    gate_report. \
+                                        write('Matched Regular Exp: {0}'.
+                                              format(regex))
+                                    gate_report. \
+                                        write('Rationale: {0}\n'.
+                                              format(desc.rstrip()))
+
 
 
 def licence_root_check(project_dir, project):
