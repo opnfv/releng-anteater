@@ -122,7 +122,7 @@ binaries:
 file_audits:
   file_names: [nullvalue]
   file_contents:
-    - ^#
+    - ^.+#
     - git clone.+\.openstack\.org
     - git clone.+gerrit\.opnfv\.org
     - wget.+build\.opnfv\.org

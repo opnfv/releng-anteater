@@ -13,7 +13,7 @@ file_audits:
     - network_settings.py
     - deploy_settings.py
   file_contents:
-    - ^#
+    - ^.+#
     - git clone.+\.openstack\.org
     - git clone.+gerrit\.opnfv\.org
     - wget.+build\.opnfv\.org
