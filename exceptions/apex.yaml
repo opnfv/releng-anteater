@@ -21,3 +21,40 @@ file_audits:
     - wget.+git\.opnfv.org
     - wget.+git\.openstack.org
     - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
+    - rpm-build wget libvirt
+    - wget git gcc
+    - def clean_ssh_keys\(key_file=\'\/root\/\.ssh\/authorized\_keys
+    - clean_ssh_keys()
+    - node\[\'pm_password\'\] = node\[\'ipmi_pass\'\]
+    - vbmc_manager\.add\(username\=DEFAULT_USER\, password\=DEFAULT_PASS
+    - libvirt_sasl_password=False
+    - pw_op = \"password\:\{\}\"\.format\(root_pw\)
+    - def make_ssh_key\(\)
+    - key = rsa\.generate_private_key
+    - private_key = key\.private_bytes
+    - return private_key\.decode\(\'utf-8\'\)\, pub_key
+    - private_key\, public_key = make_ssh_key\(\)
+    - elif \'replace_private_key\' in line
+    - key.+\.format\(private_key\)
+    - \"password=\{\}\"\.format\(overcloudrc\[\'OS_PASSWORD\'\]\)
+    - pw_op = \"password\:\{\}\"\.format\(self\.root_pw\)
+    - z = mock_git_repo\.clone_from\.return_value
+    - mock_git_repo\.clone_from\.assert_called_with\(\'\{\}\/\{\}\'\.
+    - subnet-range 0\.0\.0\.0\/1
+    - until curl -C- -L -o \$CACHE_DIR
+    - git clone https\:\/\/git-wip-us\.apache\.org\/repos
+    - ip_netmask.+0\.0\.0\.0\/0
+    - \<packagereq type=\"default\"\>wget\<\/packagereq\>
+    - \<packagereq type=\"optional\"\>ftp\<\/packagereq\>
+    - \<packagereq type=\"mandatory\"\>curl\<\/packagereq\>
+    - \<id\>ftp-server\<\/id\>
+    - \<packagereq type=\"optional\"\>finger-server\<\/packagereq\>
+    - \<packagereq type=\"optional\"\>telnet\<\/packagereq\>
+    - \<packagereq type=\"optional\"\>telnet-server\<\/packagereq\>
+    - \<groupid\>ftp-server\<\/groupid\>
+    - wget \$GETFLAG \$ARTIFACTS_BAROM\/
+    - if getent passwd \%quagga_user
+    - eval restart
+    - eval \"\$wrapper
+    - nova.+nova_private_key
+    - replace_private_key
