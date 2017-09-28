@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da33351e_e599457a",
+        "filename": "exceptions/apex.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 334
+      },
+      "writtenOn": "2017-09-28T17:39:12Z",
+      "side": 1,
+      "message": "why does anteater flag this?",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 32
+      },
+      "revId": "a35ad08c09552cb9779aa3d1e2ab77b314b27778",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
