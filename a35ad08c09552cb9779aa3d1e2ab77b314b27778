@@ -22,6 +22,30 @@
       "revId": "a35ad08c09552cb9779aa3d1e2ab77b314b27778",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da33351e_db8d02d5",
+        "filename": "exceptions/apex.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 610
+      },
+      "writtenOn": "2017-09-29T10:23:18Z",
+      "side": 1,
+      "message": "Listen all on interfaces may result in exposing a private network, breaking security zones etc.",
+      "parentUuid": "da33351e_e599457a",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 32
+      },
+      "revId": "a35ad08c09552cb9779aa3d1e2ab77b314b27778",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
