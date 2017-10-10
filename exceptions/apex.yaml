@@ -13,14 +13,6 @@ file_audits:
     - network_settings.py
     - deploy_settings.py
   file_contents:
-    - ^#
-    - git clone.+\.openstack\.org
-    - git clone.+gerrit\.opnfv\.org
-    - wget.+build\.opnfv\.org
-    - wget.+artifacts\.opnfv\.org
-    - wget.+git\.opnfv.org
-    - wget.+git\.openstack.org
-    - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
     - rpm-build wget libvirt
     - wget git gcc
     - def clean_ssh_keys\(key_file=\'\/root\/\.ssh\/authorized\_keys

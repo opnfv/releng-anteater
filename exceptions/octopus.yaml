@@ -10,12 +10,4 @@ binaries:
     - dca00ca0c823938e3fca1889ae366e86e6ce2279e4fc689b437d43978cfbe1c9
 file_audits:
   file_names: [nullvalue]
-  file_contents:
-    - ^#
-    - git clone.+\.openstack\.org
-    - git clone.+gerrit\.opnfv\.org
-    - wget.+build\.opnfv\.org
-    - wget.+artifacts\.opnfv\.org
-    - wget.+git\.opnfv.org
-    - wget.+git\.openstack.org
-    - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
+  file_contents: [nullvalue]

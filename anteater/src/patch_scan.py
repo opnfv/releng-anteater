@@ -47,7 +47,7 @@ def prepare_patchset(project, patchset):
     file_audit_list, file_audit_project_list = lists.file_audit_list(project)
 
     # Get file content black list and project waivers
-    master_list, project_list_re = lists.file_content_list(project)
+    master_list, ignore_list = lists.file_content_list(project)
 
     # Get File Ignore Lists
     file_ignore = lists.file_ignore()
@@ -69,7 +69,7 @@ def prepare_patchset(project, patchset):
         # Perform binary and file / content checks
         scan_patch(project, patch_file, binary_list,
                    file_audit_list, file_audit_project_list,
-                   master_list, project_list_re, licence_ext,
+                   master_list, ignore_list, licence_ext,
                    file_ignore, licence_ignore)
 
     # Process each file in patch set using waivers generated above
@@ -79,7 +79,7 @@ def prepare_patchset(project, patchset):
 
 def scan_patch(project, patch_file, binary_list, file_audit_list,
                file_audit_project_list, master_list,
-               project_list_re, licence_ext, file_ignore, licence_ignore):
+               ignore_list, licence_ext, file_ignore, licence_ignore):
     """ Scan actions for each commited file in patch set """
     global failure
     if is_binary(patch_file):
@@ -130,7 +130,8 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
                 for key, value in master_list.iteritems():
                     regex = value['regex']
                     desc = value['desc']
-                    if re.search(regex, line) and not re.search(project_list_re, line):
+                    if re.search(regex, line) and not re.search(
+                            ignore_list, line):
                         logger.error('File contains violation: %s', patch_file)
                         logger.error('Flagged Content: %s', line.rstrip())
                         logger.error('Matched Regular Exp: %s', regex)
