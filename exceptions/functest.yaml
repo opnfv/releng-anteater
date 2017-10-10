@@ -10,14 +10,6 @@ binaries:
 file_audits:
   file_names: [nullvalue]
   file_contents:
-    - ^#
-    - git clone.+\.openstack\.org
-    - git clone.+gerrit\.opnfv\.org
-    - wget.+build\.opnfv\.org
-    - wget.+artifacts\.opnfv\.org
-    - wget.+git\.opnfv.org
-    - wget.+git\.openstack.org
-    - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
     - openssl-dev.libjpeg-turbo-dev.git.wget.&
     - RUN.+curl.*https\:\/\/get\.rvm\.io.*bash.*stable
     - grep.sed.wget.ca-certificates.git.\&&
