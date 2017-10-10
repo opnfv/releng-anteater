@@ -11,12 +11,4 @@ binaries:
 
 file_audits:
   file_names: [nullvalue]
-  file_contents:
-    - ^#
-    - git clone.+\.openstack\.org
-    - git clone.+gerrit\.opnfv\.org
-    - wget.+build\.opnfv\.org
-    - wget.+artifacts\.opnfv\.org
-    - wget.+git\.opnfv.org
-    - wget.+git\.openstack.org
-    - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
+  file_contents: [nullvalue]

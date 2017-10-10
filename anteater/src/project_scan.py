@@ -30,6 +30,7 @@ config = six.moves.configparser.RawConfigParser()
 config.read('anteater.conf')
 reports_dir = config.get('config', 'reports_dir')
 master_list = config.get('config', 'master_list')
+ignore_list = config.get('config', 'master_list')
 ignore_dirs = ['.git']
 hasher = hashlib.sha256()
 
@@ -47,7 +48,7 @@ def prepare_project(project, project_dir):
     file_audit_list, file_audit_project_list = lists.file_audit_list(project)
 
     # Get file content black list and project waivers
-    master_list, project_list = lists.file_content_list(project)
+    master_list, ignore_list = lists.file_content_list(project)
 
     # Get File Ignore Lists
     file_ignore = lists.file_ignore()
@@ -58,8 +59,8 @@ def prepare_project(project, project_dir):
 
     # Perform rudimentary scans
     scan_file(project_dir, project, binary_list,file_audit_list,
-              file_audit_project_list, master_list, file_ignore,
-              project_list)
+              file_audit_project_list, master_list, ignore_list,
+              file_ignore)
 
     # Perform licence header checks
     licence_check(licence_ext, licence_ignore, project, project_dir)
@@ -67,8 +68,8 @@ def prepare_project(project, project_dir):
 
 
 def scan_file(project_dir, project, binary_list, file_audit_list,
-              file_audit_project_list, master_list, file_ignore,
-              project_list):
+              file_audit_project_list, master_list, ignore_list,
+              file_ignore):
     """Searches for banned strings and files that are listed """
     for root, dirs, files in os.walk(project_dir):
         # Filter out ignored directories from list.
@@ -90,9 +91,10 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                                 write('Matched String: {0}'.
                                       format(match.group()))
 
-                            # Check if Binary is whitelisted
+            # Check if Binary is whitelisted
             hashlist = get_lists.GetLists()
             binary_hash = hashlist.binary_hash(project, full_path)
+
             if is_binary(full_path) and not binary_list.search(full_path):
                 with open(full_path, 'rb') as afile:
                     buf = afile.read()
@@ -124,7 +126,7 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                             regex = value['regex']
                             desc = value['desc']
                             if re.search(regex, line) and not re.search(
-                                    project_list, line):
+                                    ignore_list, line):
                                 logger.error('File contains violation: %s',
                                              full_path)
                                 logger.error('Flagged Content: %s',

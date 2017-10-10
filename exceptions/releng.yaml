@@ -10,12 +10,9 @@ binaries:
 file_audits:
   file_names: [nullvalue]
   file_contents:
-    - ^#
     - -s  set secret key
     - "PKG_MAP\\[wget\\]"
     - "\\[wget\\]=wget"
-    - "git clone(.*)\\.openstack\\.org"
-    - "git clone(.*)gerrit\\.opnfv\\.org"
     - "name: GIT_CLONE_BASE"
     - "name: SSH_KEY"
     - "packages = \\['parted', 'puppet', 'wget'"
@@ -60,6 +57,3 @@ file_audits:
     - wget > /dev/null
     - wget \$get_pip_url
     - wget(.*)WORKSPACE/opnfv\.properties(.*)GS_URL(.*)properties
-    - wget(.*)build\.opnfv\.org
-    - wget.+git\.opnfv.org
-    - wget(.*)artifacts\.opnfv\.org
