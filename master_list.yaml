@@ -228,3 +228,13 @@ project_exceptions:
   - releng: exceptions/releng.yaml
   - sandbox: exceptions/sandbox.yaml
   - yardstick: exceptions/yardstick.yaml
+  - infra: exceptions/infra.yaml
+  - ipv6: exceptions/ipv6.yaml
+  - joid: exceptions/joid.yaml
+  - kvmfornfv: exceptions/kvmfornfv.yaml
+  - lsoapi: exceptions/lsoapi.yaml
+  - models: exceptions/models.yaml
+  - moon: exceptions/moon.yaml
+  - multisite: exceptions/multisite.yaml
+  - netready: exceptions/netready.yaml
+
