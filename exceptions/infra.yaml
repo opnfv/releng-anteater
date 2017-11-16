@@ -6,7 +6,88 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/scenario-lifecycle/From OS-BASIC to NOSDN-FDIO.png:
+    - 0b793c28fa144f822a1fb69b93c2cddd66f974e671e715c157fe67a819245166
+  docs/scenario-lifecycle/From OS-BASIC to NOSDN-OVS.png:
+    - 7d850b16dd5d2d87969db37125d8985b3a6a880ff2dbbb4a98ad916908d9c067
+  docs/scenario-lifecycle/scenario-tree+idea.png:
+    - 7d2267a08243f67a900c503326be6b2f2bd7ef34da7f531df86b59febe08bda6
+  docs/scenario-lifecycle/feature-compatibility-nosdn.png:
+    - b3de09167d2111ccf9ad48baa7ed8aa35e475854f10f62cd99a11706e9a114a5
+  docs/scenario-lifecycle/scenario-tree.png:
+    - 1955cba40666a2547ee76f9f1d0e342195553168785c78d9c29e2358cd1c4669
+  docs/scenario-lifecycle/sibling.png:
+    - 2720f3d1689eda27737e73c4ec07671a0cbe18cbd8d02e4db67abeba4ea5dc3e
+  docs/scenario-lifecycle/feature-compatibility-odl.png:
+    - e13866b6d01728d0ea0ba382b2a79153b90987c8b1dac6d949201beca215735d
+  docs/scenario-lifecycle/parent-child.png:
+    - 0ab1427d452dfe20f10c70aedec4b3f27d21c9a0068cb03129c3c8d45d97fe31
+  docs/scenario-lifecycle/ODL Generic Scenarios Evolution.png:
+    - 089a2b8b9c4827c9ed379025b2996fb787b116eb6af683ebc36111db6c4311d8
+  docs/lab-description/images/pod_topology_example.png:
+    - 00ad26b08b5775aed5627fc5bd4e9a8cd60c0462495d9e459fa67652b9e202e7
+  docs/lab-description/images/lab_topology_example.jpg:
+    - 77c4ab63bb98dba4dcba5c4ce0dd426c1f07ff0efe80201e72baa15ea746d7d8
+  docs/labs/zte-sh-lab/images/zte_sh_lab_topology.png:
+    - eb38883e5337a338abbd87b76e585653b2523335c73f240344f79d68bc49dcdf
+  docs/labs/zte-sh-lab/images/zte_sh_pod_topology.png:
+    - 2833cd74782518b19043c11f8fbdec38c8e00f9fde4da798da2bfed48bd65adb
+  docs/labs/huawei-us-lab/huawei-lab-pod.png:
+    - 777bb9a19a41aca1e724f107cec3c9f40107a509cdba34fc4360a212edb7e602
+  docs/labs/huawei-us-lab/huawei-lab-topology.png:
+    - d51d560e72294fa7718004dc1d81f179774c3dec2d6e5ac9bb4352addc9df2a5
+  docs/labs/huawei-us-lab/huawei-lab-virtual.png:
+    - b167837528626279e55af017bfb687943287a9e8b5cd192cd1d18765c7fdb1fa
+  docs/labs/huawei-us-lab/net.png:
+    - 047ed84bd20f8a36105deee894cac25507332ba4b66138f33ffd85df712820db
+  docs/labs/ericsson/images/ericsson-opnfv-topology.png:
+    - e38315f22aeba763dc78f5961f17972b131f063b65e1c3d7f8c9e1d4d5e286f4
+  docs/labs/images/Dell_POD1.jpg:
+    - a6bd6b7db26f746dffe5a64d3abedc88154ee2aecfa2a79893f9d3e38d516da3
+  docs/labs/images/orange_paris_pod1.jpg:
+    - 5e7c2a864e2198d42a46db8c6524966fbaf7f96f2842731b87b8b856ce85b808
+  docs/labs/images/Dell_Overview.jpg:
+    - 84b9adcc7e88a5acd07c9b2623d3ab4dd1948ff898145d783ccd7ede3cb01a59
+  docs/labs/images/spirent_vptc-public-drawing.png:
+    - 821724c1f70acf26c943212b02c22d9b0d63b869a957900500be8882b6a41384
+  docs/labs/images/orange_pod2.png:
+    - 7f26df03541be7f8e007b7af384707ae295b044a4ae2d4e75ec8aec7beed2ec1
+  docs/labs/images/Dell_POD2.jpg:
+    - c4a8d6b42f546cbc7de023a3a9ec0fbc14b9b7c9eef0935a41b5462f692db387
+  docs/labs/images/Dell_POD3.jpg:
+    - 7e41b50f5a2e89c6b511a5fbc747194dd21b5ee7e25d232eb84f30cf4084b279
+  docs/labs/ool/images/ool-testlab.png:
+    - db9b17c50b40ebec0ccbdff47826241d362df5bfdaa3af85336bf28b81d88bf1
+  docs/octopus_docs/images/stability_screenshot11.png:
+    - 247d4790d1e4d0be5bf943bc0c3c54a85e57c6afea88c20b2d1526a05f79d7db
+  docs/octopus_docs/images/daily_job.png:
+    - cfc7a7fe894daf3d90ba166e2729201438bfd999c5bcd3c66562e4289809c51b
+  docs/octopus_docs/images/verify_job.png:
+    - 4a9d37b2b323dd4028af711e46f87a920a7771e369d1520c8a58b9846482720a
+  docs/octopus_docs/images/stability_screenshot10.png:
+    - 528703f140fecb36e8b1e2e44f51ad8dcf67fce92e39509a88dbc39c60349bf3
+  docs/octopus_docs/images/ci_infra.png:
+    - b37f0207c371b707c3a00b5852da49afb13205ca1526f25a452875b4b36e6143
+  docs/octopus_docs/images/merge_job.png:
+    - cc955e0f751f3e22e416272135a0d83e5ab0e9fbeed94d83851f1fc26f85982e
+  docs/octopus_docs/images/stability_screenshot9.png:
+    - 46db128fe57ccfab219091a6f66f1b358718b631e10b262759a7fcf8a2e604a5
+  docs/octopus_docs/images/pipeline_overview.png:
+    - f3fa1e8a0889a7ca57eabdbb8e4c521d171f5e76da1b78820e3bdea27fa7367c
+  docs/images/opnfv-test.jpg:
+    - 76032d70a4d914b8b5873d9f8b4d5143514d4dd1e60127ba71bf6cd8abe24edd
+  docs/images/ZTE-POD.jpg:
+    - 3c8bc6841dc4fdebaacb8446fe7e10af34f287a8797f06562f8bfec060c72959
+  docs/images/opnfv-example-lab-diagram.png:
+    - 2e1d0f82acea2a6aecf6ed964993799e5bcc2a13b7f9895ba4d2ed3bbe88f165
+  docs/images/opnfv-pharos-diagram-v01.jpg:
+    - 1c3df0355f7b3a3d4206a9e3be93947ed6ab471b0b6bd2796f15b7d450918c9a
+  docs/images/bridge1.png:
+    - c736643cb7a0ad2274bdfa11f745a41472b2741092ea9f340af87f785dbdb988
+  docs/images/pharos-archi1.jpg:
+    - d7970623c44144b8913ad6215a7dfdc88f6be3e5d073dd78094b6a5ef3a00650
+  docs/images/bridge2.png:
+    - 384ce0f465c2d08757d840dab80e157fbbfa0fbbce2e540450836835bc9885c1
 
 file_audits:
   file_names: [nullvalue]

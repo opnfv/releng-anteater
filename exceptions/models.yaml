@@ -6,7 +6,12 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/images/models-k8s.png:
+    - e57b24c5591f20a8892a159fb3e83dbfd987ec0dac637c602b71a14e62da7097
+  tests/blueprints/tosca-vnfd-3node-tacker/favicon.ico:
+    - 2088cf0e9512f999b35b76b89ceec1c0e19b7b4d4444a06485c505cc734ac229
+  tests/blueprints/tosca-vnfd-3node-tacker/logo.png:
+    - 2d6e161ccbcf1bd45faab7a148095977fee40547cac479cae44bb5fddc18eb74
 
 file_audits:
   file_names: [nullvalue]

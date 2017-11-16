@@ -6,8 +6,10 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
-
+  docs/development/design/images/policy_architecture.png:
+    - 01ef1f013913b1bacbf919a20174dff034ca992660b10b26b115985a64f42f4e
+  docs/development/design/images/policy_architecture.pptx:
+    - 6235932f4223c59749d64f9d42abcac511fb39cdf61427651513a04ed6ec9e4f
 file_audits:
   file_names: [nullvalue]
   file_contents: [nullvalue]

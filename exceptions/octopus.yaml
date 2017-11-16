@@ -6,8 +6,49 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  dynamic-flow.png:
-    - dca00ca0c823938e3fca1889ae366e86e6ce2279e4fc689b437d43978cfbe1c9
+  docs/scenario-lifecycle/From OS-BASIC to NOSDN-FDIO.png:
+    - 0b793c28fa144f822a1fb69b93c2cddd66f974e671e715c157fe67a819245166
+  docs/scenario-lifecycle/create-sdf.png:
+    - 9308f47b9ef2b5c9770b834d8a1356c984a5e4dd47c6ede512dd31c6177c4771
+  docs/scenario-lifecycle/From OS-BASIC to NOSDN-OVS.png:
+    - 8a63c523c022f6c9c7bd3dd19d0665ca131e43d1dd3987898282ede9c254e57f
+  docs/scenario-lifecycle/scenario-tree+idea.png:
+    - f1b7ce0a634b11a5940db84f99a8ce09e3f1671be4efba573baea3358cb1da96
+  docs/scenario-lifecycle/pdf-and-sdf.png:
+    - f1040d9e2973b220c004591b6a7dba992d1eaf24361d481d3ebc38b67aab6bd1
+  docs/scenario-lifecycle/feature-compatibility-nosdn.png:
+    - 0e5570bc5939a90eb9fbaf3125133be215931a358a61ab5379c2301ddefe8058
+  docs/scenario-lifecycle/scenario-tree.png:
+    - 08829337e3975a5e05cdaa315e683353ea274ae34edbb607af73ace4157727a0
+  docs/scenario-lifecycle/sibling.png:
+    - c4457c2c9c6485fedba3e5d8d402776c6075ee747dedf607d27d1f47c0292530
+  docs/scenario-lifecycle/feature-compatibility-odl.png:
+    - 7634a1fd32cbf918f8a45376dd4c2bc9ffde78cca15b9b227d1d0377eea4040e
+  docs/scenario-lifecycle/scenario-tree-danube.png:
+    - 780da38c24a68dc5ee4c149857f9525737b8d5e05ed38edd27cb0613bb1dbc1b
+  docs/scenario-lifecycle/parent-child.png:
+    - e975538cfc9af0bc29ab3459f625ced3dfd900264987768349b629dec5939181
+  docs/scenario-lifecycle/ODL Generic Scenarios Evolution.png:
+    - e0ad2aecae40eb818a757c6fa8785eacb35211529a656e664971af166325dfc2
+  docs/octopus_docs/images/stability_screenshot11.png:
+    - 96753d01d7f169e69282c817f26737d995ebf5b18347858e592a39e784f950bc
+  docs/octopus_docs/images/daily_job.png:
+    - 4c2d424aa54f6ab44ffb091ec6633a095daf2fd50bc72040f86eef6ab9b40fcc
+  docs/octopus_docs/images/verify_job.png:
+    - da4d25a19ed4b7c1d86dc910ff9a52db2bba7758b4bf76f79ce71a279790ecd5
+  docs/octopus_docs/images/stability_screenshot10.png:
+    - 874d1735921bd9e1a5c02fc5ed2ddd03fd3a78eed8652983208e868cb31ba64c
+  docs/octopus_docs/images/ci_infra.png:
+    - 494ff8cabdd3e3693e884918db2421e4ce4b56385a008b47eafc177428ee6da0
+  docs/octopus_docs/images/merge_job.png:
+    - 3652f7ef90b91a52d93eabcdcdffe242d5513d442a5f2d27c065a53249d7fbc2
+  docs/octopus_docs/images/stability_screenshot9.png:
+    - ea28fcf5c6b4631d212a9d4da0a49395d412dc39135584a76fadc1fcefaa0c82
+  docs/octopus_docs/images/pipeline_overview.png:
+    - 203815804ed2163a8ec1060d29612ddc459a35e5c2dd1d92169b6f06ef0857ce
+  doc/OPNFV_Tools_Training.pptx:
+    - 202bbf2d4ab0ca494275f4efb655c90019fc13f8d5067f9fc95317b032f5cbde
+
 file_audits:
   file_names: [nullvalue]
   file_contents: [nullvalue]

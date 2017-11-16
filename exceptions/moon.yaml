@@ -6,7 +6,72 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/etc/opnfv-logo.png:
+    - 574f54438976e75415b52d9f1de1046249d67bcfd98c7b196e5ac30eaedd0194
+  moonv4/moon_gui/delivery/assets/fonts/glyphicons-halflings-regular.woff:
+    - fba7d88a505dcc153d87d082313f0ac82eca3ad026854809f494d12f8a5b5357
+  moonv4/moon_gui/delivery/assets/fonts/glyphicons-halflings-regular.eot:
+    - f7a84bff49ef059184e991735dfe6ecf8318a7813ba9a18bea410f0da938f8d2
+  moonv4/moon_gui/delivery/assets/fonts/glyphicons-halflings-regular.ttf:
+    - acff13412a3d0e98419f7a0bd138d0982d98d617d3c79cc87f77ee6fac9252f7
+  moonv4/moon_gui/delivery/assets/img/favicon.ico:
+    - 1f349520bf9d17bc8193b69dfd5f746e92ae68c3db2cbd4ee9ac807eff931e10
+  moonv4/moon_gui/delivery/assets/img/ajax-waiting.gif:
+    - 15a3ff480b3c89ac5bf5eac207f53b8fc1056271e2917697053c75a631d0d6f1
+  moonv4/moon_gui/delivery/assets/img/ajax-loader.gif:
+    - 858badcdac90fef1d2e5f25cd0410487560447a43ca1cd46a2256bd204e1b775
+  moonv4/moon_gui/delivery/assets/img/logo-orange.gif:
+    - a2642e8d26aca7c21411ef07820e50cae41206ac0f63f08de3337a43d68ee24f
+  moonv4/moon_gui/delivery/assets/img/arrow-link.gif:
+    - 455537af542d02fc12935562d650c3f7a94bcd2d047c28dce8653a6e859bd2fc
+  moonv4/moon_gui/delivery/assets/img/logo-openstack.png:
+    - 66bb605d44e4b7fce367797c3224ab0a80a41c6f2648521c03cc37f2a7bd1b3f
+  moonv4/moon_gui/static/favicon.ico:
+    - 09bc2b604209ef4afe7d2e511baac7476eacd422d2db2ba1f1cd32510dc18049
+  moonv4/moon_gui/static/img/et.jpg:
+    - d977626a5bd582551b3ae4975983315eb4dabc7a24777b8d6f1294b1330a2fb5
+  moonv4/moon_gui/static/img/ajax-waiting.gif:
+    - 73d1b1a07faaafd7644a9c7bbe3e3bec31c3ad7acee1b34b8c10eb2113251c23
+  moonv4/moon_gui/static/img/ajax-loader.gif:
+    - 1e1a52973dbda26fba07c3e65713e1dbf5550afcfb3e62367ac91bddf5102c65
+  moonv4/moon_gui/static/img/logo-orange.gif:
+    - 0eed8ff50a3a101e77537b91bdb84778eb428ee6a8362a02d907a5b4a8f46dfa
+  moonv4/moon_gui/static/img/arrow-link.gif:
+    - be503a37e93f7949745c496bd31d02b36e60577faed07154c46b9fb705df6b07
+  moonv4/moon_gui/static/img/logo-openstack.png:
+    - ec81cfb7d8bc636224cd418eae1b2b181df389fd012f6705006c9a4b15cec544
+  moonv4/moon_router/doc/api-moon-secrouter.pdf:
+    - c03aecc32c7d2335578ee457b1032f6eeba9b0a25989e06577dba3c5673a2dd4
+  moonv4/moon_router/doc/api.pdf:
+    - ea9ed7fbb74e7ef800b73e2fdb09d33611aee5c1ad3184aa9d45121f9ae04501
+  moonv4/moon_router/tests/moon_db-0.1.0.tar.gz:
+    - 6257d4319aa87f470bc2aff068564c4c7b05a67483830385b89d75105221df1d
+  moonv4/moon_router/tests/moon_policy-0.1.0.tar.gz:
+    - 5e1b322c27f327ec3d5cd6f565741e19b7e7a8dd4dde074da971550b64bfa010
+  keystone-moon/doc/source/extensions/moon/ExceptionHierarchy.pptx:
+    - 32e12b6cf6d8591cda8726d36d4106825b11857f785a2a687deb30075e0ce689
+  keystone-moon/doc/source/extensions/moon/ExceptionHierarchy-v0.2.pptx:
+    - ac0e0a2b7aceef3f03aff8dfc41adc8ba07c4dc6c38e22a5746dade015dd5780
+  keystonemiddleware-moon/doc/source/images/audit.png:
+    - c5533f7ca01bc36ddd67f1f99763736b90de32a2714e333beda3d17ac7925c62
+  upstream/odl-aaa-moon/aaa/aaa-authn-api/src/main/docs/credential_auth_sequence.png:
+    - aa0028b7236f1455dd65f4b2f3463128d934842333196ced0441e5ec9fdaf66f
+  upstream/odl-aaa-moon/aaa/aaa-authn-api/src/main/docs/class_diagram.png:
+    - 2ca3fc06cb05a1a010f27111551621cc3bb8092ca23db910b7e6bae2c4dc23ce
+  upstream/odl-aaa-moon/aaa/aaa-authn-api/src/main/docs/resource_access_sequence.png:
+    - ab50987f6d20b4fe095f11cf67e92b3bc6bb558d479ed243e0e840004d4d8ecf
+  upstream/odl-aaa-moon/aaa/aaa-authn-api/src/main/docs/sssd_auth_sequence.png:
+    - 21fdfb48f54d4cc2816a36d317e6a91381a29f8ac46bdf2d608de398e8d9285d
+  upstream/odl-aaa-moon/aaa/aaa-authn-api/src/main/docs/federated_auth_sequence.png:
+    - 034f4e4b8ceacb61381b6c5d246caf44a4f5e8e991d347540f614a19ee77a874
+  upstream/odl-aaa-moon/aaa/commons/docs/AuthNusecases.vsd:
+    - fc56c922c769cfd50bea4fd3814c421fe4f1b09b3a8d89cf69a706bb4e0a00e2
+  upstream/odl-aaa-moon/aaa/commons/docs/direct_authn.png:
+    - 365f2cb062eeaf943e428691a9fec7665b4d80f4d5e51dff1479dd22081d09e0
+  upstream/odl-aaa-moon/aaa/commons/docs/federated_authn2.png:
+    - c5fd8a830f56a1c78b3f2da9c5cdf221a6cb4f6def27a45f6de97097907ad4e2
+  upstream/odl-aaa-moon/aaa/commons/docs/federated_authn1.png:
+    - 392f69d3e3452a4c759e568cc37d78560a31bfde6b3564f908031596097a5e35
 
 file_audits:
   file_names: [nullvalue]

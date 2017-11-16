@@ -6,7 +6,133 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/com/pres/dashboard/dashboard_status/period_select.png:
+    - 45fdefead8bf893547de6ac226116774f22e539a72701c5efbc6c78ea1166c26
+  docs/com/pres/dashboard/dashboard_status/dashboard_generate.png:
+    - fc2745fb0331fa7ac5865b458f76c8026fbba8ad9b7fed8614f48e7f6dea3cce
+  docs/com/pres/dashboard/dashboard_status/._percentage.png:
+    - 3594ba28ec749a32a9e30c7ce12472a430b3f5bfbe9316e777569a04d9d087cb
+  docs/com/pres/dashboard/dashboard_status/percentage.png:
+    - 60e187e73caeb935cd25c4b63567202bea88e2d5e60280a8e8b9d8fbc0dc9855
+  docs/com/pres/dashboard/dashboard_status/._selection_2.png:
+    - 7e4e5053e4f2c5f06efbd8a45132f6f56be908b4daa2ac777c414d6d98fb9d08
+  docs/com/pres/dashboard/dashboard_status/._number.png:
+    - 3bc3ca81a56bc3e5b6db565eb316032f9b4d85be052153dc06f82dde606d85de
+  docs/com/pres/dashboard/dashboard_status/._period_select.png:
+    - 8e348e496854fc1818c51a71f4560d82c01fc884fdb14c76b73ba0f054701bff
+  docs/com/pres/dashboard/dashboard_status/selection_2.png:
+    - 2d56d7af58f2473461896aeb439625ca0ecd297901019c9a366580e8b116ef4f
+  docs/com/pres/dashboard/dashboard_status/._selection_1.png:
+    - 5132b106df45744688460c6a80f00c8e96200a962688f45c759f65fcacbc3f6e
+  docs/com/pres/dashboard/dashboard_status/result_model.png:
+    - e305723533abc0449c6cb866980f022c1662607d3f47e109e6cf9c582dfdeaa6
+  docs/com/pres/dashboard/dashboard_status/._result_model.png:
+    - 085ce6f6039b1a341216b38c65a46bd8ff2c4c844ad3e271371a0e15f31ba1cf
+  docs/com/pres/dashboard/dashboard_status/logo-OPNFV.png:
+    - dc04ec11699a7eada2af733372668b13c36ca8d78765a7cdc8975569efc660c3
+  docs/com/pres/dashboard/dashboard_status/._danube.jpg:
+    - c6f3b90f5fe21af2d455c4be739292824aa7d4a3da927732539cacb6d80ddc1f
+  docs/com/pres/dashboard/dashboard_status/duration.png:
+    - 5db8d339bd74a77a59b010c426bb89ee9d46de2a9111b7c5dde5b4b384eed630
+  docs/com/pres/dashboard/dashboard_status/._dashboard_generate.png:
+    - 6bef248a3e3e1d62bf827f0c3a373022412e6f566113a497c99e8e572a6813c0
+  docs/com/pres/dashboard/dashboard_status/title-bg.png:
+    - 910e6a777bc250a66af0dfb7ede0c07eb6f10da0036c594c65b2ebcabde12495
+  docs/com/pres/dashboard/dashboard_status/number.png:
+    - b17a82769b28d22688ba81fd5f40bcf39a3987c33e80626920ca68935458a01d
+  docs/com/pres/dashboard/dashboard_status/._duration.png:
+    - 9cfa905ed0253811d6d332d35ec47cacecef0f1648194dad54b990cb215ed3ca
+  docs/com/pres/dashboard/dashboard_status/danube.jpg:
+    - eb78a6e4b1be224f93fbd03ce9bb9169f529ee3745ff7a1e253a0d26145bdd90
+  docs/com/pres/dashboard/dashboard_status/._generation.png:
+    - 22e44122b13a0129e862b62262847039193cd66f73715aa75c2e38b3d59a7374
+  docs/com/pres/dashboard/dashboard_status/selection_1.png:
+    - bb0f849e317bf96ea21233b9faf109572d5275958833b85d017becb8e598dda3
+  docs/com/pres/dashboard/dashboard_status/generation.png:
+    - be55fe4def3f74526aa575ed59475adf82593483df2ebf049f9239c08b567bb6
+  docs/com/img/colorado.jpeg:
+    - 01ea3691aa50eedbf5f110ec1aa4faabcdc4f869abcd6db17a3ca094ff9ccd61
+  docs/com/img/colorado.png:
+    - 67cf26354ec34be41b742b43df9926b370bcdf9439afaa9696ad9cc85249845f
+  docs/com/img/testapi0.png:
+    - 5a7c6614d84cbd546d7d05daba4b35a3197e231b209f6a5b9d956a88772ea9c0
+  docs/com/img/LinuxFoundation.png:
+    - 0d0eacd686ac1523bb3d21f17b8a282c4fc078d756a1a6e14762c992f3795bc8
+  docs/com/img/reporting.png:
+    - 1128f90ad4549f0e79b637f1a2d7765883aa50238b4164153ab876a6ca0897db
+  docs/com/img/title-bg-berlin.png:
+    - 52e472302a36a714e4274925d88537482badffb5cf2eaeb567146323ba093181
+  docs/com/img/matrix.png:
+    - 7f29a1ab25c9a8c770595474c6895ac098f835e87589c359d9372db92b67cf07
+  docs/com/img/bandeau-bas.png:
+    - 1a09feddcfe8342d0aa6629507eac8836be2d3823541dd74bf36f1968fa4f6db
+  docs/com/img/logo-OPNFV-Berlin.png:
+    - d013241f81b2694270b99fc240cb7acb66b9f58138ef76d53f256989e36fae20
+  docs/com/img/wordle-opnfv2.png:
+    - dc9bdb0b1725cb949bf4a2573e9f5f3813dee413e577f03e24e8a0a48d792e4f
+  docs/com/img/jiras2.png:
+    - fc53c0e2fdcaff0ed36d3976af6b6bc2537552f8d6cff73307af34500b7a439b
+  docs/com/img/logo-OPNFV.png:
+    - b8aea7cf3276e11ce4ba9eec0dae23fc6ea26698f3f7c2c95da61bf18a25369d
+  docs/com/img/title-bg.jpg:
+    - f2b18e56937aade621ddf6914167d8e7029ab96e1975fd2651e2fb7227e9fe34
+  docs/com/img/title-bg.png:
+    - 1b74bf6fc34a8c68ee6d92710c1049fad2d9a0a17e952f1e2fb23aa805523652
+  docs/com/img/jiras.png:
+    - b5bf22614164909be774e8c08c71516859494faf0ba54212125142dda1d85dfc
+  docs/com/img/OPNFV-Berlin.png:
+    - 31fd85a46343c5a60b6d1966fda937916861b09fd9ba7bd82a6f82ed12971fc2
+  docs/com/img/opnfv_how_to_functest1.png:
+    - 2037b8d3662ad33928d3805bcd2c1ba820b50d02b539761556a5546210330247
+  docs/com/img/OPNFV_testing_group.png:
+    - 2ec28e7d57dd91b7247caf4df17232b59eff554361752e1f4bac252b277f85d2
+  docs/com/img/leaf.png:
+    - 2499f1db77d34565d4a66d102774d261b5b02af0ea8d82267c9642abaffb6e67
+  docs/com/img/Functest-CI.png:
+    - 3cc5eac85fe495262910ca30070d050056e96216ca793e356992e06ac2b0df42
+  docs/com/img/testapi1.png:
+    - f6ad2b78561a5e9f4034cf31a5015e0efa7efbc27476dc358f213e75842b3554
+  docs/com/img/teamSummitBerlin.png:
+    - 38ff0c4ae0146f71e7150abafb5db875eb1256635a80734a86eee1ae676302f8
+  docs/com/img/OPNFV.png:
+    - 2ccbba4f0e91447f6ab8001363e87848c312ef80b45eb301d86e5bf0f4a89b68
+  docs/images/functest_overview.odg:
+    - 3895890ab6d5ef635b12617c4828ceaf393b449681f185a56e8292ffa01ca66b
+  docs/images/clearwater-architecture.png:
+    - 8078aab7d76f86c72eb93a8fc28f8402544decd244854c86de624049a6390a67
+  docs/images/FunctestDashboardDanube.png:
+    - f7de6dc50adabc7ed59bbc5bd5d4294bf1b3bfe700e44c718b9333b764494b83
+  docs/images/FunctestDashboardColorado.png:
+    - 34aae4209ea61fd9c912de69e91447c022d21446c0842993129431f0bb9c97a0
+  docs/images/functestODL.png:
+    - 3991bad414f89f6e0be0dca4bedd34c634c9c45fffda5b921f5862ee338cf909
+  docs/images/FunctestDashboard.png:
+    - 7e1b9402be09d84f5195fe6563fa259b0a3543a9e32593a24244de6cf16ee8ca
+  docs/images/concepts_mapping_final.png:
+    - 9592b88e080dd10dcb6afd6bddf3f452285ed00312075399fef95e74f7db286e
+  docs/images/FunctestDashboardEuphrates.png:
+    - d0ebd2b587522ec6ea1786663f92d8cdeafc7ee4014821c7c33bff1f5ac53eb6
+  docs/images/functestRally1.png:
+    - f849d2fff912596a84b544df7eb1c165e962e40edeeb635e5c47695fe71272f6
+  docs/images/functestRally2.png:
+    - ad45a046294ff7ebb0ad4ac61b61dbf2b3ddf3402f29bd7f8b153611196120bc
+  docs/images/Ims_overview.png:
+    - 92809c83206c4622551f6eb44386b977bc1d0dc4b1a42ea7e77452ffeb808b3e
+  docs/images/functest-reporting-status.png:
+    - fa93655ed7580f295ceb7e0ac0d4802fe1a0e70da03a190f15a242f4a0a38a99
+  docs/results/img/weather-overcast.png:
+    - 3f17a25ecfab199a41c59f42ea95508e4ec8e2e9151e82f2c7dbd8fc943947d2
+  docs/results/img/weather-clear.png:
+    - edd084fad95c8a5daed6904c834563ed0f3e15564df60e97e25fc528ae5f06d6
+  docs/results/img/weather-storm.png:
+    - b74137779c5aed6a29cf6538c5b4c9919cadb31a168a7b7d8fd9326ff4a59d4e
+  docs/results/img/weather-few-clouds.png:
+    - 5e85232932fe87aaa8f109415279976d027dcf08c1fce0b4cbbf411fcf40f486
+  functest/opnfv_tests/vnf/ims/ixia/files/Registration_only_LPS.tst:
+    - 07831d78cb836ad3893f99ecc3d99050351d81e20ff66abd54dcd62f3c7cf5a8
+  functest/opnfv_tests/vnf/ims/ixia/files/SIPCall.tst:
+    - 898bfd65fc9604cee3be9e7535c9a214da58fb796a53c54df724451c41353df7
+
 file_audits:
   file_names: [nullvalue]
   file_contents:

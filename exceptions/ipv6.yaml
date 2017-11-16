@@ -6,7 +6,22 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/setupservicevm/images/ipv6-postinstall-topology.png:
+    - 767c191da864f7224a6f3eb15d928883ba20a4b38dd9f064b10bc87c3a7f6b9c
+  docs/setupservicevm/images/ipv6-architecture.png:
+    - a2be5f385763e37a863f473f8fe43f9dfd09d13f4c54c6c20de04c05a1e0aee8
+  docs/setupservicevm/images/ipv6-sample-in-horizon.png:
+    - e14578b6fe61597ed6cb2d1642de2e2a5eb705aef4019398d406e1d86b8987e1
+  docs/setupservicevm/images/odl-dlux_ipv6_poc.png:
+    - 38f1ad1935f7d34d3cc912040166e59d638815143caf48bd122414ae8ef2fece
+  docs/setupservicevm/images/ipv6-topology-scenario-2.png:
+    - bec5f8e80fcb6a93f8e60a92182e72e224e0ed29f76b7efad09439c9084503c6
+  docs/setupservicevm/images/ipv6-topology-scenario-1.png:
+    - 3a201404b252e961f8522d45ca762b49164d5c8ea3c94af2a6fbdee578addc9d
+  docs/setupservicevm/images/ipv6-topology-scenario-3.png:
+    - 51250699229b578c28ec091b358d19462f46986201c880a6b39cdc625d5f92df
+  docs/setupservicevm/images/ipv6-topology.png:
+    - d6aa1e8f276b8cc7057975dd2ac219d2ef4dbe2e4e6e6a322dd444965731bdd4
 
 file_audits:
   file_names: [nullvalue]

@@ -6,7 +6,17 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/etc/opnfv-logo.png:
+    - 574f54438976e75415b52d9f1de1046249d67bcfd98c7b196e5ac30eaedd0194
+  DPACCArchitecture/figure-guest-view.png:
+    - b876efab9bb907d6604dc6f3dc454cafdd637a0bb2e14e978f037b8853f0a267
+  DPACCArchitecture/figure-usage-examples.png:
+    - 9db162c3fca4f15a12ccc5ef431f21950d1258be0420dd9236b5bef9656cd338
+  DPACCArchitecture/figure-host-AML.png:
+    - 8171486854cac04862fb40dff818bd8c2d8ef7acfe6635b7c2ab36642637e9b6
+  DPACCArchitecture/figure-usage-types.png:
+    - 76bea637bd79e4bd8c4d1b5c667a5ebd421aebacbdf188cbd0c37f854573999d
+
 
 file_audits:
   file_names: [nullvalue]

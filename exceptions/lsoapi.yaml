@@ -6,7 +6,10 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  model/MEF-Ref-Diagrams.png:
+    - e0fab99d3045120db8755e4ce387ae52c279e0769f067462b697a0366480526f
+  model/MEF-Classes.png:
+    - 3cf16011304c47e02b0b2a5896ea0ea369823a6ca3e008cd5e7590c73d6f40ab
 
 file_audits:
   file_names: [nullvalue]

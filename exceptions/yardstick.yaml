@@ -6,7 +6,66 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/testing/user/userguide/images/TC002.png:
+    - f7fe8cf4d157191ab91b67c4bebff2d58e03aab40c6765998cc2984c1fa80f7f
+  docs/testing/user/userguide/images/Grafana_config.png:
+    - 81ff69c3af89df52080e5948628bf2d7b12db565abbae33efe5567b7a0289ba8
+  docs/testing/user/userguide/images/test_execution_flow.png:
+    - 3663e9f2a015b5609acaaffae16106f16e15b04320dc7452bdefc42d6935bed5
+  docs/testing/user/userguide/images/Logical_view.png:
+    - 8eb1880ac16f59dd26e270940485811b022ad01bdf084ece9b0e1a77737e4d77
+  docs/testing/user/userguide/images/InfluxDB_store.png:
+    - ea1a7b945513e7f572e5677b6a539e9800393798e9a63139e98d4bfd9ce85155
+  docs/testing/user/userguide/images/add.png:
+    - 27d8455ec7b531c656be1963738803ac3cb4dcc529f45eb32ac42eb979c7068e
+  docs/testing/user/userguide/images/results_visualization.png:
+    - 417339fab1c556eda4ff517d5a8fe0782ed0acd2e5d8d8088a4e374cf380e434
+  docs/testing/user/userguide/images/login.png:
+    - 13da6388bf6761f73a2ed714ebc9e3e1ea10bb4f6d96db11a8fcdb7c3dba6057
+  docs/testing/user/userguide/images/Yardstick_framework_architecture_in_D.png:
+    - 0c3a1a66a54ffc8a03f44c49a389ed180d92652a6f1c75f9661344477b179308
+  docs/testing/user/userguide/images/Deployment.png:
+    - 6da7b15b5b87b2701751083d7a1ee29dacc2cdab807784da11896dd012bcc6a6
+  docs/testing/user/userguide/images/Use_case.png:
+    - 8cac128a44481314a2c1b1823154ee7b4f803fe266b86f7f962c479ed26cc467
+  docs/testing/developer/devguide/images/review.PNG:
+    - bd09d936f69061ed9cb1d5f3bf5b58b04a5ca2b1374564d720b1b882ce249ad6
+  gui/app/favicon.ico:
+    - b51c7d0f7037d1965a1d5817c5c0cd0a721215d3af261d48a130ff3d17915b22
+  gui/app/images/loading.gif:
+    - 49afe80e4f9032060068892dc4accadd41e4eaf102ac8c2eed0d5b71ffe057a8
+  gui/app/images/statusno.png:
+    - f4170b153a1fc845fceaedf068d73a49a9b236cc661d1e6383a105de1e842393
+  gui/app/images/yeoman.png:
+    - bd73d61fdb4a29f97387c1b91d1cbee08805f672c6bc27a57709e5e7deee13fe
+  gui/app/images/loading2.gif:
+    - 48e1342e9e7ce2ce2ab22db771887b3a118e8cfa3c699b9355ca552d4d80283c
+  gui/app/images/close.png:
+    - 497b6377f50a0afee5842ca54ef72eae57cf8f2503ab9d46a684ba3183b2c9bc
+  gui/app/images/back.png:
+    - 608b858bf436365942525c80c03e34437a33040f52d03423eda09757eefa82a8
+  gui/app/images/logo.png:
+    - 66eede2667c2817a39c0ddfeaddf9b435ce466449cf0a4ba45c27c5b110e6516
+  gui/app/images/statusyes.png:
+    - 3f791499f302e604d850d9222ee9861df94e5ee2edc993bce9e857c46ca4078e
+  samples/vnf_samples/traffic_profiles/acl/acl_ipv4_profile_1flows.ixncfg:
+    - 27bd48e57a5a83bc5082d5fc1a184505ec97e8c3fffcf973fcff92958460a929
+  samples/vnf_samples/traffic_profiles/cgnapt/cgnat_ipv4_profile_1flows_3node_latency.ixncfg:
+    - 83a6557a63dbc70f328a42a3aad547f84b2c47e5508177155eb150574f351e42
+  samples/vnf_samples/traffic_profiles/cgnapt/cgnat_ipv4_profile_1flows.ixncfg:
+    - f088324c60b3d3dc358b6e269b777bead52fb17e89248060af29f03cf7b5d401
+  samples/vnf_samples/traffic_profiles/vpe/vpe_ipv4_profile_256Kflows.ixncfg:
+    - cb6076a6625223660d4b1c2dc77d5f8553bd73708a1793145fd2739df3d45197
+  samples/vnf_samples/traffic_profiles/vpe/vpe_ipv4_profile_1flows.ixncfg:
+    - 26994abb020d46dd84f6313be626547d03754d1ab2727118acc1d6948b17adc2
+  samples/vnf_samples/traffic_profiles/ixia/ixia_ipv4_profile_2_port.ixncfg:
+    - d29e71d026280bb5ce8e14da19e5704c84e265d37a5d95bc0f58008d1697c719
+  samples/vnf_samples/traffic_profiles/ixia/ixia_ipv4_profile_4_port.ixncfg:
+    - f62c06694fe1a6cfc15d5e1ad1775e5ca9705df28d450db7a2d46d47f4fb3f43
+  samples/vnf_samples/traffic_profiles/vfw/vfw_ipv4_profile_muttiport.ixncfg:
+    - 47063e72e21cc149310234445f906b084b3c9ee6c3e669388f1a966d4bc72cdf
+  samples/vnf_samples/traffic_profiles/vfw/vfw_ipv4_profile_1flows.ixncfg:
+    - 4b105a6ffb383b91825a898f843d6764b277f251de2b5925726616280007d65d
 
 file_audits:
   file_names: [nullvalue]

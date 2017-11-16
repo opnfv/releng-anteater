@@ -6,7 +6,48 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/release/userguide/images/figure1.png:
+    - 344aae9fc0d054fd89b4bdaebd79879bb8b0246bc7239c1c48b993b840ed5ded
+  docs/development/overview/functest_scenario/images/figure-p1.png:
+    - d5d2acc405ae098c2fcbe91fa8baa67a00795c32941352c95cac5bc67a20c6eb
+  docs/development/design/images/notification-time.png:
+    - b9c496eecdfd1fb6c6e3fe93e4ecc4504fa113deaa532de16b8e669b075a3eaa
+  docs/development/design/images/conservative-notification.png:
+    - 124ada4dc0eb30ce2d4b2c565f63a460a1cd8b43f7cdf950c5a3b1d886b15c89
+  docs/development/design/images/shortcut-notification.png:
+    - 7962354b0ad087797da2273d6deede6355ecb50b0f372d74e8162353b2532595
+  docs/development/requirements/images/figure4.png:
+    - 2cc24be18bc86f764c95cd71152df204b32edfbedef69c2fd0effa2e025a5a15
+  docs/development/requirements/images/figure14.png:
+    - e059e87e057a03dd13683ed107fd9c5b68a33cce063a8d5406d3c3eee239adc0
+  docs/development/requirements/images/figure13.png:
+    - 7f85320b868ed30c0bdf015061743617c6e27b99c2f8dc3f9b47ede8a9c19725
+  docs/development/requirements/images/figure10.png:
+    - 82eeefa60f581a78b0bdbe74b2554f894407801a686919a32a9a02246d583f85
+  docs/development/requirements/images/figure8.png:
+    - 8530cc062898dbad792641955014c93c0f03dccb3a5859718b1241c4fe37b75e
+  docs/development/requirements/images/figure11.png:
+    - cd6617c3e9c2fd202a0119f6a99c8f0df04ebb86f1db69227b598e79017fe0f1
+  docs/development/requirements/images/figure5b.png:
+    - 1b58c633a96b43f231a2f95a1bc1dc2643f6386e4c758cae246a3a3c3fcc3728
+  docs/development/requirements/images/figure12.png:
+    - f0c1e6f5b6cc0b0da7b6b1733ac4a7ee2b0c277faf5d4ed0bc59c44dc2ac2b73
+  docs/development/requirements/images/figure7.png:
+    - 7fab9c295ae4c382099ee591e701c6ed59289b8f4ecc17496ca2270ca34b08f5
+  docs/development/requirements/images/figure9.png:
+    - 558fa543e79c8a55fae03225c2ac1c49fa9d71952a50c2efd0f5da65c6758039
+  docs/development/requirements/images/figure2.png:
+    - c98d51fa6a487940756ff72c7e284bdf3f5a5dd291130f19a91fab43f422ee5c
+  docs/development/requirements/images/figure6.png:
+    - 46b914a3b88542d293050e8ea54493f6bb67bebc0d8c9492ae64c0db577c051d
+  docs/development/requirements/images/figure5a.png:
+    - 95cb8d6e4e4a8d24e6dfbd9c546167afda9fafaef93f64f01ba16f0eb3201d22
+  docs/development/requirements/images/figure5c.png:
+    - 9aeac028499f85f4622542503f0afc4d41e14d54d50b94bdec9b3909d22535db
+  docs/development/requirements/images/figure3.png:
+    - 20668b5fbd71718e7bec7c603c0089f617ab0528bb54951ff169660f7520765c
+  docs/development/requirements/images/figure1.png:
+    - 474516935e9fc6d472f6e9c308417ace6af66af20613d149260c58a0d44e4312
 
 file_audits:
   file_names: [nullvalue]

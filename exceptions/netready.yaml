@@ -6,7 +6,24 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/development/requirements/use_cases/images/instances-architecture.png:
+    - 865b07e24593700148af91537ce0b7c4d62c295a52ea9729f9c78b1829b17fe0
+  docs/development/requirements/use_cases/images/georedundancy-after.png:
+    - 40c151ff3fcb81e4c7382d8680702b2d3b9ef0e229f4f43d03b842031f172b8c
+  docs/development/requirements/use_cases/images/l3vpn-ecmp.png:
+    - 3cd344e9e937a420dbb83b054b185287c1d9f5c8a5d26dbecefcb8647343f8f1
+  docs/development/requirements/use_cases/images/l3vpn-hub-spoke.png:
+    - 5349e53883409d364929e4fc558b34dcea65cd31c20ff4dd06222c65827a0841
+  docs/development/requirements/use_cases/images/l3vpn-any2any.png:
+    - 255d89ec53bffe5094db77b2cf6bac45a839671c31acf88fd3ce7ea699651d8b
+  docs/development/requirements/use_cases/images/l3vpn-figures.pptx:
+    - 88e0353de9fab4c7cb8a7ea1c963feb25a5232ca692ff2eb3427a669f4280a51
+  docs/development/requirements/use_cases/images/cells-architecture.png:
+    - 87cfbf33ae846c38efb16cb30e6860ca4084744affebc6ccfada2928f79e9a2a
+  docs/development/requirements/use_cases/images/georedundancy-before.png:
+    - 383579581de36b43207532650c1c753ac0430dfb30b9ea9d7cb08913b7d4e75b
+  docs/development/requirements/retired_use_cases/images/api-users.png:
+    - 2146adf9a96ef4ca33fa4cc2df70f98e020d5d281e5e1519c868eccac1ab7167
 
 file_audits:
   file_names: [nullvalue]

@@ -6,7 +6,22 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/release/release-notes/Features_to_date1.png:
+    - 519014ed3ab6989b6c3bb2714515b106863f35f83fdb5deb6557ed4fe2412cf4
+  docs/release/release-notes/Features_to_date2.png:
+    - 742a05f7c6c1d6c199eaa4bd730e281c02b681abc8737e85085dacf4ece02596
+  docs/release/userguide/monitoring_interfaces.png:
+    - 33d069d74ddd4aaa57c51be3cfaa0a5340923f2e1cc4bf42422cf76132123e16
+  docs/development/requirements/dpdk_ka.png:
+    - 0d0ed626890170d6eaf3602ada5ab0f5a396bceeb2628fd8fc46783f9bc5b6f9
+  docs/development/requirements/stats_and_timestamps.png:
+    - 11428bd835c55879a70a05c2488ebf80dab6cd27b287f947c409772747b56c8a
+  docs/development/requirements/barometer_scope.png:
+    - 2a535449d9487145fd1667da2804784b120655c6d10233bd8b975fbd5ab95bc0
+  baro_tests/mce-inject_ea:
+    - 2710595ead6bf2826cb5b0fd438015f4a44e1719744697bc3693dc7769145b9c
+  baro_utils/mce-inject_df:
+    - 047bfe6140f3290096f521b0e991f98ae29b11c9d765a68d269ebb053b17a53d
 
 file_audits:
   file_names: [nullvalue]

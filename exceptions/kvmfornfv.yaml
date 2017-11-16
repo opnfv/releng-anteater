@@ -6,7 +6,82 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/release/scenarios/.kvmfornfv.scenarios.description.rst.swp:
+    - 3caa2a090ca8716d69be2ecedb651190977d9e4201387016a0a11ff2e91b0055
+  docs/release/userguide/lmnetwork.jpg:
+    - deef78108604363a2de51b2553f0d9c96da5ee179360514ad093f74c766cadfc
+  docs/release/userguide/lmtotaltime.jpg:
+    - 9d78b46720a107540136878d1311a46c19a25454e3cf92ee0761149ae8b666e6
+  docs/release/userguide/lmdowntime.jpg:
+    - 95303fd4de1ab09ce3fba70d521e0c905db3d08a9f554d5636693e1dfdb35ab0
+  docs/release/userguide/images/cpu-stress-idle-test-type.png:
+    - 969ebf23aff7e4abfefafb099fa7255145623c5e141cc75ade5bbb7a2b839d28
+  docs/release/userguide/images/Dashboard-screenshot-1.png:
+    - 757246709cec000b9929bc07b5681a030cf01ef9249d29c53419fb71b7fa089a
+  docs/release/userguide/images/Idle-Idle.png:
+    - 86dc19a3ab5f600a26729f539852ed1bf6161fef549aea816a9d24022049568f
+  docs/release/userguide/images/Guest_Scenario.png:
+    - 8e6531818956d118f8bf1ea3eb52093de3bf95fff9a624811ae0fd014ba13b08
+  docs/release/userguide/images/Cpustress-Idle.png:
+    - ca51bd2ed1bbbf01bc856fa525b93814989f873cc0f5fa1a292491df051e8060
+  docs/release/userguide/images/IXIA1.png:
+    - 78411fd26b840982a7116c1a20be9465f50514ed1c8ffcdae8b5ccd04718216f
+  docs/release/userguide/images/io-stress-idle-test-type.png:
+    - 2eb2e89f387819baeff611abf2ed4943b303b2bea1cf6a353724f8cfaa273b90
+  docs/release/userguide/images/host_pk_fw.png:
+    - 0189dae27c86e630404c12cabf83a060eeac31b3999ee6ca5e848fec35590e72
+  docs/release/userguide/images/guest_pk_fw.png:
+    - dcf99869127f6f4fd0916067289ea40a2e4321ce8dfa6f1624c8384201da45bd
+  docs/release/userguide/images/sriov_pk_fw.png:
+    - d7c013ee26d81b0635cfe36f4a11ca0115c5753f68f72afffdf895cc2241fe7d
+  docs/release/userguide/images/IOstress-Idle.png:
+    - 95b8a4bea7f9cc98c718407880f348d246c5748e44bf83e3c453deae4a313fd4
+  docs/release/userguide/images/idle-idle-test-type.png:
+    - 9ee072d74e88d230d78fd2c86beb904a20e212d6eecf0db1ea46136d6f82218c
+  docs/release/userguide/images/SRIOV_Scenario.png:
+    - 105eac37af6bc492e730ded970c424a0381fbebf8ab0d43242981aa76541a7de
+  docs/release/userguide/images/UseCaseDashboard.png:
+    - f07164af81e06b4b020085a141bb0a8f7291703ced1e82690baf45d6d4b3f173
+  docs/release/userguide/images/Dashboard-screenshot-2.png:
+    - 6d8c71be1116cca6d860b302c3aba7615c8063df274bc48f3d77d0677962b11c
+  docs/release/userguide/images/Host_Scenario.png:
+    - 37cc8b83d30a7ab88accf46f934255a0ad03e24374ad82ae01fb71abd8fefe65
+  docs/release/userguide/images/memory-stress-idle-test-type.png:
+    - edcbfd2298420727ea1547aa943a049579e270f0008590cc873e4daa5ad5c103
+  docs/release/userguide/images/dashboard-architecture.png:
+    - 07efc994079838040c88978f8ec494b6bb2b13f625a3b83e972189e4b7ea71b0
+  docs/release/userguide/images/Memorystress-Idle.png:
+    - 5e7011a8b2d2a01cb0afc0a860c3147ff13f9e7b64c8f4cd61dc47ff6643b7ac
+  docs/release/configguide/images/brahmaputrafeaturematrix.jpg:
+    - 90056f5293b2ec0301d590235c226b38c04a9cacac121e67ad780e19ae5a9d4b
+  docs/release/configguide/images/weather-overcast.jpg:
+    - 7f621c7815277ae1b01288521f1c34c2851b45c8bfb15cd29e04d078980f9add
+  docs/release/configguide/images/brahmaputrascenariomatrix.jpg:
+    - 108d84f20ed112d48d322270be4fb680513dfdb6a5cfa215d41221c328a04748
+  docs/release/configguide/images/weather-few-clouds.jpg:
+    - 4346a0117a66419645ac9e07881ef37893f39694b11286e439d6b4c5d2596973
+  docs/release/configguide/images/idle-idle-test.png:
+    - 5961e08dc8e1ca7281fb26f44b6c94acedcf447cd3a34c5f4b9cacddbdee6298
+  docs/release/configguide/images/weather-clear.jpg:
+    - 966a00a49bd472c9507c66347e569e84182c326dbbad3bfcc95f83b03418c9cf
+  docs/release/configguide/images/weather-dash.jpg:
+    - b96ba47d6a8e4c5a5d1ae311c897a9f7ec5be53a9ae0e02194153c1f3bd37b76
+  docs/release/configguide/images/stress-idle-test.png:
+    - b86642504450b7d04051a0709b9b9ba77e0be2738dd44b6e325b715d2c57c9ea
+  docs/etc/opnfv-logo.png:
+    - 954131a461aedc5cd171b1c5e8d50aca976f13affa94d1f40e3b51c8a0bb78f2
+  docs/development/design/DeviceInterruptTest.png:
+    - fa1ec7957d606e50a7ade7206e35766890ecf7bc05345d9a93726148cefaa6cc
+  docs/development/design/kvm1.png:
+    - e5eaec93b9753aa385761194395d629fcb301cd4cdedf62ff4de74a4c9002402
+  docs/development/design/PacketforwardingDPDK_OVS.png:
+    - 9283c46d18780933fe25153bdba4826c9cf71103c1f2a8bcc9af02ba7ec136b6
+  docs/development/design/Bare-metalPacketForwarding.png:
+    - 006e81b239a91554557cf40e5de32dd1986e33874868d0e3a5a48fbe8fe1a8f0
+  docs/development/design/TimerTest.png:
+    - efdbd1ad1fe3ad8673813918469f6faf68185533c6c5d21ee1bd8eb84a76ff68
+  kernel/Documentation/logo.gif:
+    - 8829a24943ef40826f26008effb9931588be76d5641848d84cddbad9b32772f0
 
 file_audits:
   file_names: [nullvalue]

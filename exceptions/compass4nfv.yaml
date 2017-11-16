@@ -6,7 +6,22 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/release/installation/images/k8s.png:
+    - ea74fbfa486f2e5ec7afc36a0cccc0161420409fd84fec0b56af2db65c053c4a
+  docs/release/installation/images/architecture.png:
+    - b941339d32e26eddef5074f893ffe69b8c922bee074638ed5cf67b6b5b40d50e
+  docs/release/installation/images/multi_nics.png:
+    - a9597f00a89874ea908d542d1dd6a7a125f2e0e0128d4714b7564e226ea789e8
+  docs/release/installation/images/single_nic.png:
+    - 2d0d900d84ee7258ebc27822fcfdab54ede33c64676def4b679e77d34912ff71
+  docs/development/overview/images/compass_arch.png:
+    - 098f8470138c881c29c92ed89069e939336ccd6d0653826a319bc0a1224350c9
+  docs/development/design/images/Existed_roles.png:
+    - ce19bfbba632dce8d78762d035ea12d1b4ad7e39f6000c4ed9743976afca7b47
+  docs/development/design/images/Moon.png:
+    - 9a9d40d9ffa4bcbf99140fa6678599298bda913329ef3b40ef34b0e62f848180
+  docs/development/design/images/repo_features.png:
+    - ce345b0fd8583a792180521c7a8c1ff37574cc7ca693617d974632565720d89c
 
 file_audits:
   file_names: [nullvalue]

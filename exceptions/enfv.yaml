@@ -6,7 +6,8 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/etc/opnfv-logo.png:
+    - 574f54438976e75415b52d9f1de1046249d67bcfd98c7b196e5ac30eaedd0194
 
 file_audits:
   file_names: [nullvalue]

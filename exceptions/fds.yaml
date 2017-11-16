@@ -6,7 +6,38 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/scenarios/os-odl-fdio-ha/FDS-basic-components.jpg:
+    - 0e4a2ea81f5cc3a609f36e62e61669089c48138b30e99e4c2f104d370dd19c35
+  docs/scenarios/os-odl-fdio-ha/FDS-odl_l3-noha-overview.png:
+    - 6364ce3b458799c2e703c342da52015cb80368b95905a6266b10ea944f6de3a3
+  docs/scenarios/os-odl-fdio-ha/FDS-simple-callflow.png:
+    - 26fda006fff803358c8825f8b48c067651ed7451fe70aeedc24e6b32892fee99
+  docs/scenarios/os-odl-fdio-ha/FDS-L3-noha-sample-setup.png:
+    - 7dc981cc09e983dfec4ca90d17be083c0768d39c352f1793e2838e315522b691
+  docs/scenarios/os-odl-fdio-noha/FDS-basic-components.jpg:
+    - 8714b729514cf545eb0d49727d72c01af6f76d11213d01827bf96e1c00284bb8
+  docs/scenarios/os-odl-fdio-noha/FDS-odl_l3-noha-overview.png:
+    - 3e93f3a4a15628921f220c158fb719baf2d3a54ab22a7a7afed03084e121c257
+  docs/scenarios/os-odl-fdio-noha/FDS-simple-callflow.png:
+    - be7665baa8d674bc84908a4c5609b1deab9490d0db9be4fecddaa16041d23004
+  docs/scenarios/os-odl-fdio-noha/FDS-L3-noha-sample-setup.png:
+    - 4d1f85f6eaa42a1bc032a78204358bec522c4d71375ffb2185051eba2e84d94a
+  docs/scenarios/os-nosdn-fdio-ha/FDS-nosdn-overview.png:
+    - c98726969a6efb6f246e6b4e754f2168be8ca6c03b9fbccb0c946b53f95b496b
+  docs/scenarios/os-odl-fdio-dvr-noha/FDS-basic-components.png:
+    - 69aafb93c350b9512fb02232a3d254c5e3c7652ee21d0a950f6230f667210ebb
+  docs/scenarios/os-odl-fdio-dvr-noha/FDS-east-west-traffic.png:
+    - b858bdb89f9927df43b0576edb9796e777b517cbe18738bfe979a7b41e7a173a
+  docs/scenarios/os-odl-fdio-dvr-noha/FDS-L3-DVR-sample-setup.png:
+    - 08c9388d6b72184867d3379c8423f3e92a635a29db4c8e1a537ca2febdfc04bb
+  docs/scenarios/os-odl-fdio-dvr-noha/FDS-simple-callflow.png:
+    - bfa5658faeea6e5a4270fa52be4d5a4ae71e524f24920055814205806c28c908
+  docs/scenarios/os-odl-fdio-dvr-noha/FDS-odl-dvr-noha-overview.png:
+    - 49dc18e6f9f08eac61105e892c5620e3de18297df8e6746346de781666b8ff11
+  docs/scenarios/os-nosdn-fdio-noha/FDS-nosdn-overview.png:
+    - 1a1199977eccf540f33724ba5fc7f0c346c04b599785c289e0211e39d93741d6
+  networking-odl/networking_odl/ml2/vpp_ml2.tar:
+    - 8db054457167ce7fee775b2b25c7cd4a0b09f69c4e4a21e8bd06c1cc086eba50
 
 file_audits:
   file_names: [nullvalue]

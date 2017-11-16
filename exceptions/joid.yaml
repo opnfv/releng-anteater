@@ -6,7 +6,8 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  labconfig/nokia/pod1/diagram.png:
+    - 2090c13235fed3e76cd48a435e60fd88a961512a6c559b960e5fff034236a2d6
 
 file_audits:
   file_names: [nullvalue]

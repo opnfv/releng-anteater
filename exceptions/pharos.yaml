@@ -6,7 +6,55 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/release/release-notes/lab-description/images/pod_topology_example.png:
+    - c0fe55c282d0ba6fa75fd7b324128dd8ccf1e35e2cbc8ceccc0fd472fef51394
+  docs/release/release-notes/lab-description/images/lab_topology_example.jpg:
+    - 78de6d26217401ea90359a35ea87c732ef8f966c4729ceb7809d58a8ba5915b9
+  docs/release/release-notes/labs/zte-sh-lab/images/zte_sh_lab_topology.png:
+    - 424a017383e53946be0776e6d306c72adb1c6ab7cd5d7593e42a07ba5b5123ff
+  docs/release/release-notes/labs/zte-sh-lab/images/zte_sh_pod_topology.png:
+    - 43c453466773588a8e4fcf0017a2fa846f467656fbdf7f1e9f46de2e03c6d605
+  docs/release/release-notes/labs/huawei-us-lab/huawei-lab-pod.png:
+    - 21907cb1937f37ef49166fedd03c9eb92f4cc9e1aa25fa9b908e35adee233e0a
+  docs/release/release-notes/labs/huawei-us-lab/huawei-lab-topology.png:
+    - 62b12e3e3a1e9357a7b262f82cb4cff96d95f9854c9f677250a1b383b33d302d
+  docs/release/release-notes/labs/huawei-us-lab/huawei-lab-virtual.png:
+    - 40207d757775b0bd0d8d942b0b210be8b6e7061c92c3f9e8faecd9fd0f6da72f
+  docs/release/release-notes/labs/huawei-us-lab/net.png:
+    - 3d18feb69252b7ed7e552ce1ad6b0160844bfd460c8f87798921a5c86b8e2572
+  docs/release/release-notes/labs/ericsson/images/ericsson-opnfv-topology.png:
+    - 57e471ec2d6f75d3d125bddf9fa4ebe38dc4977a54ca49e9ed72daac1c6fa2d6
+  docs/release/release-notes/labs/images/Dell_POD1.jpg:
+    - db5e702b3a4a142affdacb654b17b055818d3d9f5680834b771a74d1104188aa
+  docs/release/release-notes/labs/images/orange_paris_pod1.jpg:
+    - 78faea1e7527580cf6102d0d272b07116cab24934ea1c1b193dd06dfb71f8f76
+  docs/release/release-notes/labs/images/Dell_Overview.jpg:
+    - 44dbe607456002a71970228036fcd458a6f1b02d1d67237ccc56c67c65000064
+  docs/release/release-notes/labs/images/spirent_vptc-public-drawing.png:
+    - 3bdabb5650f00263bc8b3dd1c72daf610bf1e23cb52fb7b48e2dc761e26cda32
+  docs/release/release-notes/labs/images/orange_pod2.png:
+    - e54ffdd33c871ceefd80d45eaebbadc805e23522389e64a794aed35db6b02bd2
+  docs/release/release-notes/labs/images/Dell_POD2.jpg:
+    - 2bf09d45edb56d12dbed72af1e3fabd2d43d8a45b59cdefd2fc5d5cb63e6a760
+  docs/release/release-notes/labs/images/Dell_POD3.jpg:
+    - 9883fee38a86c8c37ffb9ab8379413bd28e484e7f2ef74dee181a1da8658090b
+  docs/release/release-notes/labs/ool/images/ool-testlab.png:
+    - c924494d9a5421165e06b9c8e0cf78812e7a21d70523f85ceb1093ce8436dab4
+  docs/release/images/opnfv-test.jpg:
+    - 194b77af5491e4bfbdae07514ac21dbb9609cc356334e7bcd9760bb58611be08
+  docs/release/images/ZTE-POD.jpg:
+    - fdd9415eda9104a1c8a1b604f8959824727a64f7e2e9c4a0b681c80062a0c017
+  docs/release/images/opnfv-example-lab-diagram.png:
+    - 4e4b22c62559f9842338bd0cfe45f998027f0034e1e67ed5662b7774f08afc04
+  docs/release/images/opnfv-pharos-diagram-v01.jpg:
+    - ab685fe2aed4956c6d7feec88960f0a6057ae6f3e692284701fb12e9d98e74c4
+  docs/release/images/bridge1.png:
+    - 40eed86ae0abf5c425554e756641a984812e39f61d22587c53d44d6d49441ee2
+  docs/release/images/pharos-archi1.jpg:
+    - ce20fca9217f1140c28ad449a3b0a0ea51bc99ef01f963d105a0a65aa4e1b586
+  docs/release/images/bridge2.png:
+    - 062e34a9dc030f83fcbb636cdc7a873816cf7b92c6eed1b9dd5550bcccc3207c
+
 file_audits:
   file_names: [nullvalue]
   file_contents: [nullvalue]

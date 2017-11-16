@@ -6,7 +6,38 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/gap_analysis/etc/opnfv-logo.png:
+    - 574f54438976e75415b52d9f1de1046249d67bcfd98c7b196e5ac30eaedd0194
+  docs/etc/opnfv-logo.png:
+    - fd5a53b266c9d1c5ba428137943775882cc383d28d40a4625b1bf80066355fef
+  docs/design/etc/opnfv-logo.png:
+    - 10dbd4ea680e25ba7547f54bd62ec8687697141e284e19ea3f326afbb82aeb49
+  docs/design/images/figure4.png:
+    - 93f2c7b502f0e93c8028577c14ab54ccddd799ffe7019ced9ee891fcffb50357
+  docs/design/images/figure5.png:
+    - 15e28e3f123fc15278fa965a4d0f69540c00b767cabec89f7bd91acbe1f4488f
+  docs/design/images/figure2.png:
+    - 177c5e38d99c7f0bd475e435bd605626a3be700b7ae99a6d23ff8fdf627a5e4e
+  docs/design/images/figure6.png:
+    - 54db7875800a53194681514da7c1d2621e93775e3812f496cedcfa6c9df8feee
+  docs/design/images/figure3.png:
+    - 0fb0ca27d399ebc5212f6d4759e4e1d8c58ed999c14173658427656fb829c781
+  docs/requirements/etc/opnfv-logo.png:
+    - d97ffb40995f4dbb9b1a83807211525996a4e2da248f51070d9a728d71d12268
+  docs/requirements/images/figure1.png:
+    - 6ff62f251f0458ce5c7b409843e2269a9ce13da5fe51097cee65529f97c0858c
+  docs/images/figure4.png:
+    - ffb9bdb07f6b9b87f9c564089f6e225c706aa77c29a4c14eacac37ab1b010e76
+  docs/images/figure5.png:
+    - 16f504c99e5c5c905e13ed633e66e766b46c88671f5975dca2feb513fd8414d3
+  docs/images/figure2.png:
+    - 9958b17076863d6035d0e382f73d5064274e68e123915001a8717ec6f278342d
+  docs/images/figure6.png:
+    - 101ae5707e3946c22a09fc507cdc7968a0aee3314fdb08513019ea7c1edd6ac0
+  docs/images/figure3.png:
+    - bcf374e69a6f415b334b64e4d16ab9aa7cb896e88b9535a7db37c05555ab3eed
+  docs/images/figure1.png:
+    - 2cb5a8af052bb4aa4c470a5397b5db3b7cadd9927b0dcfdaba91904afa13b9dd
 
 file_audits:
   file_names: [nullvalue]

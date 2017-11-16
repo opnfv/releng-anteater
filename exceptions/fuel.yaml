@@ -6,7 +6,14 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/release/installation/img/fuel_baremetal.png:
+    - fec8773affddee41c4093a293623016530d271069aa856e0b6e43e246cc57731
+  docs/release/installation/img/lf_pod2.png:
+    - efae1bf49729102ace7ffe1fcdd2b111f983afb53e68b31aa736a793ef83d872
+  docs/release/installation/img/arm_pod5.png:
+    - d292580e5ed584c1037e74aa8f5c7ead41832ccd33ee5eebef3629a9cbe52737
+  docs/release/installation/img/fuel_virtual.png:
+    - 893f6b4c45f7bc3049dfeb6931798393e384527739b5a44363f7fce1d172e635
 
 file_audits:
   file_names: [nullvalue]

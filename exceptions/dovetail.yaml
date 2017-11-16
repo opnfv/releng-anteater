@@ -6,7 +6,50 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  binary_ignore: [nullvalue]
+  docs/images/dovetail_offline_mode.png:
+    - f305370003ecadafba397f6bb28e398960abb828ab16922350691261aba5ae70
+  docs/images/dovetail_online_mode.png:
+    - ea604f5e6e7bd1d9fa0e8a54b5bf138fbff0efe32e320d754c1a3f8e7f441779
+  cvp/3rd_party/static/swagger/images/wordnik_api.png:
+    - 1393c9262841e4cd57600e6cb59ae3c77259b861c6f5fca66b4a941590e6b147
+  cvp/3rd_party/static/swagger/images/throbber.gif:
+    - 6f79634df8865a78e83fec50bbdea12ac9414f69d23298630e719fc65f65aec9
+  cvp/3rd_party/static/swagger/images/logo_small.png:
+    - f1a40c01eea685a5140d11143b470ca37e6c4382018cc2f9dfb92fa0cffcf529
+  cvp/3rd_party/static/swagger/images/explorer_icons.png:
+    - 62b4219f556787776d26226f66fb2de6ba3376df3d0adf87126be510a26a0577
+  cvp/3rd_party/static/swagger/images/pet_store_api.png:
+    - 947c66b7a8951438e9ddcec1c1d8571c8b0147d3cc435888a8a5cb3fda62d183
+  cvp/3rd_party/static/testapi-ui/favicon-32x32.png:
+    - 405d46736cc2ce1a93c1927c71c7b433e16b0cb672e887a2c42998c0fc80a72f
+  cvp/3rd_party/static/testapi-ui/favicon.ico:
+    - cc2d66211194711619e8467fe2d3c6699673cc79070ffb8cc63ebb900059934e
+  cvp/3rd_party/static/testapi-ui/favicon-16x16.png:
+    - 9e12a664ddbd6929f3dbc631b05cd74471f9ee0840399f671916146a2b1a864a
+  cvp/3rd_party/static/testapi-ui/assets/img/testapi-logo.png:
+    - f9713a3502d7503e8e564b467a51cad3981b761736103ae039f6f88bca4be7b7
+  cvp/3rd_party/static/testapi-ui/assets/img/opnfv-logo.png:
+    - 593137cc9f3d66dc9337e08a0f60b45aef3ae7d35d8c4c352196333eccbbbbff
+  cvp/3rd_party/static/testapi-ui/assets/img/testapi-log.png:
+    - 7c7a07fb5e7fbf896c550bc2d7f2beeb86222c52d1c3461c9e2b4551133fb2fc
+  cvp/3rd_party/static/testapi-ui/assets/lib/angular/angular.min.js.gzip:
+    - 8fa065dc3e299582d91a886dcd67051bbe879e4d16bd3e75302df89d4a91f990
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.woff:
+    - d653696ee7cd00de03300f5b8a021d85b3b6e96c66ad3caf33277642b3a3e849
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.eot:
+    - 1bea2245162da39a52853625757328db902bc1ce180f08162ae11af21dbdfaaa
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2:
+    - 0a22c57791bdc2f43177956cb32194547cd44ecf33af5548ee38c84eb6314824
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf:
+    - 023625e20cc93107e8ade10de86caaf2aeb9d9fe4388ba9cefa0b4bc5a139123
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff:
+    - c66a74bba3e249651d0c14c1ad9544e31339e8fd006858abbaddc3688ae3dbce
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot:
+    - 958befe2596a28055ee81677ba00db7b24999ebbe48f6e38d545c0ebfbd4204b
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2:
+    - 98769ac3d28ceb446ac02677d9dd94a932a4da97adccec4a17300e11579003b5
+  cvp/3rd_party/static/testapi-ui/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf:
+    - 4fe9c8effb5626938bb725cb6f266af65bb4c181da858b43a18e11554474bc21
 
 file_audits:
   file_names: [nullvalue]
