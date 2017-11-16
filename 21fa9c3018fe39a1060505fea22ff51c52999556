@@ -1,0 +1,7 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Luke Hinds <lhinds@redhat.com>
+Submitted-by: Luke Hinds <lhinds@redhat.com>
+Submitted-at: Thu, 16 Nov 2017 14:27:19 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/47139
+Project: releng-anteater
+Branch: refs/heads/master
