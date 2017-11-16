@@ -111,6 +111,9 @@ def scan_file(project_dir, project, binary_list, file_audit_list,
                               "a") as gate_report:
                             gate_report.write('Non Whitelisted Binary: {0}\n'.
                                               format(full_path))
+                            gate_report.write(
+                                'Submit patch with the following hash: {0}\n'.
+                                format(hasher.hexdigest()))
 
             else:
                 if not items.endswith(tuple(file_ignore)):

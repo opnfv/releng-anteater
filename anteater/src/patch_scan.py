@@ -102,6 +102,9 @@ def scan_patch(project, patch_file, binary_list, file_audit_list,
                     as gate_report:
                 gate_report.write('Non Whitelisted Binary file: {0}\n'.
                                   format(patch_file))
+                gate_report.write('Submit patch with the following hash: {0}\n'.
+                                  format(hasher.hexdigest()))
+
     else:
         # Check file names / extensions
         if file_audit_list.search(patch_file) and not \
