@@ -6,12 +6,14 @@ file_audits:
   file_names: [nullvalue]
   file_contents:
     - ^#
-    - \bwget\s+\\
-    - \bcurl\s+\\
-    - git clone.+\.openstack\.org
-    - git clone.+gerrit\.opnfv\.org
-    - wget.+build\.opnfv\.org
-    - wget.+artifacts\.opnfv\.org
-    - wget.+git\.opnfv.org
-    - wget.+git\.openstack.org
+    - git clone.+\.openstack\.org\/.*
+    - git clone.+gerrit\.opnfv\.org\/.*
     - git clone.+https:\/\/git.opendaylight\.org\/gerrit\/
+    - wget.+build\.opnfv\.org\/.*
+    - wget.+artifacts\.opnfv\.org\/.*
+    - wget.+git\.opnfv.org\/.*
+    - wget.+git\.openstack.org\/.*
+    - curl.+build\.opnfv\.org\/.*
+    - curl.+artifacts\.opnfv\.org\/.*
+    - curl.+git\.opnfv.org\/.*
+    - curl.+git\.openstack.org\/.*
