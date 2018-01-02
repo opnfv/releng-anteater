@@ -290,6 +290,7 @@ file_audits:
     - bifrost_ssh_private_key
     - cacheValues
     - elif type wget >/dev/null
+    - eval \$(cat /\$WORKSPACE/installer_track.txt)
     - eval_collection
     - eval_db
     - evaluate
