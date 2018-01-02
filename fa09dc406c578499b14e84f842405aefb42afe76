@@ -1,0 +1,8 @@
+Verified+1: jenkins-ci <jenkins-opnfv-ci@opnfv.org>
+Code-Review+2: Luke Hinds <lhinds@redhat.com>
+Code-Review+2: Serena Feng <feng.xiaowei@zte.com.cn>
+Submitted-by: Serena Feng <feng.xiaowei@zte.com.cn>
+Submitted-at: Tue, 02 Jan 2018 07:03:20 +0000
+Reviewed-on: https://gerrit.opnfv.org/gerrit/48519
+Project: releng-anteater
+Branch: refs/heads/master
