@@ -112,3 +112,4 @@ file_audits:
     - RABBITMQ_PK_FILE_ATTR = 'private_key_file'
     - paramiko.RSAKey.from_private_key_file
     - if not self.ftp
+    - curl .*\$SCANS_URL
