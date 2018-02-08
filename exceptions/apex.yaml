@@ -12,6 +12,7 @@ file_audits:
   file_names:
     - network_settings.py
     - deploy_settings.py
+    - PR_revision.log
   file_contents:
     - rpm-build wget libvirt
     - wget git gcc
@@ -50,3 +51,16 @@ file_audits:
     - eval \"\$wrapper
     - nova.+nova_private_key
     - replace_private_key
+    - copr\.fedorainfracloud\.org\/coprs\/leifmadsen
+    - artifacts\.opnfv\.org\/apex\/dependencies
+    - private_key.decode\(\'utf\-8\'\)
+    - for line in private_key\.splitlines\(\)
+    - output_line.*private_key.*\\n\"
+    - add Greg Troxel\'s md5 buffer copy\/dup fix
+    - downloads\.onosproject\.org\/nightly\/
+    - test_ops.*--root-password.*password
+    - import make_ssh_key
+    - priv\, pub \= make_ssh_key\(\)
+    - def test_make_ssh_key\(self\)
+    - github\.com\/6WIND
+    - issues\.apache\.org\/jira\/secure\/
