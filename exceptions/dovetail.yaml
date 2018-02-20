@@ -53,4 +53,5 @@ binaries:
 
 file_audits:
   file_names: [nullvalue]
-  file_contents: [nullvalue]
+  file_contents:
+    - '\/var\/run\/docker\.sock\:\/tmp\/docker\.sock\:ro'
