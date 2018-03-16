@@ -10,4 +10,11 @@ binaries:
 
 file_audits:
   file_names: [nullvalue]
-  file_contents: [nullvalue]
+  file_contents:
+      - wget \\
+      - wget \$sha256sum_url
+      - wget -nc --progress=dot\:giga \$image_xz_url
+      - wget --progress=dot\:giga \$\{file_url\}
+      - wget \$\{md5_url\}
+      - wget --spider \$file_url -o tmp_filesize
+      - wget \$\{sha512sum_url\}
