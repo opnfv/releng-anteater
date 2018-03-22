@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a3f45e8_1b2180fb",
+        "filename": "docker/Dockerfile",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1451
+      },
+      "writtenOn": "2018-03-22T21:43:43Z",
+      "side": 1,
+      "message": "I\u0027m not aware of a `virtualenv-3` binary, though perhaps this is a CentOS thing (as I run Ubuntu)?\n\nMy experience when initializing a virtualenv with python3 is: `/usr/bin/virtualenv --python /usr/bin/python3 ~/venv`",
+      "range": {
+        "startLine": 38,
+        "startChar": 3,
+        "endLine": 38,
+        "endChar": 26
+      },
+      "revId": "51386e7c92945a60519f48ecd71f0f78970c477f",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
