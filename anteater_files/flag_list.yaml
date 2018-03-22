@@ -2,10 +2,6 @@
 # This file uses standard regular expression syntax,  however be mindful
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
-binaries:
-  binary_ignore:
-    - \.git/(index|objects)
-
 file_audits:
   file_names:
     - \.asc
@@ -83,14 +79,6 @@ file_audits:
       regex: (password|passwd)(.*:|.*=.*)
       desc: "Possible hardcoded password"
 
-    curl:
-      regex: \bcurl\b
-      desc: "Curl can be used for retrieving objects from untrusted sources"
-
-    clone:
-      regex: git.*clone
-      desc: "clone blocked as using an non approved external source"
-
     dual_ec_drbg:
       regex: dual_ec_drbg
       desc: "Insecure cryptographic algorithm"
@@ -151,10 +139,6 @@ file_audits:
       regex: tlsv1
       desc: "Insecure TLS Version"
 
-    wget:
-      regex: wget
-      desc: "WGET is blocked to unknown / untrusted destinations"
-
     run_as_root:
       regex: run_as_root.*=.*True
       desc: "Its better to use sudo or a rootwrapper"
@@ -190,7 +174,7 @@ file_audits:
         "tmp directories are risky. They are world writable and easily guessed"
 
     yamlload:
-      regex: \yaml\.load
+      regex: yaml\.load
       desc: |
         "Avoid dangerous file parsing & serialization libs, use yaml.safe_load"
 
@@ -208,52 +192,3 @@ file_audits:
     allint:
       regex: 0\.0\.0\.0
       desc: "Interface listening on all addresses - may break security zones"
-
-file_ignore:
-  - '.rst'
-  - '.md'
-
-licence:
-  licence_ext:
-    - '.java'
-    - '.md'
-    - '.py'
-    - '.rb'
-    - '.rst'
-    - '.sh'
-  licence_ignore:
-    - '__init__.py'
-
-project_exceptions:
-  - apex: exceptions/apex.yaml
-  - armband: exceptions/armband.yaml
-  - bamboo: exceptions/bamboo.yaml
-  - barometer: exceptions/barometer.yaml
-  - bottlenecks: exceptions/bottlenecks.yaml
-  - calipso: exceptions/calipso.yaml
-  - compass4nfv: exceptions/compass4nfv.yaml
-  - conductor: exceptions/conductor.yaml
-  - copper: exceptions/copper.yaml
-  - cperf: exceptions/cperf.yaml
-  - daisy: exceptions/daisy.yaml
-  - doctor: exceptions/doctor.yaml
-  - dovetail: exceptions/dovetail.yaml
-  - dpacc: exceptions/dpacc.yaml
-  - enfv: exceptions/enfv.yaml
-  - escalator: exceptions/escalator.yaml
-  - fds: exceptions/fds.yaml
-  - functest: exceptions/functest.yaml
-  - octopus: exceptions/octopus.yaml
-  - pharos: exceptions/pharos.yaml
-  - releng: exceptions/releng.yaml
-  - sandbox: exceptions/sandbox.yaml
-  - yardstick: exceptions/yardstick.yaml
-  - infra: exceptions/infra.yaml
-  - ipv6: exceptions/ipv6.yaml
-  - joid: exceptions/joid.yaml
-  - kvmfornfv: exceptions/kvmfornfv.yaml
-  - lsoapi: exceptions/lsoapi.yaml
-  - models: exceptions/models.yaml
-  - moon: exceptions/moon.yaml
-  - multisite: exceptions/multisite.yaml
-  - netready: exceptions/netready.yaml

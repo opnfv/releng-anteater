@@ -1,0 +1,79 @@
+---
+# When adding projects all sections must have a value, Use 'nullvalue' if no
+# waivers are required.
+#
+# This file uses standard regular expression syntax,  however be mindful
+# of escaping "\" YAML delimiters too (such as "\:" or "\/").
+#
+# NOTE: DO NOT REMOVE ANY OF THE DEFAULT VALUES, ONLY ADD TO OR REPLACE
+
+# sha256 checksums of binary files allowed
+binaries:
+  path/to/example.png:
+    - 609feaed93afbea14c6b10c6effc986f39d1deb0a372ac088129bb22bbca8834
+
+# Ignore file_names and file_contents that match the following RegExp
+file_audits:
+  file_names:
+    - LICENSE.txt
+  file_contents:
+    - \bcurl|wget\s+\\
+
+# Any files with the following extensions will not be scanned
+file_ignore:
+  - '.rst'
+  - '.md'
+
+url_ignore:
+  - 'http://www.apache.org'
+  - 'https://github.com'
+  - 'https://opnfv.org'
+
+ip_ignore:
+  - '173.217.16.206'
+
+# Unit tests, functional tests, documentation etc. These folders will never be
+# scanned. This is a relative path, so always leave a trailing `/` path
+# delimiter, but don't start with one!
+ignore_directories:
+  - .git/
+  - tests/
+  - docs/
+
+
+# Add your project exception file into here.
+project_exceptions:
+  - apex: exceptions/apex.yaml
+  - armband: exceptions/armband.yaml
+  - availability: exceptions/availability.yaml
+  - bamboo: exceptions/bamboo.yaml
+  - barometer: exceptions/barometer.yaml
+  - bottlenecks: exceptions/bottlenecks.yaml
+  - calipso: exceptions/calipso.yaml
+  - compass4nfv: exceptions/compass4nfv.yaml
+  - conductor: exceptions/conductor.yaml
+  - copper: exceptions/copper.yaml
+  - cperf: exceptions/cperf.yaml
+  - daisy: exceptions/daisy.yaml
+  - doctor: exceptions/doctor.yaml
+  - dovetail: exceptions/dovetail.yaml
+  - dpacc: exceptions/dpacc.yaml
+  - enfv: exceptions/enfv.yaml
+  - escalator: exceptions/escalator.yaml
+  - fds: exceptions/fds.yaml
+  - fuel: exceptions/fuel.yaml
+  - functest: exceptions/functest.yaml
+  - infra: exceptions/infra.yaml
+  - ipv6: exceptions/ipv6.yaml
+  - joid: exceptions/joid.yaml
+  - kvmfornfv: exceptions/kvmfornfv.yaml
+  - lsoapi: exceptions/lsoapi.yaml
+  - models: exceptions/models.yaml
+  - moon: exceptions/moon.yaml
+  - multisite: exceptions/multisite.yaml
+  - netready: exceptions/netready.yaml
+  - octopus: exceptions/octopus.yaml
+  - pharos: exceptions/pharos.yaml
+  - releng: exceptions/releng.yaml
+  - sandbox: exceptions/sandbox.yaml
+  - yardstick: exceptions/template.yaml

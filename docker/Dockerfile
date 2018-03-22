@@ -9,9 +9,9 @@
 # http://www.apache.org/licenses/LICENSE-2.0
 ##############################################################################
 
-FROM centos:latest
+FROM fedora:latest
 MAINTAINER Luke Hinds <lhinds@redhat.com>
-LABEL version="0.1" description="Anteater - OPNFV Gerrit Security Gate Checks"
+LABEL version="0.2" description="Anteater - OPNFV Gerrit Security Gate Checks"
 
 # environment variables
 ARG BRANCH=master
@@ -24,10 +24,9 @@ ENV HOME /home/${ANTEATER_USER}
 ENV ANTEATER_HOME ${HOME}/anteater
 
 # Packaged dependencies
-RUN yum -y install epel-release
-RUN yum -y update
-RUN yum -y install git python-devel python-pip python-virtualenv
-RUN yum clean all
+RUN dnf -y update
+RUN dnf -y install git python3-devel python3-pip python3-virtualenv
+RUN dnf clean all
 
 # Run all following commands and container as non-root user
 USER ${ANTEATER_USER}
@@ -36,7 +35,7 @@ USER ${ANTEATER_USER}
 RUN mkdir -p ${ANTEATER_HOME}
 RUN git clone https://gerrit.opnfv.org/gerrit/releng-anteater ${ANTEATER_HOME}
 WORKDIR ${ANTEATER_HOME}
-RUN virtualenv ~/venv
+RUN /usr/bin/virtualenv-3 ~/venv
 RUN . ~/venv/bin/activate
-RUN ~/venv/bin/pip install -r ${ANTEATER_HOME}/requirements.txt
-RUN ~/venv/bin/python ${ANTEATER_HOME}/setup.py install
+RUN ~/venv/bin/pip install anteater --no-cache-dir
+RUN ~/venv/bin/anteater --version
