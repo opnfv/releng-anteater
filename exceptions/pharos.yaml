@@ -57,4 +57,10 @@ binaries:
 
 file_audits:
   file_names: [nullvalue]
-  file_contents: [nullvalue]
+  file_contents:
+    - pkcs7_private_key\: \/etc\/eyaml_keys\/private_key.pkcs7.pem
+    - \/tmp\/out\.yml
+    - daisy_passwd
+    - cpu_cflags\:.*$
+    - address\: 0\.0\.0\.0
+
