@@ -54,7 +54,37 @@ binaries:
     - ce20fca9217f1140c28ad449a3b0a0ea51bc99ef01f963d105a0a65aa4e1b586
   docs/release/images/bridge2.png:
     - 062e34a9dc030f83fcbb636cdc7a873816cf7b92c6eed1b9dd5550bcccc3207c
+  docs/release/scenario-lifecycle/create-sdf.png:
+    - 65c5ca93a81af629c01e97b139e26165ad01745ed7841dee582fd03e6516b20d
+  docs/release/scenario-lifecycle/feature-compatibility-nosdn.png:
+    - a451058b1ef366e00ffaeff3bfdf5ce891fa7373bcac06003084891abc26c91d
+  docs/release/scenario-lifecycle/feature-compatibility-odl.png:
+    - cc5eaaab40488f6bad17bf674d80177a5c1477a1149e805c630cc99713a00ee0
+  docs/release/scenario-lifecycle/From OS-BASIC to NOSDN-FDIO.png:
+    - 2cdcb41d200579ed4888a92af87d138a34eac1000dcf53299d7e50fa481f7aab
+  docs/release/scenario-lifecycle/From OS-BASIC to NOSDN-OVS.png:
+    - 20467f307c30deea7a8de77550843ef5ba9e6b8d2ce82a354cd8afa91aa4a05b
+  docs/release/scenario-lifecycle/ODL Generic Scenarios Evolution.png:
+    - 786dec2e07c4713ab1d838dac834feaf7ce1c8d7c9d1368621e7c05923bced23
+  docs/release/scenario-lifecycle/parent-child.png:
+    - 29fa08b50ff88f6b63b1c3e5e607bd92580d9bd44025a48b8ff6bb8cd888d522
+  docs/release/scenario-lifecycle/pdf-and-sdf.png:
+    - 11c041fed0645e7468b2693bc952f22abc18af4303c6281a675c6a79b6ad5529
+  docs/release/scenario-lifecycle/scenario-tree+idea.png:
+    - 64db0b5037632ac3b8f05363f01d180c1366ffcef4f6dcebc3c43d6936994cac
+  docs/release/scenario-lifecycle/scenario-tree-danube.png:
+    - 012ea5d7b1605493558868c9519fbbe0eea05e634796ea317d49e25a337aa62e
+  docs/release/scenario-lifecycle/scenario-tree.png:
+    - bc344643e10f87213c150a286a39b5b7555d01964f829699e991c6e040e9dccd
+  docs/release/scenario-lifecycle/sibling.png:
+    - 3b5e569e30b1019fe24e009813410fb644d53c16e2247a0f3adfabf9aea9a410
 
 file_audits:
   file_names: [nullvalue]
-  file_contents: [nullvalue]
+  file_contents:
+    - "address: 0\\.0\\.0\\.0"
+    - "cpu_cflags:.*$"
+    - "pkcs7_private_key: \\/etc\\/eyaml_keys\\/private_key.pkcs7.pem"
+    - daisy_passwd
+    - power_password
+    - \/tmp\/out\.yml
