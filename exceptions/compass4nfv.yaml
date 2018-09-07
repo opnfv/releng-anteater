@@ -6,25 +6,29 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  docs/release/installation/images/k8s.png:
-    - ea74fbfa486f2e5ec7afc36a0cccc0161420409fd84fec0b56af2db65c053c4a
-  docs/release/installation/images/architecture.png:
-    - b941339d32e26eddef5074f893ffe69b8c922bee074638ed5cf67b6b5b40d50e
   docs/release/installation/images/multi_nics.png:
-    - a9597f00a89874ea908d542d1dd6a7a125f2e0e0128d4714b7564e226ea789e8
+    - 27b705de5bae75d09d3889b58bc105aac74b7bbb6bf0fedad4b4568b4e4b5e63
+  docs/release/installation/images/architecture.png:
+    - fe2021a265b52d541870464fd4165c54684a0d99702480652cb1d4ff1063d63c
+  docs/release/installation/images/k8s.png:
+    - 1314e7914dd5fad06e45b5338fbb21e32b21489a58186198df6743102c2555bf
   docs/release/installation/images/single_nic.png:
-    - 2d0d900d84ee7258ebc27822fcfdab54ede33c64676def4b679e77d34912ff71
-  docs/development/overview/images/compass_arch.png:
-    - 098f8470138c881c29c92ed89069e939336ccd6d0653826a319bc0a1224350c9
-  docs/development/design/images/Existed_roles.png:
-    - ce19bfbba632dce8d78762d035ea12d1b4ad7e39f6000c4ed9743976afca7b47
-  docs/development/design/images/Moon.png:
-    - 9a9d40d9ffa4bcbf99140fa6678599298bda913329ef3b40ef34b0e62f848180
+    - 84166285df9974f4c4e539fc011af3b11b7f0de8431b24a23ba420ac6ed6693c
   docs/development/design/images/repo_features.png:
-    - ce345b0fd8583a792180521c7a8c1ff37574cc7ca693617d974632565720d89c
+    - 3e68381937aa317023d9a497ad4c0c44ec501f760dd78ee543bbc7f8c866d008
+  docs/development/design/images/Existed_roles.png:
+    - f44ce4d2bc354c7bd046f8b91367b30559fe66332b54804b0ce802ba682c7d3b
+  docs/development/design/images/Moon.png:
+    - cfeb37bb865a5b7414cc21beb5e74e192c00763c613ca48a9c21bde131195488
+  docs/development/overview/images/compass_arch.png:
+    - e5a92b0aba418df4142e141d67473233950cbfb14b1d45c3e919ae2857700e19
 
 file_audits:
-  file_names: [nullvalue]
+  file_names:
+    - kickstart_knife.rb
+    - preseed_knife.rb
+    - .*.pem
+    - .*.asc
   file_contents:
     - publicURL
     - server_password
@@ -33,3 +37,21 @@ file_audits:
     - \'password\'\:.\{
     - metadata_secret
     - compass_user_password
+    - shell.*
+    - curl
+    - eval
+    - wget
+    - ftp
+    - telnet
+    - finger
+    - 0\.0\.0\.0
+    - md+
+    - (password|passwd)(.*:|.*=.*)
+    - \/tmp\/
+    - ssh_key
+    - secret
+    - yaml.*
+    - sha.*
+    - git.*
+    - exec.*
+    - private_key
