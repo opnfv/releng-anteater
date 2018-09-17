@@ -10,6 +10,15 @@ binaries:
     - 344aae9fc0d054fd89b4bdaebd79879bb8b0246bc7239c1c48b993b840ed5ded
   docs/development/overview/functest_scenario/images/figure-p1.png:
     - d5d2acc405ae098c2fcbe91fa8baa67a00795c32941352c95cac5bc67a20c6eb
+  docs/development/overview/functest_scenario/images/Fault management design\
+   2018.png:
+    - 12fbe80684f0ff74f0bb9865ff9dcfd0521c92e9e1f9c4a0e15fdbbde5353a06
+  docs/development/overview/functest_scenario/images/Maintenance design\
+   2018.png:
+    - 4baa7693939f818184095d67a76e531ddd1ef0c8fbb29212eafb3cedb3ecf768
+  docs/development/overview/functest_scenario/images/Maintenance workflow\
+   2018.png:
+    - c85a90f909a2bd50673b30e719d4ae6ac5118f63fdc6b83d117929450377f8d1
   docs/development/design/images/notification-time.png:
     - b9c496eecdfd1fb6c6e3fe93e4ecc4504fa113deaa532de16b8e669b075a3eaa
   docs/development/design/images/conservative-notification.png:
