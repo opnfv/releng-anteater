@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_a65fe671",
+        "filename": "exceptions/doctor.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 7409
+      },
+      "writtenOn": "2018-09-18T06:27:49Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we remove the \"?\"?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 3
+      },
+      "revId": "1e11faecd96f63a0559d85ba6d8fb00eefcd1a2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_a68886e8",
+        "filename": "exceptions/doctor.yaml",
+        "patchSetId": 6
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 7409
+      },
+      "writtenOn": "2018-09-18T06:27:49Z",
+      "side": 1,
+      "message": "Maintenance-workflow",
+      "range": {
+        "startLine": 17,
+        "startChar": 53,
+        "endLine": 17,
+        "endChar": 73
+      },
+      "revId": "1e11faecd96f63a0559d85ba6d8fb00eefcd1a2a",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
