@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a682502_c63b02ea",
+        "filename": "exceptions/doctor.yaml",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 7409
+      },
+      "writtenOn": "2018-09-18T07:29:58Z",
+      "side": 1,
+      "message": "This will add one space between \"...design.\" and \"png\"\n\nThe following will work:\n\n  ? \"docs/development/overview/functest_scenario/images/\\\n    Fault-management-design.png\"\n  :\n\nOr a better way is to rename the file as \"fault-mgmt-design.png\". But it needs another patch to update.",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 7
+      },
+      "revId": "75eabb86e533004a960e817f320451461e9554f4",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
+    }
+  ]
+}
