@@ -22,6 +22,30 @@
       "revId": "3c71e127fd8dc2bf83e025900b55123e2ac1d22e",
       "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_66302e57",
+        "filename": "exceptions/doctor.yaml",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 751
+      },
+      "writtenOn": "2018-09-18T05:37:51Z",
+      "side": 1,
+      "message": "Yes, I will change that. Also the year is needless as it will not be valid when this changes.",
+      "parentUuid": "5a682502_067cda1f",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 12
+      },
+      "revId": "3c71e127fd8dc2bf83e025900b55123e2ac1d22e",
+      "serverId": "bbac25d2-bf60-4904-9ba8-a72fc000d6c5",
+      "unresolved": false
     }
   ]
 }
