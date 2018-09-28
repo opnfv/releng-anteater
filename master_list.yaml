@@ -242,6 +242,7 @@ project_exceptions:
   - enfv: exceptions/enfv.yaml
   - escalator: exceptions/escalator.yaml
   - fds: exceptions/fds.yaml
+  - fuel: exceptions/fuel.yaml
   - functest: exceptions/functest.yaml
   - octopus: exceptions/octopus.yaml
   - pharos: exceptions/pharos.yaml
