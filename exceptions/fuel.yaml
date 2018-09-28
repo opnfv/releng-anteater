@@ -6,15 +6,39 @@
 # of escaping YAML delimiters too (such as `:`) using double quotes "".
 
 binaries:
-  docs/release/installation/img/fuel_baremetal.png:
-    - fec8773affddee41c4093a293623016530d271069aa856e0b6e43e246cc57731
-  docs/release/installation/img/lf_pod2.png:
-    - efae1bf49729102ace7ffe1fcdd2b111f983afb53e68b31aa736a793ef83d872
+  docs/release/userguide/img/reclass_doc.png:
+    - 7a8234a1de85ceb011954d36d55004593a57b2eb6d125849ce2a77b42a6528b0
+  docs/release/userguide/img/horizon_login.png:
+    - b5d5ea10cfb1cc7756446737bc7804372d380689ea8bc6bd7ee4c079fb72c200
+  docs/release/userguide/img/salt_services_ip.png:
+    - b2ded465a8927a8a96a95103d83fbbfd1055c1652457a55cdb0429a6ac736911
   docs/release/installation/img/arm_pod5.png:
-    - d292580e5ed584c1037e74aa8f5c7ead41832ccd33ee5eebef3629a9cbe52737
+    - de0d9daedc3529db41a16379afe23227cb31a5cee971d6af3f4907ab3bb47fcf
+  docs/release/installation/img/fuel_baremetal.png:
+    - 05c16caa185cbf2374ca981daafebc74681414ad427e80d0d10a54afc41694a6
   docs/release/installation/img/fuel_virtual.png:
-    - 893f6b4c45f7bc3049dfeb6931798393e384527739b5a44363f7fce1d172e635
+    - c9724a2c817618e4ee02842919490a8d39920eb06923e7b934723bc14bbaed9c
+  docs/release/installation/img/lf_pod2.png:
+    - 47bc13cfbc3cfffaaa6d2c7a251178f4e7d83c374aafce266c215f14310b76a9
 
 file_audits:
-  file_names: [nullvalue]
-  file_contents: [nullvalue]
+  file_names:
+    - 'database.yml'
+    - 'passwords.yml'
+  file_contents:
+    - 'eval \${LAYER_[\w]*}'
+    - 'eval "\${cmdstr}"'
+    - 'eval "\${statuscmd}"'
+    - '[\w]*password:\s *\${_param:[\w]*password}'
+    - '[\w]*key:\s *\${_param:[\w]*password}'
+    - '[\w]*password:\s *opnfv_secret'
+    - '\${ssh_key_data}'
+    - 'mcp_ssh_key'
+    - '\${ssh_key}'
+    - 'wget --progress=dot:giga -P "\${image_dir}" -N "\${base_image}"'
+    - 'wget "\${url}" -O "\${image_dir}/\${__srpm}"'
+    - 'curl -L "\${VIRT_URL}" -o "\${VIRT_TGZ}"'
+    - 'curl -o "\${LOCAL_IDF}" "\${BASE_CONFIG_IDF}'
+    - 'curl --create-dirs -o "\${LOCAL_PDF}" "\${BASE_CONFIG_PDF}'
+    - 'curl -fsSL https://get.docker.com'
+    - 'curl -sSqL https://raw.githubusercontent.com/salt-formulas/salt-formulas-scripts/master/formula-fetch.sh'
