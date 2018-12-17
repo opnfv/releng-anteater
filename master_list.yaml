@@ -233,7 +233,6 @@ project_exceptions:
   - calipso: exceptions/calipso.yaml
   - compass4nfv: exceptions/compass4nfv.yaml
   - conductor: exceptions/conductor.yaml
-  - copper: exceptions/copper.yaml
   - cperf: exceptions/cperf.yaml
   - daisy: exceptions/daisy.yaml
   - doctor: exceptions/doctor.yaml
